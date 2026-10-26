@@ -58,3 +58,11 @@ profession coverage, and testing notes.
 - CurseForge: [Babunigaming](https://www.curseforge.com/members/babunigaming)
 - Instagram: [babunigaming](https://www.instagram.com/babunigaming/)
 - YouTube: [BABUNI GAMING](https://www.youtube.com/@babunigaming)
+
+## Development documentation
+
+- [Concept](CONCEPT.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md)
+- [Architecture](docs/ARCHITECTURE.md) · [Design evidence](docs/DECISIONS.md) · [Development journal](docs/DEVLOG.md)
+- [AI collaborator rules](AGENTS.md)
+
+The journal distinguishes source-based reconstruction, author direction, AI assistance, and independently verified behavior.
