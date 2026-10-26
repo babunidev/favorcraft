@@ -1,5 +1,7 @@
 # FavorCraft
 
+**Author:** Babuni.dev
+
 Merchant's Favor & Profession Planner  
 World of Warcraft Forever | Alliance & Horde
 
