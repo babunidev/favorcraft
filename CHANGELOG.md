@@ -47,3 +47,9 @@
 
 - FavorCraft plans Merchant's Favor recipe purchases and the materials those crafts need.
 - Alliance and Horde share one recipe list. Armor follows the class filter, including paladin plate.
+
+## Documentation audit #35 — 2026-10-28
+
+- Created visual-design, content/provenance and human–AI collaboration guides.
+- Expanded historical and technical documentation, preserving co-originator Danoozy's original idea and Babuni.dev's implementation/refinement credit.
+- Clarified the 309 recipes / 314 offers distinction and the legacy data/command continuity. No Lua, add-on metadata, data catalog or packaging source was modified; no runtime test was executed.
