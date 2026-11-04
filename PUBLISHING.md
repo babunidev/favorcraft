@@ -39,7 +39,7 @@ An ordinary GitHub source archive is **not** the same as a packaged addon.
 3. Check the GitHub webhook deliveries for a successful HTTP result.
 4. Only after explicit approval for that public version: prepare the changelog
    and both TOC versions, verify the exact release commit, and create an
-   annotated tag such as `v0.5.1-beta`. Push **only that approved tag**
+   annotated tag such as `v0.5.2-beta`. Push **only that approved tag**
    (not all local tags). Create a matching GitHub prerelease only if the
    repository's agreed process requires it; verify CurseForge publication
    separately. Ordinary development commits to main are **not** releases.

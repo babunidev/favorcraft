@@ -1,17 +1,13 @@
 # FavorCraft — Changelog
 
-## Unreleased (development only)
+## 0.5.1-beta — 2026-11-04
 
-- Fixed the recipe details pane retaining a recipe excluded by a changed profession, search, class, build or learned filter; saved shopping selections remain independent.
-- Reviewed all 32 additional recipe-source entries (15 Blacksmithing, 17 Leatherworking). Preserved the reported source records, distinguished dungeon/world/vendor claims, surfaced trainer disputes and split an ambiguous Shadowfang Keep creature listing.
-- Corrected publishing instructions for the current GitHub repository, release approval, and unverified CurseForge auto-packaging settings. Strengthened both-TOC ZIP verification and regression tests.
-
-- Clarified the approved two-state learned indicator: green check = Learned, red X = Unlearned, including catalog recipes not yet scanned. No third Unknown state and no icon redesign.
-
-- Removed 150 Merchant's Favor-to-Merchant's Favor comparison links from Alchemy, Cooking, and Tailoring; retained researched outside alternatives.
-- Added a catalog-backed guard against cross-Favor comparisons, while retaining separate additional-source records.
-- Updated comparison regression checks; in-game behavior and drop sources remain unverified.
-- Replaced 61 weak Blacksmithing same-slot research candidates with four client-documented rare, near-level non-Favor crafted comparisons; 57 recipes intentionally have no comparable item. Additional dungeon source reports remain separate.
+- Recipe details now follow the selected profession and active filters. Empty results clear the details pane without losing saved purchase plans.
+- Recipe comparison research now excludes other Merchant's Favor items, so the panel focuses on alternatives acquired outside the Favor system.
+- Blacksmithing comparisons now show four level-appropriate, rare-quality crafted alternatives rather than unrelated lower-tier same-slot gear. Other recipes show no comparison when no suitable alternative is documented.
+- The Learned/Unlearned indicators remain a green check and red X. Recipes not yet detected as learned show Unlearned, including before a profession scan.
+- Reviewed the 32 additional recipe-acquisition reports (15 Blacksmithing, 17 Leatherworking). Dungeon and world drops are labeled as reports, trainer disputes remain visible, and those sources stay separate from crafted-item comparisons.
+- Improved regression checks and verified the runtime file lists in both Forever TOCs. Source reports and visual behavior still require in-game verification.
 
 ## 0.5.0-beta — 2026-10-16
 

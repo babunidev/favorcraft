@@ -7,3 +7,7 @@ ignore:
   - README.md
   - PUBLISHING.md
   - .github
+  - docs
+  - CONCEPT.md
+  - ROADMAP.md
+  - COMPARISON_BETA_GUIDE.md
