@@ -4,7 +4,7 @@
 
 ## Current state
 
-A working-intent codebase and public description are committed. This audit did not launch the game.
+The 0.5.1-beta release candidate was tagged on 2026-11-04 at source commit `2ba7601`. GitHub Actions passed; CurseForge showed the Beta file for Forever 1.60.1 as **Processing** in the publisher's screenshot. Final approval, inspection of the actual CurseForge ZIP, and live gameplay tests remain unconfirmed. The October documentation audit did not launch the game.
 
 ## Proposed verification
 
@@ -22,7 +22,8 @@ Future features require a separate recorded author decision.
 - [ ] Test profession-window scans, known-recipe indicators, shopping materials and comparison calculations in the client.
 - [ ] Check both profession-specific source evidence and any claimed alternative item acquisition sources.
 - [x] Correct the GitHub source URL and the release-gate instructions in `PUBLISHING.md`.
-- [ ] Verify live CurseForge source integration, webhook and tag-only packaging settings before any release tag.
+- [x] Observe that the `v0.5.1-beta` tag triggered a CurseForge Beta file (publisher screenshot, 2026-11-04).
+- [ ] Audit the private integration settings to establish that untagged commits cannot publish Alpha files.
 
 No in-game or packaging acceptance test was performed in this documentation audit.
 
@@ -34,4 +35,7 @@ No in-game or packaging acceptance test was performed in this documentation audi
 - [x] Audit 32 separate recipe-acquisition reports and mark disputed sources as reports.
 - [x] Align comparison and publishing documentation with the source.
 - [ ] Verify UI selection, vendor sources, reported drops and SavedVariables in the live Forever client.
-- [ ] Confirm CurseForge tag-only packaging and latest actually published file before a public release.
+- [x] Push the approved annotated tag `v0.5.1-beta` targeting `2ba7601` and observe the CurseForge Beta entry in Processing status.
+- [x] Confirm GitHub Actions passed at the tagged commit (`41925630865`).
+- [ ] Confirm CurseForge approval and inspect the downloadable archive to verify the exact installed file set.
+- [ ] Verify that ordinary development pushes cannot trigger CurseForge Alpha packages.
