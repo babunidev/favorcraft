@@ -27,3 +27,9 @@ This audit records existing documented behavior and choices, not a new approval 
 ## Stale detail selection and reported acquisition data — approved (2026-11-04)
 
 The details pane must describe a recipe in the current visible list, or show no selection when the list is empty. Filtering does **not** erase the saved purchase plan. All 32 additional source records remain separate from crafted-item comparisons. Each alleged dungeon drop, world drop, or vendor listing is presented as **reported**, with trainer disagreements and ambiguities retained instead of choosing an unsupported source. This decision does not approve a new UI design, an unverified drop rate, or a public release.
+
+## CurseForge packaging decision — 2026-11-04
+
+Player installs should contain the addon rather than the development repository. `.pkgmeta` uses `package-as: FavorCraft` and excludes the documentation, tests, development configuration and unused JSON source file. The changelog is kept for CurseForge's manual changelog feature. The GitHub workflow independently builds its installation archive from both TOC manifests and the Lua files they reference.
+
+Babuni pushed `v0.5.1-beta` after the packaging review. The resulting CurseForge entry was observed as a Beta for Forever 1.60.1 in Processing status. Final approval, actual CurseForge archive contents and private auto-packaging settings remain unverified.
