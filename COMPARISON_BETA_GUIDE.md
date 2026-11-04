@@ -28,8 +28,10 @@ spell or is guaranteed to drop from a named mob on today's server build.
   the items are interchangeable.
 - **Same-slot Gear:** Two pieces for the same slot. This *alone* does not imply
   comparable stats.
-- **Additional Recipe Source:** A database lists another way to acquire the
-  same pattern. The pattern item tooltip, not the crafted-armor tooltip, is shown.
+- **Additional Recipe Source:** A database reports another way to acquire the
+  same pattern. Dungeon drops, world drops and vendor sales are explicitly
+  marked as reported; a named location is not a confirmed current drop.
+  The pattern item tooltip, not the crafted-armor tooltip, is shown.
 - **No Comparison Recorded:** No matching research record. It does not imply
   that no alternative exists.
 
@@ -74,8 +76,16 @@ the right-hand pane. Its source/effect summary and every available researched
 alternative are scrollable. Click the recipe only to add or remove it from the
 purchase plan.
 
-Sources reported for Blacksmithing and Leatherworking are shown as additional paths to obtain the
-**same recipe pattern**, not new crafted equipment.
+Sources reported for **15 Blacksmithing plans and 17 Leatherworking patterns**
+are shown separately as possible acquisition routes for the **same recipe
+pattern**, not comparisons to other crafted equipment. The normal Merchant's
+Favor vendor is not mislabeled as an additional drop. Leatherworking trainer
+availability is disputed across public databases; these disputes are displayed
+rather than interpreted as proof that a trainer does or does not teach a recipe.
+An ambiguous Shadowfang Keep creature listing has been separated into a
+named Shadow Charger report and an unresolved Fel Steed location report.
+Totemic Leather Leggings has both a named boss report and a general world-drop
+report; neither is treated as exclusive.
 
 When a comparison's external alternative does not yet have an output item/spell
 ID in the source records or bundle, FavorCraft displays the written research
@@ -93,6 +103,7 @@ Use the following to validate before packaging:
 ```bash
 luajit tests/validate_db.lua
 luajit tests/planner_logic.lua
+luajit tests/non_favor_comparisons.lua
 ```
 
 Confirm scroll sizing and native tooltips in the actual WoW Forever client,

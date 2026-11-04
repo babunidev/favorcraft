@@ -23,3 +23,7 @@ Verify migration semantics, profession-window scans, cross-faction recipe filter
 - **0.5.0-beta presentation:** Release notes document complete materials, clearer tooltips, actual profession filters and narrower comparisons.
 
 This audit records existing documented behavior and choices, not a new approval discussion. Verify source claims and vendor availability in-game before describing them as current.
+
+## Stale detail selection and reported acquisition data — approved (2026-11-04)
+
+The details pane must describe a recipe in the current visible list, or show no selection when the list is empty. Filtering does **not** erase the saved purchase plan. All 32 additional source records remain separate from crafted-item comparisons. Each alleged dungeon drop, world drop, or vendor listing is presented as **reported**, with trainer disagreements and ambiguities retained instead of choosing an unsupported source. This decision does not approve a new UI design, an unverified drop rate, or a public release.

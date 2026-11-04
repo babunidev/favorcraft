@@ -21,6 +21,17 @@ Future features require a separate recorded author decision.
 - [ ] Test legacy `/rrp` and `/redridge` commands and `RRPDB`/`FavorcraftDB` plan migration with existing data.
 - [ ] Test profession-window scans, known-recipe indicators, shopping materials and comparison calculations in the client.
 - [ ] Check both profession-specific source evidence and any claimed alternative item acquisition sources.
-- [ ] Verify current packaging and repository URLs in `PUBLISHING.md` before publishing new release instructions.
+- [x] Correct the GitHub source URL and the release-gate instructions in `PUBLISHING.md`.
+- [ ] Verify live CurseForge source integration, webhook and tag-only packaging settings before any release tag.
 
 No in-game or packaging acceptance test was performed in this documentation audit.
+
+## November 2026 pre-release development
+
+- [x] Remove cross-Favor item comparisons and review Blacksmithing peers (development; live test pending).
+- [x] Keep the approved Learned / Unlearned visual states.
+- [x] Prevent stale recipe details after filter or profession changes.
+- [x] Audit 32 separate recipe-acquisition reports and mark disputed sources as reports.
+- [x] Align comparison and publishing documentation with the source.
+- [ ] Verify UI selection, vendor sources, reported drops and SavedVariables in the live Forever client.
+- [ ] Confirm CurseForge tag-only packaging and latest actually published file before a public release.

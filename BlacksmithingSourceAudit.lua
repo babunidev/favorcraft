@@ -60,7 +60,9 @@ local audits = {
         researchSpellID = 1252278,
         researchScrollID = 251381,
         sources = {
-            {type = "dungeon_drop", npc = "Fel Steed / Shadow Charger", location = "Shadowfang Keep", verification = "reported"},
+            {type = "dungeon_drop", npc = "Shadow Charger", location = "Shadowfang Keep", verification = "reported",
+             evidence = "https://www.wowhead.com/forever/item=251381"},
+            {type = "dungeon_report", location = "Shadowfang Keep (Fel Steed claim not individually established)", verification = "reported"},
         },
     },
     ["Blacksmithing|Protector's Silvered Chain Helm"] = {

@@ -2,6 +2,10 @@
 
 ## Unreleased (development only)
 
+- Fixed the recipe details pane retaining a recipe excluded by a changed profession, search, class, build or learned filter; saved shopping selections remain independent.
+- Reviewed all 32 additional recipe-source entries (15 Blacksmithing, 17 Leatherworking). Preserved the reported source records, distinguished dungeon/world/vendor claims, surfaced trainer disputes and split an ambiguous Shadowfang Keep creature listing.
+- Corrected publishing instructions for the current GitHub repository, release approval, and unverified CurseForge auto-packaging settings. Strengthened both-TOC ZIP verification and regression tests.
+
 - Clarified the approved two-state learned indicator: green check = Learned, red X = Unlearned, including catalog recipes not yet scanned. No third Unknown state and no icon redesign.
 
 - Removed 150 Merchant's Favor-to-Merchant's Favor comparison links from Alchemy, Cooking, and Tailoring; retained researched outside alternatives.

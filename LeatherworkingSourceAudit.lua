@@ -4,7 +4,7 @@
 -- A reported drop is not a confirmed drop, and it is not a different item.
 local _, RRP = ...
 
-local TRAINER = "Trainer listings disagree. AHledger mentions trainers, while Forever Era and Endgame Tools describe recipe items that trainers do not teach. No trainer source is shown."
+local TRAINER = "Trainer source disputed: AHledger records trainer learning; other Forever databases describe a recipe item instead. The Merchant's Favor vendor sells the pattern separately. Trainer availability has not been confirmed in-game."
 
 RRP.SourceAudits = RRP.SourceAudits or {}
 local audits = {
@@ -148,7 +148,7 @@ local audits = {
              evidence = "https://realmfirst.net/world-of-warcraft-forever/items/252823/"},
         },
         conflicts = {
-            "Endgame Tools lists a Twilight Lord Kelris drop. RealmFirst lists a world drop. Those claims disagree.",
+            "Endgame Tools names Twilight Lord Kelris; RealmFirst lists a general world drop. These reports differ in specificity and are not necessarily mutually exclusive. Neither establishes exclusive or current acquisition.",
             TRAINER,
         },
     },

@@ -14,4 +14,9 @@
 
 ## Attribution and publishing
 
-The README explicitly says the original concept came from **Danoozy**, with Babuni.dev implementing and refining the addon. Maintain both contributions, along with verified third-party catalog and comparison sources. `PUBLISHING.md` explains package assembly and external distribution; its older repository URL must be verified against the current remote before reuse. Do not publish credentials or webhook tokens. Do not describe the research catalog as current without fresh checks.
+The README explicitly says the original concept came from **Danoozy**, with Babuni.dev implementing and refining the addon. Maintain both contributions, along with verified third-party catalog and comparison sources. `PUBLISHING.md` explains package assembly and external distribution; uses the current `https://github.com/babunidev/favorcraft` repository URL. Actual CurseForge
+source integration, webhook and tag-only settings still require independent verification. Do not publish credentials or webhook tokens. Do not describe the research catalog as current without fresh checks.
+
+## Separate recipe source audits (November 2026)
+
+The source records comprise 15 Blacksmithing plans and 17 Leatherworking patterns. Their spell and pattern-scroll IDs are compared with the canonical client-derived `Schematics.lua`; crafted output item IDs remain distinct. The claims describe possible **additional acquisition of the same recipe scroll** and are not item alternatives. Dungeon, world and vendor acquisition paths are explicitly reported rather than confirmed live drops. The Leatherworking research contains trainer-learning disagreements with AHledger; the UI now shows that unresolved conflict rather than deciding whether a trainer teaches it. The Totemic Leather Leggings named-boss/world-drop descriptions are compatible as non-exclusive reports. The combined Fel Steed / Shadow Charger entry has been separated because the creatures are distinct. In-game acquisition remains unverified for the full set of 32.

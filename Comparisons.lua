@@ -257,17 +257,21 @@ local function idState(researchId, currentId)
 end
 
 local function sourceLine(src)
-    local kind = src.type or "dungeon_drop"
+    -- These are reported additional sources for the SAME recipe scroll, not
+    -- alternative crafted items. Avoid presenting reports as confirmed drops.
+    local kind = src.type or "dungeon_report"
     if kind == "vendor_sale" then
-        return "Listed sale: " .. (src.npc or "unspecified vendor")
+        return "Reported vendor sale: " .. (src.npc or "unspecified vendor")
             .. (src.location and (" (" .. src.location .. ")") or "") .. "."
     elseif kind == "world_drop" then
-        return "Also listed as a general world drop."
+        return "Reported general world drop."
     elseif kind == "zone_report" or kind == "dungeon_report" then
-        return "Other listings mention " .. (src.location or "unspecified locations") .. "."
+        return "Other reports mention " .. (src.location or "unspecified locations") .. "."
+    elseif kind == "dungeon_drop" then
+        return "Reported dungeon drop: " .. (src.npc or "unspecified creature")
+            .. (src.location and (" (" .. src.location .. ")") or "") .. "."
     end
-    return "Listed dungeon drop: " .. (src.npc or "unspecified creature")
-        .. (src.location and (" (" .. src.location .. ")") or "") .. "."
+    return "Reported source: " .. tostring(kind) .. "."
 end
 
 local function genericSources(raw)
@@ -298,14 +302,14 @@ local function buildAcquisition(key, name, raw, catalog, merchant)
     local reported = audit and audit.sources or nil
     if type(reported) ~= "table" or #reported == 0 then reported = genericSources(raw) end
     if #reported == 0 then return nil end
-    local lines = {}
+    local lines = {"Additional acquisition reports; baseline camp vendors are listed elsewhere."}
     local scrollId = merchant and tonumber(merchant.scrollItemID)
         or (audit and tonumber(audit.researchScrollID))
     for i = 1, #reported do lines[#lines + 1] = sourceLine(reported[i]) end
     if audit and type(audit.conflicts) == "table" then
         for i = 1, #audit.conflicts do
             local note = audit.conflicts[i]
-            if type(note) == "string" and not note:find("Trainer listings disagree", 1, true) then
+            if type(note) == "string" then
                 lines[#lines + 1] = note
             end
         end

@@ -33,8 +33,10 @@ jobs:
 
           toc_files = sorted(Path('.').glob('FavorCraft*.toc'))
           assert toc_files, 'Missing FavorCraft TOC'
+          assert len(toc_files) == 2, f'Expected two TOCs, got {[str(p) for p in toc_files]}'
           package_files = set(toc_files)
           version = None
+          manifest_files = None
           for toc in toc_files:
               source = toc.read_text(encoding='utf-8')
               match = re.search(r'^## Version:\s*(\S+)', source, flags=re.M)
@@ -42,6 +44,7 @@ jobs:
               if version is None:
                   version = match.group(1)
               assert match.group(1) == version, f'{toc}: version mismatch'
+              runtime = []
               for line in source.splitlines():
                   line = line.strip()
                   if not line or line.startswith('#'):
@@ -49,13 +52,27 @@ jobs:
                   path = Path(line.replace('\\', '/'))
                   assert not path.is_absolute() and '..' not in path.parts
                   assert path.is_file(), f'{toc}: missing file {path}'
-                  package_files.add(path)
+                  assert path.suffix.lower() == '.lua', f'{toc}: non-Lua runtime entry {path}'
+                  assert path not in runtime, f'{toc}: duplicate runtime entry {path}'
+                  runtime.append(path)
+              assert runtime, f'{toc}: empty runtime manifest'
+              if manifest_files is None:
+                  manifest_files = runtime
+              assert runtime == manifest_files, f'{toc}: runtime manifest/order mismatch'
+              package_files.update(runtime)
           Path('dist').mkdir(exist_ok=True)
           zip_path = Path('dist') / f'FavorCraft-{version}.zip'
           with ZipFile(zip_path, 'w', ZIP_DEFLATED, compresslevel=9) as z:
               for path in sorted(package_files):
                   z.write(path, arcname=str(Path('FavorCraft') / path))
-          print(f'Created {zip_path} with {len(package_files)} addon files')
+          with ZipFile(zip_path) as z:
+              expected = {str(Path('FavorCraft') / p) for p in package_files}
+              assert set(z.namelist()) == expected, 'ZIP contents differ from both manifests'
+              for toc in toc_files:
+                  assert str(Path('FavorCraft') / toc) in z.namelist()
+              bad = z.testzip()
+              assert bad is None, f'Corrupt ZIP entry: {bad}'
+          print(f'Verified both TOCs and created {zip_path} with {len(package_files)} addon files')
           PY
 
       - name: Upload installable ZIP

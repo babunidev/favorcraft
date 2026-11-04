@@ -13,31 +13,36 @@ use this same `.pkgmeta` layout.
 GitHub Actions creates a downloadable ZIP artifact on pushes to main and on
 new version tags. The ZIP has `FavorCraft/FavorCraft.toc` at its root.
 
-CurseForge packages a file when the version tag is pushed, the same way
-Social Forever, Roar Forever, and Resist Forever do. The tag is created on
-the release commit and pushed with it. GitHub Actions checks the addon and
-builds a ZIP for review. It does not create the tag or the CurseForge file.
+**Intended policy:** CurseForge packages only an explicitly approved tagged release.
+This repository cannot confirm the live CurseForge source integration, webhook,
+or auto-packager settings; verify them before pushing a release tag. In
+particular, ensure ordinary pushes to main do not produce automatic Alpha files.
+GitHub Actions checks the addon and builds a ZIP for review on main pushes;
+it does not create a release tag or prove a CurseForge file was published.
 
-The ZIP can also be uploaded manually to the CurseForge project dashboard.
+A manual ZIP upload requires separate explicit public-release approval. The ZIP
+can then be uploaded to the CurseForge project dashboard.
 An ordinary GitHub source archive is **not** the same as a packaged addon.
 
 ## Enabling CurseForge automation
 
 1. Create/approve the WoW addon project on CurseForge and configure the
    project's Source / Repository settings for
-   `https://github.com/Morkahja/favorcraft`.
+   `https://github.com/babunidev/favorcraft`.
 2. For CurseForge's repository auto-packager, generate an API token **in your
    CurseForge account** and add a **GitHub repository webhook** with payload:
    `https://www.curseforge.com/api/projects/PROJECT_ID/package?token=TOKEN`.
    The project ID comes from the CurseForge project page.
-   Use Content type `application/json` and push events. **Never commit the
+   Use Content type `application/json` and push events only after confirming
+   that untagged pushes cannot trigger an Alpha package. **Never commit the
    token to this repository, an issue, or a screenshot.**
 3. Check the GitHub webhook deliveries for a successful HTTP result.
-4. Update both TOC versions and `CHANGELOG.md`, commit, then create an
-   annotated tag such as `v0.4.9-beta` on that commit. Push `main` and the
-   tag together. Create the GitHub prerelease on that tag with the player
-   notes and no attached ZIP. CurseForge builds the installable file from
-   the tag.
+4. Only after explicit approval for that public version: prepare the changelog
+   and both TOC versions, verify the exact release commit, and create an
+   annotated tag such as `v0.5.1-beta`. Push **only that approved tag**
+   (not all local tags). Create a matching GitHub prerelease only if the
+   repository's agreed process requires it; verify CurseForge publication
+   separately. Ordinary development commits to main are **not** releases.
 5. Check the CurseForge project **Files** page for the packaged ZIP and
    the correct WoW Forever game version. A new project/file may require
    CurseForge moderation before it becomes publicly installable.

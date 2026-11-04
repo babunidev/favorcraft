@@ -712,9 +712,9 @@ check("the hood source stays lean",
 local gloves = RRP.ComparisonsFor(RRP.GetByKey("Leatherworking|Brawler's Leather Gloves"))
 local gloveText = table.concat(gloves.sources[1].lines, " ")
 check("Gilnid is listed as a dungeon drop",
-    gloveText:find("Listed dungeon drop: Gilnid", 1, true)
-    and not gloveText:find("Listed sale: Gilnid", 1, true)
-    and not gloveText:find("Those claims disagree", 1, true))
+    gloveText:find("Reported dungeon drop: Gilnid", 1, true)
+    and not gloveText:find("Reported vendor sale: Gilnid", 1, true)
+    and gloveText:find("Trainer source disputed", 1, true))
 check("the glove scroll stays 252777", gloves.merchantScrollID == 252777 and gloves.merchantSpellID == 1255130)
 local leggings = RRP.ComparisonsFor(RRP.GetByKey("Leatherworking|Totemic Leather Leggings"))
 local leggingText = table.concat(leggings.sources[1].lines, " ")
@@ -730,7 +730,7 @@ local smithText = smithSource and smithSource[1] and table.concat(smithSource[1]
 check("acolyte gloves keep an additional recipe source",
     smithSource and smithSource[1] and smithSource[1].kind == "source" and smithSource[1].scrollItemID == 251363)
 check("acolyte gloves name Rhahk'Zor and mention Shadowfang Keep simply",
-    smithText:find("Rhahk'Zor", 1, true) and smithText:find("Other listings mention Shadowfang Keep", 1, true)
+    smithText:find("Rhahk'Zor", 1, true) and smithText:find("Other reports mention Shadowfang Keep", 1, true)
     and not smithText:find("without a specific confirmed boss", 1, true)
     and not smithText:find("Recipe scroll item", 1, true)
     and not smithText:find("Merchant's Favor", 1, true))
@@ -757,6 +757,47 @@ check("source audits cover fifteen blacksmithing plans", sourceCounts.Blacksmith
 check("source audits cover seventeen leatherworking patterns", sourceCounts.Leatherworking == 17, sourceCounts.Leatherworking)
 check("source audits stay on blacksmithing and leatherworking", not wrongProfession)
 check("researched source audit ids match the schematic", not spellClash)
+-- Every reported source remains a separate acquisition claim for the same
+-- pattern, with no invented trainer/vendor certainty or crafted-item comparison.
+local allReported, allSeparated, noAmbiguousVendor = true, true, true
+local totalSources, disputedTrainers = 0, 0
+for key, audit in pairs(RRP.SourceAudits) do
+    local view = RRP.ComparisonsFor(RRP.GetByKey(key))
+    local sch = RRP.Schematics[key]
+    local block = view and view.sources and view.sources[1]
+    if not block or block.kind ~= "source" or block.sameRecipe ~= true
+        or block.acquisitionVerified ~= false or block.scrollItemID ~= sch.scrollItemID
+        or type(audit.sources) ~= "table" or #audit.sources == 0 then allSeparated = false end
+    for _, source in ipairs(audit.sources or {}) do
+        totalSources = totalSources + 1
+        if source.verification ~= "reported"
+            or not ({dungeon_drop=true,dungeon_report=true,zone_report=true,world_drop=true,vendor_sale=true})[source.type]
+            or (source.type == "dungeon_drop" and (not source.npc or not source.location)) then
+            allReported = false
+        end
+        if source.type == "vendor_sale" then noAmbiguousVendor = false end
+    end
+    for _, entry in ipairs((view and view.entries) or {}) do
+        if entry.kind == "source" or entry.scrollItemID == sch.scrollItemID then allSeparated = false end
+    end
+    if key:find("^Leatherworking|") then
+        if not block or not table.concat(block.lines, " "):find("Trainer source disputed", 1, true)
+            then disputedTrainers = disputedTrainers + 1 end
+    end
+end
+check("all 32 source audits are reported and well typed", allReported and totalSources > 32, totalSources)
+check("additional sources are separate from item comparisons", allSeparated)
+check("no dungeon report silently becomes a vendor sale", noAmbiguousVendor)
+check("17 leatherworking trainer ambiguities are explicitly visible", disputedTrainers == 0, disputedTrainers)
+local charger = RRP.ComparisonsFor(RRP.GetByKey("Blacksmithing|Guard's Silvered Chain Helm"))
+local chargerText = table.concat(charger.sources[1].lines, " ")
+check("combined Shadowfang creatures no longer masquerade as one drop",
+    chargerText:find("Reported dungeon drop: Shadow Charger", 1, true)
+    and chargerText:find("Fel Steed claim not individually established", 1, true)
+    and not chargerText:find("drop: Fel Steed / Shadow Charger", 1, true))
+local totemText = table.concat(leggings.sources[1].lines, " ")
+check("Kelris and general world drop are distinguished without exclusivity",
+    totemText:find("not necessarily mutually exclusive", 1, true))
 local wisdomGloves = RRP.ComparisonsFor(RRP.GetByKey("Leatherworking|Wisdom's Leather Gloves"))
 check("wisdom gloves gain the extended leatherworking source",
     wisdomGloves.sources and wisdomGloves.sources[1] and wisdomGloves.sources[1].scrollItemID == 252782)
@@ -995,6 +1036,49 @@ check("armor crafts lead the profession list", groups
 check("enchanting engineering and alchemy are grouped together", groups
     and groups[2][1] == "Enchanting" and groups[2][2] == "Engineering" and groups[2][3] == "Alchemy")
 check("cooking is the last profession group", groups and groups[3][1] == "Cooking" and #groups == 3)
+
+-- Details must never retain a recipe outside the currently visible list.
+-- This is a mocked logic check, not an in-game UI rendering test.
+profile.profession, profile.search = "All", nil
+profile.showAll, profile.hideLearned, profile.allClasses = true, false, true
+RRP.selectedKey = "Alchemy|Elixir of Lesser Intellect"
+check("selected recipe starts on the chosen Alchemy entry",
+    RRP.SelectedRecipe() and RRP.SelectedRecipe().key == "Alchemy|Elixir of Lesser Intellect")
+RRP.SetProfession("Blacksmithing")
+local smithSelection = RRP.SelectedRecipe()
+check("changing professions replaces stale Alchemy details",
+    smithSelection and smithSelection.profession == "Blacksmithing"
+    and RRP.selectedKey == smithSelection.key)
+local smithKey = smithSelection and smithSelection.key
+RRP.SetSearch("__no_favorcraft_recipe_matches__")
+check("empty filtered list clears the details selection",
+    RRP.SelectedRecipe() == nil and RRP.selectedKey == nil)
+RRP.SetSearch(nil)
+check("clearing search restores a visible selection",
+    RRP.SelectedRecipe() and RRP.SelectedRecipe().profession == "Blacksmithing")
+RRP.SetSearch("Guard's Chain Belt")
+local guard = RRP.SelectedRecipe()
+check("search selects only a matching recipe",
+    guard and guard.key == "Blacksmithing|Guard's Chain Belt")
+if guard then
+    profile.known[guard.key] = true
+    RRP.SetHideLearned(true)
+    local filteredSelection = RRP.SelectedRecipe()
+    check("hide learned drops a stale selected recipe",
+        (not filteredSelection or filteredSelection.key ~= guard.key) and RRP.selectedKey ~= guard.key)
+    profile.hideLearned = false
+    profile.known[guard.key] = nil
+end
+RRP.SetSearch(nil)
+RRP.SetProfession("All")
+profile.showAll = true
+RRP.selectedKey = "Alchemy|Elixir of Lesser Intellect"
+RRP.SetSelected("Alchemy|Elixir of Lesser Intellect", true)
+RRP.SetProfession("Blacksmithing")
+check("changing details never discards the saved purchase plan",
+    RRP.PlanOn("Alchemy|Elixir of Lesser Intellect"))
+check("selection always matches an actually visible entry",
+    RRP.SelectedRecipe() and RRP.SelectedRecipe().key == (RRP.VisibleRecipes()[1] and RRP.VisibleRecipes()[1].key))
 
 if failures > 0 then
     print(failures .. " failed")

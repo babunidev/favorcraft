@@ -44,7 +44,10 @@ entry. This does not imply identical effects or guaranteed current drop rates.
 Blacksmithing has four level-appropriate rare crafted comparisons with documented
 stats and non-Favor recipes; 57 entries have no suitable comparison recorded.
 The 15 Blacksmithing and 17 Leatherworking additional-source reports refer to
-the **same recipe pattern**, not to other crafted items. Item/spell IDs are
+the **same recipe pattern**, not to other crafted items. Dungeon and world drops
+are labeled **reported**, with disputed trainer sources identified separately.
+Changing profession or filters now updates the details pane to a visible recipe
+(or clears it when none match) without changing the purchase plan. Item/spell IDs are
 never guessed; external alternatives without usable IDs show the documented
 comparison instead of a native tooltip.
 

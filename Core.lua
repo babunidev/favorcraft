@@ -896,11 +896,15 @@ function RRP.VisibleRecipes()
 end
 
 function RRP.SelectedRecipe()
-    local r = RRP.selectedKey and RRP.GetByKey(RRP.selectedKey)
-    if r then return r end
+    -- Keep the details pane in sync with the same profession, search, class,
+    -- build and learned filters as the browser list. The purchase plan is
+    -- independent of the temporary details selection.
     local list = RRP.VisibleRecipes()
-    r = list[1]
-    if r then RRP.selectedKey = r.key end
+    for i = 1, #list do
+        if list[i].key == RRP.selectedKey then return list[i] end
+    end
+    local r = list[1]
+    RRP.selectedKey = r and r.key or nil
     return r
 end
 
