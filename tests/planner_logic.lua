@@ -578,6 +578,62 @@ for _, recipe in ipairs(RRP.Catalog) do
     end
 end
 check("blacksmithing keeps no weak same-slot comparisons", smithSlotLeft == 0, smithSlotLeft)
+-- Blacksmithing must compare only documented, level-matched non-Favor peers.
+local smithExpected = {
+    ["Enriched Thorium Breastplate"] = {12618, 58, "Enchanted Thorium Breastplate"},
+    ["Enriched Thorium Helm"] = {12620, 57, "Enchanted Thorium Helm"},
+    ["Enriched Thorium Leggings"] = {12619, 58, "Enchanted Thorium Leggings"},
+    ["Thorium Greatmace"] = {11608, 50, "Dark Iron Pulverizer"},
+}
+local smithReviewed, smithMatches, smithErrors = 0, 0, {}
+for _, recipe in ipairs(RRP.Catalog) do
+    if recipe.profession == "Blacksmithing" then
+        smithReviewed = smithReviewed + 1
+        local view = RRP.ComparisonsFor(recipe)
+        local expected = smithExpected[recipe.name]
+        if expected then
+            if #view.entries ~= 1 then
+                smithErrors[#smithErrors + 1] = recipe.name .. " missing peer"
+            else
+                local peer = view.entries[1]
+                local raw = RRP.BlacksmithingComparisons[recipe.name]
+                local record = raw and raw.matches and raw.matches[1]
+                if peer.itemID ~= expected[1] or peer.name ~= expected[3]
+                    or peer.tier ~= "alternative" or record.quality ~= "rare"
+                    or math.abs(RRP.BlacksmithingComparisons[recipe.name].required_level - expected[2]) > 3
+                    or record.acquisition == "merchants_favor"
+                    or peer.acquisitionVerified ~= false then
+                    smithErrors[#smithErrors + 1] = recipe.name .. " incorrect peer"
+                end
+                smithMatches = smithMatches + 1
+            end
+        elseif #view.entries ~= 0 then
+            smithErrors[#smithErrors + 1] = recipe.name .. " unsupported comparison"
+        end
+    end
+end
+check("61 blacksmithing plans: only four researched alternatives",
+    smithReviewed == 61 and smithMatches == 4 and #smithErrors == 0,
+    table.concat(smithErrors, "; "))
+check("enriched breastplate has a quest-source label",
+    RRP.ComparisonsFor(RRP.GetByKey("Blacksmithing|Enriched Thorium Breastplate"))
+    .entries[1].acquisition:find("Reported quest reward", 1, true) ~= nil)
+check("same-level mace has the researched output ID",
+    entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Blacksmithing|Thorium Greatmace")), "Dark Iron Pulverizer").itemID == 11608)
+-- Do not admit a lower-quality or distant-tier peer even if it claims relevance.
+local smithBad = RRP.BlacksmithingComparisons["Thorium Greatmace"].matches
+local smithOriginal = smithBad[1]
+smithBad[1] = {
+    name = "Inlaid Thorium Hammer", outputItemID = 12772,
+    functional_peer = true, required_level = 49, quality = "uncommon",
+    armor_type = "Two-hand mace", slot = "Two-hand mace", similarity = "weapon_or_slot",
+    acquisition = "recipe_item",
+}
+RRP.RebuildComparisons()
+check("blacksmithing guard rejects lower-quality fake peers",
+    #RRP.ComparisonsFor(RRP.GetByKey("Blacksmithing|Thorium Greatmace")).entries == 0)
+smithBad[1] = smithOriginal
+RRP.RebuildComparisons()
 local minorSpirit = entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of Lesser Spirit")), "Elixir of Minor Spirit")
 local spiritText = minorSpirit and table.concat(minorSpirit.similarities or {}, " ") or ""
 check("alchemy keeps the spirit comparison", spiritText:find("Spirit bonus", 1, true) and not spiritText:lower():find("compare", 1, true))
@@ -777,7 +833,7 @@ check("all seven professions are represented in the lookup", coverage.Alchemy ==
     and coverage.Blacksmithing == 61 and coverage.Cooking == 6
     and coverage.Enchanting == 39 and coverage.Engineering == 26
     and coverage.Leatherworking == 81 and coverage.Tailoring == 67)
-check("independent alternatives and reported sources are counted", selected == 94, selected)
+check("independent alternatives and reported sources are counted", selected == 98, selected)
 check("parachute cloak stays a researched cloak item", parachute and parachute.itemID == 10518)
 check("additional sources stay labeled separately from item comparisons",
     hoodSource.label == "Additional Recipe Source")

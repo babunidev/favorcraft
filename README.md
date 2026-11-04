@@ -41,8 +41,9 @@ The addon presents the researched data so players can evaluate it during the
 WoW Forever beta, without requiring a separate player observation for every
 entry. This does not imply identical effects or guaranteed current drop rates.
 
-Blacksmithing same-slot gear is labeled as such rather than treated as an
-equivalent upgrade. The 11 Leatherworking additional-source reports refer to
+Blacksmithing has four level-appropriate rare crafted comparisons with documented
+stats and non-Favor recipes; 57 entries have no suitable comparison recorded.
+The 15 Blacksmithing and 17 Leatherworking additional-source reports refer to
 the **same recipe pattern**, not to other crafted items. Item/spell IDs are
 never guessed; external alternatives without usable IDs show the documented
 comparison instead of a native tooltip.

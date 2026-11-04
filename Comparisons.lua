@@ -46,6 +46,21 @@ local function qualityToken(value)
     return low
 end
 
+-- Only show Blacksmithing peers where documented item properties establish a
+-- comparable alternative, not merely the same equipment slot.
+local function documentedBlacksmithPeer(record, match)
+    if not record or not match or match.functional_peer ~= true then return false end
+    local merchantQuality = qualityToken(record.quality)
+    local matchQuality = qualityToken(match.quality)
+    local merchantLevel = tonumber(record.required_level)
+    local matchLevel = tonumber(match.required_level)
+    return merchantQuality == "rare" and matchQuality == merchantQuality
+        and merchantLevel and matchLevel and math.abs(merchantLevel - matchLevel) <= 3
+        and type(record.slot) == "string" and record.slot == match.slot
+        and type(record.armor_type) == "string" and record.armor_type == match.armor_type
+        and tonumber(match.outputItemID) ~= nil
+end
+
 -- Same-slot trainer gear is only useful when quality matches and the required
 -- levels are close. A blue level-15 Favor piece is not compared with a green
 -- level-10 trainer piece.
@@ -70,7 +85,10 @@ local function classify(record, match, catalogBacked)
     if record.exact_trainer_duplicate_confirmed == true or record.exact_duplicate_confirmed == true then
         return "duplicate"
     end
-    if sameSlot(record,match) then return "slot" end
+    if sameSlot(record,match) then
+        if documentedBlacksmithPeer(record, match) then return "alternative" end
+        return "slot"
+    end
     local relation=match.relation or record.classification or ""
     if relation=="possible_duplicate" or relation=="related_unverified"
         or relation=="related_not_interchangeable" then return "related" end
@@ -117,6 +135,8 @@ local function acquisition(match)
     if formulaOnly(place) then place = nil end
     if raw=="world_drop" or raw=="drop" then
         return place and ("World drop: "..place) or "World drop",indexed
+    elseif raw=="quest_reward" then
+        return place and ("Reported quest reward: "..place) or "Reported quest reward",false
     elseif raw=="trainer" or raw=="trainer_client_index" then
         return "Profession trainer",indexed
     elseif raw=="merchants_favor" then return "Merchant's Favor vendor",true
@@ -351,7 +371,8 @@ local function buildView(profession, name, raw)
     local entries = {}
     for i = 1, #matches do
         local match = matches[i]
-        if isMerchantAlternative(match) or weakSlotOnly(raw, match) then
+        if isMerchantAlternative(match) or weakSlotOnly(raw, match)
+            or (profession == "Blacksmithing" and not documentedBlacksmithPeer(raw, match)) then
             match = nil
         end
         if match then

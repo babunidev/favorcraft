@@ -5,6 +5,7 @@
 - Removed 150 Merchant's Favor-to-Merchant's Favor comparison links from Alchemy, Cooking, and Tailoring; retained researched outside alternatives.
 - Added a catalog-backed guard against cross-Favor comparisons, while retaining separate additional-source records.
 - Updated comparison regression checks; in-game behavior and drop sources remain unverified.
+- Replaced 61 weak Blacksmithing same-slot research candidates with four client-documented rare, near-level non-Favor crafted comparisons; 57 recipes intentionally have no comparable item. Additional dungeon source reports remain separate.
 
 ## 0.5.0-beta — 2026-10-16
 

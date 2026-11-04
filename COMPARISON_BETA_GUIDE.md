@@ -46,11 +46,11 @@ visible where relevant.
 | Profession | Merchant catalog | Comparison data |
 |---|---:|---|
 | Alchemy | 29 | Independent elixirs, potions and trainer comparisons only |
-| Blacksmithing | 61 | 61 equipment/weapon comparisons, many matching by slot only |
+| Blacksmithing | 61 | Four same-quality, close-level non-Favor crafted peers; 57 with no suitable comparison, plus 15 reported same-recipe sources |
 | Cooking | 6 | Smoothies compared to outside-source teas only |
 | Enchanting | 39 | Enchants, staves, wands and relics; same slot != same effect |
 | Engineering | 26 | Bombs, parachutes, gadgets and goggles; 2 additional research-only records |
-| Leatherworking | 81 | 11 additional recipe-source listings; remainder retained |
+| Leatherworking | 81 | 17 reported additional recipe-source listings; other research retained |
 | Tailoring | 67 | Outside-source cloth alternatives and bags; no cross-Favor gear |
 | **Total** | **309** | **All seven research datasets loaded** |
 
@@ -60,6 +60,13 @@ Crafted-item/output IDs and recipe-scroll IDs are separate fields.
 The Engineering research files contain Gnomish Army Knife and Loot-A-Rang.
 Their presence in research does **not** make them Merchant's Favor purchases.
 
+The four Blacksmithing peer comparisons use rare-quality, same-slot and armor-type
+items within three required levels, with documented functional overlap. Their
+crafted-item IDs are taken from Forever item data. Quest and dungeon recipe
+acquisition remains reported and has not been confirmed by a live player test.
+The other 57 Blacksmithing items do not acquire a synthetic comparison just
+because a lower-tier trainer item fits the slot.
+
 ## How it appears in-game
 
 Hover a recipe. Recipe Comparisons appears beneath the crafting materials in
@@ -67,7 +74,7 @@ the right-hand pane. Its source/effect summary and every available researched
 alternative are scrollable. Click the recipe only to add or remove it from the
 purchase plan.
 
-Sources reported for Leatherworking are shown as additional paths to obtain the
+Sources reported for Blacksmithing and Leatherworking are shown as additional paths to obtain the
 **same recipe pattern**, not new crafted equipment.
 
 When a comparison's external alternative does not yet have an output item/spell
