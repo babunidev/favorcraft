@@ -3,7 +3,7 @@
 **Author:** Babuni.dev
 
 Merchant's Favor & Profession Planner  
-World of Warcraft Forever | Alliance & Horde
+World of Warcraft Forever 1.60.1 (Interface 16001) | Alliance & Horde
 
 Babunigaming built FavorCraft. Danoozy is the co-author who came up with the idea, and that idea is what led to the hours spent sitting with it, thinking it through, and polishing it.
 
@@ -64,6 +64,10 @@ profession coverage, and testing notes.
 - CurseForge: [Babunigaming](https://www.curseforge.com/members/babunigaming)
 - Instagram: [babunigaming](https://www.instagram.com/babunigaming/)
 - YouTube: [BABUNI GAMING](https://www.youtube.com/@babunigaming)
+
+## Release and verification status
+
+Version `0.5.1-beta` was tagged on 4 November 2026 for WoW Forever 1.60.1. The tag-triggered CurseForge file was visible as a **Beta in Processing** in the publisher dashboard; final approval and inspection of its archive contents have not been confirmed. GitHub Actions passed its LuaJIT and installable-ZIP checks at commit `2ba7601`, but these are not in-game tests. The intended CurseForge package excludes repository documentation and development files via `.pkgmeta`; see [publishing record](PUBLISHING.md).
 
 ## Development documentation
 
