@@ -68,3 +68,9 @@ and delivery mechanism must be configured.
 Sources:
 - https://support.curseforge.com/support/solutions/articles/9000197281
 - https://support.curseforge.com/support/solutions/articles/9000203228-manually-triggering-the-auto-packager
+
+## 0.5.1-beta publication record — 2026-11-04
+
+Babuni explicitly pushed the annotated tag `v0.5.1-beta` on source commit `2ba7601`. The GitHub tag is confirmed; the corresponding GitHub Actions run [41925630865](https://github.com/babunidev/favorcraft/actions/runs/41925630865) passed. A screenshot of the CurseForge project Files dashboard showed a new `v0.5.1-beta` Beta for Forever 1.60.1, **Processing**, with zero downloads at capture time. This is evidence of receipt and processing, not evidence of final approval.
+
+Before the tag, `.pkgmeta` was corrected to ignore `AGENTS.md` and `AlchemyComparisons.json` as well as the existing development folders and documents. GitHub's separately generated ZIP contains only manifest-listed files. The downloadable CurseForge archive has not been inspected, and the private webhook/tag-only settings remain unverified. No matching GitHub Release was present at the time of this record; a tag alone should not be described as a GitHub Release.
