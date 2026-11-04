@@ -707,8 +707,10 @@ check("the hood second source references its actual recipe scroll",
     hoodSource and hoodSource.kind == "source" and hoodSource.scrollItemID == 252798)
 local hoodText = table.concat(hoodSource.lines or {}, " ")
 check("the hood names Lady Sarevess", hoodText:find("Lady Sarevess", 1, true) and hoodText:find("Blackfathom Deeps", 1, true))
-check("the hood source stays lean",
-    not hoodText:find("Recipe scroll item", 1, true) and not hoodText:find("Merchant's Favor", 1, true))
+check("hood source distinguishes trainer dispute from a recipe drop",
+    not hoodText:find("Recipe scroll item", 1, true)
+    and hoodText:find("Trainer source disputed", 1, true)
+    and not hoodText:find("Reported vendor sale: Lady Sarevess", 1, true))
 local gloves = RRP.ComparisonsFor(RRP.GetByKey("Leatherworking|Brawler's Leather Gloves"))
 local gloveText = table.concat(gloves.sources[1].lines, " ")
 check("Gilnid is listed as a dungeon drop",
