@@ -382,13 +382,13 @@ end
 profile.known = {}
 profile.learnScan = {}
 profile.scanSig = {}
-check("an unscanned recipe is not learned", RRP.LearnState(cooking[1]) == "unlearned")
+check("unscanned catalog recipe is Unlearned, never Unknown", RRP.LearnState(cooking[1]) == "unlearned")
 check("the scan button stays until a profession is scanned", not RRP.HasScannedProfession())
 RRP.RecordLearnScan("Cooking", {[cooking[1].key] = true}, false, 1)
 check("a partial scan confirms the recipe it listed", RRP.LearnState(cooking[1]) == "learned")
-check("a partial scan leaves the rest not learned", RRP.LearnState(cooking[2]) == "unlearned")
+check("a partial scan leaves the rest Unlearned", RRP.LearnState(cooking[2]) == "unlearned")
 RRP.RecordLearnScan("Cooking", {[cooking[1].key] = true}, true, 1)
-check("a complete scan marks a missing recipe unlearned", RRP.LearnState(cooking[2]) == "unlearned")
+check("a complete scan keeps a missing catalog recipe Unlearned", RRP.LearnState(cooking[2]) == "unlearned")
 check("a complete scan keeps the listed recipe learned", RRP.LearnState(cooking[1]) == "learned")
 check("a scanned profession retires the scan button", RRP.HasScannedProfession())
 local learnedSpell = RRP.Schematics[cooking[2].key].spellID

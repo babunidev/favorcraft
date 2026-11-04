@@ -26,7 +26,7 @@ The shared catalog has 309 recipes. Public counts of 314 offers are those recipe
 
 Favor is the cost of buying a recipe once. Selecting a recipe counts that cost once and lists the materials for one craft.
 
-The recipe list, reagents, and crafted item IDs come with the addon. You do not need to visit a camp vendor or learn the recipe to see them. A green check means this character knows the recipe. A red x means this character has not learned it. Fishing and Mining are left alone.
+The recipe list, reagents, and crafted item IDs come with the addon. You do not need to visit a camp vendor or learn the recipe to see them. A green check means **Learned**. A red X means **Unlearned**: the recipe exists in the catalog but has not been recorded as learned by this character. This is also the label before a profession scan; there is no separate Unknown learned-state indicator. A scan or newly detected recipe spell can update the mark to Learned. Fishing and Mining are left alone.
 
 Spell IDs, crafted item IDs, and reagent quantities are World of Warcraft: Forever client data published by [AHledger](https://ahledger.com), client build 1.60.1, imported 15 October 2026. Auction prices are not stored. Lesser Arcane Elixir uses the camp scroll that requires Alchemy 120 and takes 4 Kingsblood and 1 Leaded Vial. Recipe scrolls were not found for Sentinel's Wristguards, Officer's Wristguards, Prefect's Wristguards, or Warder's Wristguards. Icons and item tooltips are loaded by the game from the item IDs, and this repository cannot confirm them without the client. Run `luajit tests/validate_db.lua` for the current counts. The only verified trainer comparison in the catalog is Elixir of Wisdom against Elixir of Lesser Intellect.
 

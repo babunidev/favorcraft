@@ -2,6 +2,8 @@
 
 ## Unreleased (development only)
 
+- Clarified the approved two-state learned indicator: green check = Learned, red X = Unlearned, including catalog recipes not yet scanned. No third Unknown state and no icon redesign.
+
 - Removed 150 Merchant's Favor-to-Merchant's Favor comparison links from Alchemy, Cooking, and Tailoring; retained researched outside alternatives.
 - Added a catalog-backed guard against cross-Favor comparisons, while retaining separate additional-source records.
 - Updated comparison regression checks; in-game behavior and drop sources remain unverified.

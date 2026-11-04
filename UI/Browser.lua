@@ -69,7 +69,7 @@ function UI.BuildBrowser(panel)
         header("Recipe", 36, 200, "name", "Sort by recipe name."),
         header("Skill", 248, 48, "skill", "Sort by required skill."),
         header("Favor", 298, 48, "favor", "Sort by Merchant's Favor. This is the cost to buy the recipe once."),
-        header("Learned", 348, 58, nil, "Green check: this character knows the recipe. Red x: this character has not learned it."),
+        header("Learned", 348, 58, nil, "Green check: Learned. Red X: Unlearned. Catalog recipes without a recorded learn, including before a profession scan, show Unlearned."),
         header("Level", 408, 48, "level", "Required level of the crafted item. Green: you can use it. Orange: 1 to 3 levels above you. Red: higher than that."),
     }
 

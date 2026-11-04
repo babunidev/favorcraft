@@ -454,6 +454,9 @@ local function refreshLearned()
     elseif RRP.Refresh then RRP.Refresh() end
 end
 
+-- Approved two-state display: catalog recipes are Learned or Unlearned.
+-- Before a profession scan, absence of a learned record means Unlearned,
+-- not a third Unknown status. Positive spell/scan evidence updates the mark.
 function RRP.LearnState(recipe)
     if not recipe then return "unlearned" end
     local p = RRP.GetProfile()

@@ -6,6 +6,10 @@ The README attributes the initial idea to **Danoozy**, with Babuni.dev building 
 
 This records current evidence, not the exact original discussion chronology.
 
+## Learned-recipe indicator — confirmed design (2026-11-04)
+
+Babuni confirmed a **two-state** display for known catalog recipes: **Learned** (green check) and **Unlearned** (red X). A catalog recipe not recorded as learned by the current character is displayed as Unlearned even before a profession scan; it is not shown as Unknown. Positive spell or profession-scan evidence changes its status to Learned. This is a presentation convention; an unscanned character has not supplied independent proof of non-ownership. The red X is intentionally preserved, and no third indicator is approved.
+
 ## Outstanding verification
 
 Verify migration semantics, profession-window scans, cross-faction recipe filters, 309-vs-314 catalog explanations and comparison math in-game.
