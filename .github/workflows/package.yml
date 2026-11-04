@@ -22,6 +22,7 @@ jobs:
         run: |
           luajit tests/validate_db.lua
           luajit tests/planner_logic.lua
+          luajit tests/non_favor_comparisons.lua
 
       - name: Verify manifests and build installable ZIP
         run: |

@@ -33,6 +33,10 @@ spell or is guaranteed to drop from a named mob on today's server build.
 - **No Comparison Recorded:** No matching research record. It does not imply
   that no alternative exists.
 
+Merchant's Favor-to-Merchant's Favor comparisons are excluded by merchant recipe name,
+crafted output ID, and explicit source category. Reported alternative acquisitions of
+the *same* recipe remain separate from item comparisons. External sources may be unverified.
+
 These are classifications of the **relationship**, not tiers of publication
 certainty. The source, individual effect differences, and conflicts can remain
 visible where relevant.
@@ -41,13 +45,13 @@ visible where relevant.
 
 | Profession | Merchant catalog | Comparison data |
 |---|---:|---|
-| Alchemy | 29 | Related elixirs, potions, effects and trainer comparisons |
+| Alchemy | 29 | Independent elixirs, potions and trainer comparisons only |
 | Blacksmithing | 61 | 61 equipment/weapon comparisons, many matching by slot only |
-| Cooking | 6 | Smoothies compared to teas and other smoothies |
+| Cooking | 6 | Smoothies compared to outside-source teas only |
 | Enchanting | 39 | Enchants, staves, wands and relics; same slot != same effect |
 | Engineering | 26 | Bombs, parachutes, gadgets and goggles; 2 additional research-only records |
 | Leatherworking | 81 | 11 additional recipe-source listings; remainder retained |
-| Tailoring | 67 | Gowns, dropped cloth alternatives, and bag comparisons |
+| Tailoring | 67 | Outside-source cloth alternatives and bags; no cross-Favor gear |
 | **Total** | **309** | **All seven research datasets loaded** |
 
 All 309 Merchant recipes have bundled spell IDs and reagent lists in Schematics.lua.

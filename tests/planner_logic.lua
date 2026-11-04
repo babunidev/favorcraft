@@ -516,24 +516,14 @@ local expectedAlchemyIds = {
     ["Elixir of Intellect"] = 250354,
     ["Minor Cleric's Elixir"] = 250330,
     ["Cleric's Elixir"] = 250332,
-    ["Elixir of Lesser Spirit"] = 250345,
-    ["Lesser Mageblood Elixir"] = 250340,
-    ["Lesser Cleric's Elixir"] = 250331,
     ["Elixir of Minor Fortitude"] = 2458,
     ["Elixir of Lesser Fortitude"] = 3825,
-    ["Elixir of Greater Fortitude"] = 250335,
     ["Elixir of Defense"] = 8951,
     ["Greater Stoneshield Potion"] = 13455,
     ["Elixir of Greater Agility"] = 9187,
     ["Elixir of Greater Intellect"] = 9179,
     ["Elixir of Ogre Strength"] = 3391,
-    ["Elixir of Sages"] = 250338,
-    ["Elixir of the Whale"] = 250348,
-    ["Elixir of Cunning"] = 250328,
     ["Elixir of Greater Strength"] = 9206,
-    ["Frenzy Potion"] = 250940,
-    ["Mender's Potion"] = 250946,
-    ["Spellblasting Potion"] = 250934,
     ["Troll's Blood Elixir"] = 3826,
 }
 local alchemyMatches = 0
@@ -556,12 +546,12 @@ for name in pairs(seenAlternatives) do
     uniqueAlternatives = uniqueAlternatives + 1
 end
 check("all Alchemy comparison links resolve researched output IDs",
-    alchemyMatches == 51 and uniqueAlternatives == 35 and #mismatch == 0,
+    alchemyMatches == 41 and uniqueAlternatives == 25 and #mismatch == 0,
     table.concat(mismatch, ", "))
 check("Forever elixir name changes use their current item IDs",
     entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of the Phalanx")), "Elixir of Defense").itemID == 8951
     and entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of Wicked Regeneration")), "Troll's Blood Elixir").itemID == 3826
-    and entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of the Whale")), "Elixir of Sages").itemID == 250338)
+    and entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of the Whale")), "Elixir of Spirit").itemID == 250346)
 check("Alchemy item links are independent of recipe-scroll IDs",
     entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of Lesser Spirit")), "Elixir of Minor Spirit").itemID == 250344)
 local lesserSpirit = RRP.ComparisonsFor(RRP.GetByKey("Alchemy|Elixir of Lesser Spirit"))
@@ -608,10 +598,10 @@ check("comparison text does not list unfinished work", unfinishedNote == nil, un
 local venom = RRP.ComparisonsFor(RRP.GetByKey("Cooking|Venomous Smoothie"))
 local peace = entryNamed(venom, "Peace Tea")
 local slimy = entryNamed(venom, "Slimy Smoothie")
-check("a cooking recipe has several alternatives", #venom.entries >= 2)
+check("cooking shows only its outside tea alternative", #venom.entries == 1)
 check("peace tea's documented alternative and source are visible",
     peace and peace.tier == "alternative" and peace.acquisition:find("World drop", 1, true))
-check("another favor smoothie uses its real item id", slimy and slimy.itemID == RRP.Schematics["Cooking|Slimy Smoothie"].outputItemID)
+check("cooking excludes other Favor smoothies", slimy == nil)
 check("peace tea uses the researched drink, not a recipe scroll", peace and peace.itemID == 249865)
 local expectedTeaIds = {
     ["Peace Tea"] = 249865,
@@ -717,8 +707,8 @@ check("wisdom gloves gain the extended leatherworking source",
 check("wisdom is still an alchemy alternative", wisdom and wisdom.tier == "alternative")
 local boots = RRP.ComparisonsFor(RRP.GetByKey("Tailoring|Flame Boots"))
 local silky = entryNamed(boots, "Silky Boots")
-check("flame boots compare with silky boots", silky and silky.tier == "alternative" and silky.itemID == 253891)
-check("silky boots come from the merchant", silky and silky.acquisition == "Merchant's Favor vendor")
+check("flame boots have no documented outside comparison", boots.status == "none" and #boots.entries == 0)
+check("silky boots are not shown as alternatives", silky == nil)
 check("flame boots keep the schematic item", boots.merchantSpellID == 1257372 and boots.merchantItemID == 253893 and boots.merchantScrollID == 253894)
 local gaze = entryNamed(RRP.ComparisonsFor(RRP.GetByKey("Tailoring|Flame Leggings")), "Gaze Dreamer Pants")
 check("gaze dreamer pants are a world drop", gaze and gaze.acquisition == "World drop" and gaze.itemID == 6903)
@@ -763,7 +753,7 @@ check("glove differences skip the formula wording",
     fireText:find("Fire", 1, true) and not fireText:lower():find("formula", 1, true) and not fireText:lower():find("non-favor", 1, true))
 check("elixir of sages uses the catalog name", RRP.ComparisonByKey["Alchemy|Elixir of Sages"] ~= nil)
 local gown = RRP.ComparisonsFor(RRP.GetByKey("Tailoring|Pristine Gown"))
-check("pristine gown keeps its researched alternatives", entryNamed(gown, "Shining Gown") and entryNamed(gown, "Pearly Gown") and gown.status ~= "none")
+check("pristine gown excludes Favor-to-Favor alternatives", #gown.entries == 0 and gown.status == "none")
 local missing = RRP.ComparisonsFor({key = "Alchemy|Not A Recipe", name = "Not A Recipe", profession = "Alchemy"})
 check("a missing comparison does not error", missing.status == "none" and missing.missingRecord)
 -- Integration coverage: each of the 309 merchant recipes must have a
@@ -787,7 +777,7 @@ check("all seven professions are represented in the lookup", coverage.Alchemy ==
     and coverage.Blacksmithing == 61 and coverage.Cooking == 6
     and coverage.Enchanting == 39 and coverage.Engineering == 26
     and coverage.Leatherworking == 81 and coverage.Tailoring == 67)
-check("beta comparison records are shown for the researched recipes", selected >= 150, selected)
+check("independent alternatives and reported sources are counted", selected == 94, selected)
 check("parachute cloak stays a researched cloak item", parachute and parachute.itemID == 10518)
 check("additional sources stay labeled separately from item comparisons",
     hoodSource.label == "Additional Recipe Source")

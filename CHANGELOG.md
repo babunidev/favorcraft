@@ -1,5 +1,11 @@
 # FavorCraft — Changelog
 
+## Unreleased (development only)
+
+- Removed 150 Merchant's Favor-to-Merchant's Favor comparison links from Alchemy, Cooking, and Tailoring; retained researched outside alternatives.
+- Added a catalog-backed guard against cross-Favor comparisons, while retaining separate additional-source records.
+- Updated comparison regression checks; in-game behavior and drop sources remain unverified.
+
 ## 0.5.0-beta — 2026-10-16
 
 - Recipe and material names load ahead of time and stay saved, so item numbers no longer flash in.

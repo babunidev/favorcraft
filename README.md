@@ -47,6 +47,8 @@ the **same recipe pattern**, not to other crafted items. Item/spell IDs are
 never guessed; external alternatives without usable IDs show the documented
 comparison instead of a native tooltip.
 
+Alchemy, Cooking and Tailoring now exclude other Merchant's Favor items from comparisons. Research about additional sources for the same pattern is shown separately. External acquisitions may still need in-game verification.
+
 Research data can be corrected as the beta changes. See
 [Comparison Beta Guide](COMPARISON_BETA_GUIDE.md) for the category rules,
 profession coverage, and testing notes.

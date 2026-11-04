@@ -320,6 +320,29 @@ local function buildAcquisition(key, name, raw, catalog, merchant)
     }}
 end
 
+-- Compare recipes with independent alternatives, not other Merchant's Favor outputs.
+-- Identification uses the full catalog; acquisition labels may be absent or inaccurate.
+-- Same-recipe dungeon and vendor reports remain separate in SourceAudits.
+local merchantItemIDs, merchantRecipeNames = {}, {}
+local function indexMerchantOutputs()
+    merchantItemIDs, merchantRecipeNames = {}, {}
+    for key, sch in pairs(RRP.Schematics or {}) do
+        local name = type(key) == "string" and key:match("^[^|]+|(.+)$")
+        if name then merchantRecipeNames[name] = true end
+        if type(sch) == "table" and sch.kind ~= "enchant" then
+            local itemID = tonumber(sch.outputItemID)
+            if itemID then merchantItemIDs[itemID] = true end
+        end
+    end
+end
+
+local function isMerchantAlternative(match)
+    if match.acquisition == "merchants_favor" then return true end
+    local itemID = tonumber(match.outputItemID or match.output_item_id or match.crafted_item_id)
+    if itemID and merchantItemIDs[itemID] then return true end
+    return type(match.name) == "string" and merchantRecipeNames[match.name] == true
+end
+
 local function buildView(profession, name, raw)
     local key = profession .. "|" .. name
     local catalog = RRP.GetByKey and RRP.GetByKey(key)
@@ -328,7 +351,7 @@ local function buildView(profession, name, raw)
     local entries = {}
     for i = 1, #matches do
         local match = matches[i]
-        if weakSlotOnly(raw, match) then
+        if isMerchantAlternative(match) or weakSlotOnly(raw, match) then
             match = nil
         end
         if match then
@@ -473,6 +496,7 @@ local NAME_FIX = {
 }
 
 function RRP.RebuildComparisons()
+    indexMerchantOutputs()
     RRP.ComparisonByKey = {}
     RRP.ComparisonBySpell = {}
     for i = 1, #SOURCES do
