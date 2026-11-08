@@ -1,5 +1,9 @@
 # FavorCraft — Changelog
 
+## Unreleased
+
+- Filter choices are now stored independently for each profession and restored when switching professions or reopening FavorCraft. First-visit automatic defaults for broad professions and the existing All Specs behavior for Enchanting, Engineering, and Cooking are preserved; Alchemy retains its existing behavior.
+
 ## 0.5.1-beta — 2026-11-04
 
 - Recipe details now follow the selected profession and active filters. Empty results clear the details pane without losing saved purchase plans.
