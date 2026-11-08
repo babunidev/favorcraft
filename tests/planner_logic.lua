@@ -995,6 +995,8 @@ check("a saved learned flag survives", migrated.known["Alchemy|Lesser Arcane Eli
 check("a saved plan survives", migrated.plan["Alchemy|Elixir of Lesser Intellect"] == savedPlan)
 check("a saved profile does not gain a caster role", migrated.roles.Caster ~= true)
 
+profile.professionFilters = {}
+profile.profession = "All"
 profile.allClasses = false
 RRP.SetProfession("Blacksmithing")
 check("blacksmithing leaves my class selected", profile.allClasses == false)
@@ -1095,6 +1097,7 @@ check("cooking is the last profession group", groups and groups[3][1] == "Cookin
 
 -- Details must never retain a recipe outside the currently visible list.
 -- This is a mocked logic check, not an in-game UI rendering test.
+profile.professionFilters = {}
 profile.profession, profile.search = "All", nil
 profile.showAll, profile.hideLearned, profile.allClasses = true, false, true
 RRP.selectedKey = "Alchemy|Elixir of Lesser Intellect"
