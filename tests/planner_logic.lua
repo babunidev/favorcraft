@@ -1032,6 +1032,60 @@ RRP.SetProfession("Cooking")
 check("cooking switches to all classes", profile.allClasses == true)
 check("cooking marks all specs", profile.specMode == "all" and profile.roles.Tank and profile.roles.Healer and RRP.BuildOn("DPS"))
 check("cooking keeps the saved spec", profile.yourSpec == savedSpec)
+
+-- Profession filters are independent and survive closing/reopening the main window.
+profile.profession = "Blacksmithing"
+profile.allClasses = false
+profile.previewClass = "WARRIOR"
+profile.showAll = false
+profile.roles.Tank, profile.roles.Healer = true, false
+profile.roles.Melee, profile.roles.Hunter, profile.roles.Caster = false, false, false
+profile.specMode = "yours"
+profile.yourSpec = {Tank = true, Healer = false, DPS = false}
+profile.hideLearned = true
+profile.search = "thorium"
+RRP.SaveProfessionFilters()
+
+-- Simulate a first visit to Engineering: retain its established automatic defaults.
+profile.professionFilters.Engineering = nil
+RRP.SetProfession("Engineering")
+check("first Engineering visit still enables all specs", profile.specMode == "all"
+    and profile.roles.Tank and profile.roles.Healer and RRP.BuildOn("DPS"))
+check("first Engineering visit still enables all classes", profile.allClasses == true)
+
+-- Customize Engineering independently, then switch away and back.
+profile.allClasses = false
+profile.previewClass = "PALADIN"
+profile.roles.Tank, profile.roles.Healer = false, true
+profile.roles.Melee, profile.roles.Hunter, profile.roles.Caster = false, false, false
+profile.specMode = "yours"
+profile.yourSpec = {Tank = false, Healer = true, DPS = false}
+profile.hideLearned = false
+profile.search = "steel"
+RRP.SetProfession("Blacksmithing")
+check("Blacksmithing restores its own class filter", profile.allClasses == false
+    and profile.previewClass == "WARRIOR")
+check("Blacksmithing restores its own spec filters", profile.specMode == "yours"
+    and profile.roles.Tank and not profile.roles.Healer)
+check("Blacksmithing restores its own learned/search filters", profile.hideLearned == true
+    and profile.search == "thorium")
+
+RRP.SetProfession("Engineering")
+check("Engineering restores its independent class filter", profile.allClasses == false
+    and profile.previewClass == "PALADIN")
+check("Engineering restores its independent spec filters", profile.specMode == "yours"
+    and not profile.roles.Tank and profile.roles.Healer)
+check("Engineering restores its independent learned/search filters", profile.hideLearned == false
+    and profile.search == "steel")
+
+-- Simulate the window closing and opening while Engineering is active.
+RRP.SaveProfessionFilters()
+profile.roles.Healer, profile.roles.Tank = false, true
+profile.search = nil
+profile.allClasses = true
+check("reopening restores the active profession's filters",
+    RRP.RestoreProfessionFilters() and profile.roles.Healer and not profile.roles.Tank
+    and profile.search == "steel" and profile.allClasses == false)
 local groups = RRP.ProfessionGroups
 check("armor crafts lead the profession list", groups
     and groups[1][1] == "Blacksmithing" and groups[1][2] == "Leatherworking" and groups[1][3] == "Tailoring")
