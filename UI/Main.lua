@@ -308,6 +308,7 @@ function RRP.Toggle()
 end
 
 f:SetScript("OnHide", function()
+    if RRP.SaveProfessionFilters then RRP.SaveProfessionFilters() end
     UI.CloseMenus()
     if UI.settings then UI.settings:Hide() end
     UI.SaveWindow(f, "main")
@@ -348,7 +349,7 @@ end)
 
 f:SetScript("OnShow", function()
     RRP.scanPromptHidden = nil
-    if RRP.EnableAllSpecs then RRP.EnableAllSpecs() end
+    if RRP.RestoreProfessionFilters then RRP.RestoreProfessionFilters() end
     if RRP.SyncProfessions then RRP.SyncProfessions() end
     if RRP.QueueProfessionScan then RRP.QueueProfessionScan(true) end
     RRP.Refresh()
@@ -362,6 +363,7 @@ persist:SetScript("OnEvent", function(_, event, arg)
         if RRP.MigrateSaved then RRP.MigrateSaved() end
         if UI.RestoreLayout then UI.RestoreLayout() end
     elseif event == "PLAYER_LOGOUT" then
+        if RRP.SaveProfessionFilters then RRP.SaveProfessionFilters() end
         UI.SaveWindow(f, "main")
         if RRP.Shopping then UI.SaveWindow(RRP.Shopping, "shop") end
     end
