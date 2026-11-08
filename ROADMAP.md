@@ -39,3 +39,12 @@ No in-game or packaging acceptance test was performed in this documentation audi
 - [x] Confirm GitHub Actions passed at the tagged commit (`41925630865`).
 - [ ] Confirm CurseForge approval and inspect the downloadable archive to verify the exact installed file set.
 - [ ] Verify that ordinary development pushes cannot trigger CurseForge Alpha packages.
+
+## Unreleased usability improvement — per-profession filters
+
+- [x] Store filter snapshots independently by profession in the character's existing SavedVariables profile.
+- [x] Restore the active profession's snapshot when reopening FavorCraft.
+- [x] Save the outgoing profession before switching and restore the destination's saved filters.
+- [x] Preserve first-visit defaults for broad professions and the existing special All Specs behavior.
+- [x] Add mocked regression coverage for profession switching and close/reopen restoration.
+- [ ] Run the LuaJIT regression suite in CI and verify the behavior in WoW Forever 1.60.1.
