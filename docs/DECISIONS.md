@@ -33,3 +33,9 @@ The details pane must describe a recipe in the current visible list, or show no 
 Player installs should contain the addon rather than the development repository. `.pkgmeta` uses `package-as: FavorCraft` and excludes the documentation, tests, development configuration and unused JSON source file. The changelog is kept for CurseForge's manual changelog feature. The GitHub workflow independently builds its installation archive from both TOC manifests and the Lua files they reference.
 
 Babuni pushed `v0.5.1-beta` after the packaging review. The resulting CurseForge entry was observed as a Beta for Forever 1.60.1 in Processing status. Final approval, actual CurseForge archive contents and private auto-packaging settings remain unverified.
+
+## Per-profession filter persistence — approved implementation (2026-11-08)
+
+Filter choices belong to the selected profession rather than one shared character-wide view. The active profession stores its role/build checks, spec mode and custom spec selection, class scope and preview class, Show All Recipes, Hide Learned, and search text in `profile.professionFilters[profession]`. Switching saves the outgoing view and restores the destination's saved view. Hiding/reopening the main window restores the active profession's saved view; it must not force All Specs again.
+
+The established first-visit behavior remains: broad professions enable All Classes, and professions in `RRP.AllSpecProfessions` receive their existing All Specs default. A saved profession profile takes precedence on later visits, so automatic defaults do not erase player customization. Existing character plans, learned-recipe data, profession scans and other profile data remain separate and untouched.
