@@ -82,6 +82,7 @@ function RRP.GetProfile()
     if type(p.page) ~= "number" then p.page = 1 end
     if p.expandIntermediate == nil then p.expandIntermediate = true end
     if type(p.professions) ~= "table" then p.professions = {} end
+    if type(p.professionFilters) ~= "table" then p.professionFilters = {} end
     if type(p.professionRanks) ~= "table" then p.professionRanks = {} end
     if type(p.scanInfo) ~= "table" then p.scanInfo = {} end
     if type(p.trainer) ~= "table" then
@@ -944,15 +945,75 @@ end
 function RRP.Increment(key, delta)
     RRP.SetSelected(key, (tonumber(delta) or 0) > 0)
 end
-function RRP.SetProfession(prof)
+local PROFESSION_FILTER_FIELDS = {
+    "showAll", "allRoles", "allClasses", "previewClass",
+    "specMode", "hideLearned", "search",
+}
+
+local function copyBooleanTable(source)
+    local copy = {}
+    if type(source) == "table" then
+        for key, value in pairs(source) do
+            if type(key) == "string" and type(value) == "boolean" then
+                copy[key] = value
+            end
+        end
+    end
+    return copy
+end
+
+function RRP.SaveProfessionFilters(profession)
     local p = RRP.GetProfile()
     if not p then return end
-    p.profession, p.page, p.professionPicked = prof, 1, true
-    if RRP.BroadProfessions and RRP.BroadProfessions[prof] then
-        p.allClasses = true
+    profession = profession or p.profession or "All"
+    p.professionFilters = p.professionFilters or {}
+    local saved = {roles = copyBooleanTable(p.roles)}
+    for _, field in ipairs(PROFESSION_FILTER_FIELDS) do
+        saved[field] = p[field]
     end
-    if RRP.AllSpecProfessions and RRP.AllSpecProfessions[prof] and RRP.EnableAllSpecs then
-        RRP.EnableAllSpecs()
+    if type(p.yourSpec) == "table" then
+        saved.yourSpec = copyBooleanTable(p.yourSpec)
+    end
+    p.professionFilters[profession] = saved
+end
+
+function RRP.RestoreProfessionFilters(profession)
+    local p = RRP.GetProfile()
+    if not p then return false end
+    profession = profession or p.profession or "All"
+    local saved = p.professionFilters and p.professionFilters[profession]
+    if type(saved) ~= "table" then return false end
+    if type(saved.roles) == "table" then p.roles = copyBooleanTable(saved.roles) end
+    for _, field in ipairs(PROFESSION_FILTER_FIELDS) do
+        if saved[field] ~= nil then p[field] = saved[field] end
+    end
+    if type(saved.yourSpec) == "table" then
+        p.yourSpec = copyBooleanTable(saved.yourSpec)
+    end
+    p.page = 1
+    return true
+end
+
+function RRP.SetProfession(prof)
+    local p = RRP.GetProfile()
+    if not p or type(prof) ~= "string" then return end
+    local previous = p.profession or "All"
+    if previous == prof then return end
+
+    -- Keep each profession's filters independent before changing the active view.
+    RRP.SaveProfessionFilters(previous)
+    p.profession, p.page, p.professionPicked = prof, 1, true
+
+    -- A profession's saved choices take priority. The familiar broad/all-spec
+    -- defaults apply only the first time that profession is selected.
+    local restored = RRP.RestoreProfessionFilters(prof)
+    if not restored then
+        if RRP.BroadProfessions and RRP.BroadProfessions[prof] then
+            p.allClasses = true
+        end
+        if RRP.AllSpecProfessions and RRP.AllSpecProfessions[prof] and RRP.EnableAllSpecs then
+            RRP.EnableAllSpecs()
+        end
     end
     RRP.clearArmed = nil
     if RRP.Refresh then RRP.Refresh() end
