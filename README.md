@@ -1,6 +1,6 @@
 # FavorCraft
 
-**Author:** Babuni.dev
+**Creative:** Babuni
 
 Merchant's Favor & Profession Planner  
 World of Warcraft Forever 1.60.1 (Interface 16001) | Alliance & Horde
@@ -77,7 +77,7 @@ Version `0.5.1-beta` was tagged on 4 November 2026 for WoW Forever 1.60.1. The t
 
 The journal distinguishes source-based reconstruction, author direction, AI assistance, and independently verified behavior.
 
-## Documentation audit #35 — 28 October 2026
+## Documentation review — 28 October 2026
 
 The original idea for this project is credited to **Danoozy**; **Babuni.dev** built and refined FavorCraft. Its October 2026 catalog uses **309 recipes**, while descriptions of **314 vendor offers** include five separate profession certifications. The two counts should not be conflated. The addon preserves Redridge Recipe Planner aliases and SavedVariables compatibility; source-level migration is not a substitute for a tested upgrade.
 
