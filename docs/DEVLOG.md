@@ -1,6 +1,6 @@
 # favorcraft — development journal
 
-**Author:** Babuni.dev
+**Creative:** Babuni
 
 ## Retrospective source reconstruction — 2026-10-26
 
