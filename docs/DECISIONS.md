@@ -39,3 +39,7 @@ Babuni pushed `v0.5.1-beta` after the packaging review. The resulting CurseForge
 Filter choices belong to the selected profession rather than one shared character-wide view. The active profession stores its role/build checks, spec mode and custom spec selection, class scope and preview class, Show All Recipes, Hide Learned, and search text in `profile.professionFilters[profession]`. Switching saves the outgoing view and restores the destination's saved view. Hiding/reopening the main window restores the active profession's saved view; it must not force All Specs again.
 
 The established first-visit behavior remains: broad professions enable All Classes, and professions in `RRP.AllSpecProfessions` receive their existing All Specs default. A saved profession profile takes precedence on later visits, so automatic defaults do not erase player customization. Existing character plans, learned-recipe data, profession scans and other profile data remain separate and untouched.
+
+## 2026-11-13 — Licensing decision
+
+To make the reuse terms explicit, I approved MIT for original addon software, preserving Danoozy's original-idea credit. This applies only to material for which the relevant rights can be granted; third-party contributors keep their own credits and licenses. AI assistance committed the license notice and updated project-facing documentation. This was a legal/documentation change, not a runtime feature or test.
