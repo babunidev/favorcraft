@@ -68,3 +68,8 @@
 - Created visual-design, content/provenance and human–AI collaboration guides.
 - Expanded historical and technical documentation, preserving co-originator Danoozy's original idea and Babuni.dev's implementation/refinement credit.
 - Clarified the 309 recipes / 314 offers distinction and the legacy data/command continuity. No Lua, add-on metadata, data catalog or packaging source was modified; no runtime test was executed.
+
+## 2026-11-13 — License and rights
+
+- Established MIT for original addon software, preserving Danoozy's credit and updated repository documentation to explain the permission boundary.
+- Preserved third-party authorship and external assets' separate terms. No gameplay or runtime verification is claimed.
