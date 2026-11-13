@@ -43,3 +43,7 @@ The profession list already remembered where I had been working, but every time 
 The filter state now lives in a small snapshot for each profession inside the character's existing SavedVariables profile. Switching saves the profession being left and restores the destination; reopening the window restores the active profession instead of resetting it. First-visit defaults remain intact for broad professions and the existing special All Specs professions. Once a profession has a saved snapshot, the player's choices take priority over those defaults.
 
 **Human direction:** Babuni specified independent per-profession filter memory while retaining the established profession-specific defaults. **AI contribution:** Traced the reset to the main window's `OnShow` handler, implemented snapshot migration/save/restore, and added regression checks for switching and reopening. **Verification:** Mocked planner tests are added; CI and in-game verification are pending. No release version or tag was changed.
+
+## 2026-11-13 — Giving the repository clear permissions
+
+Public source alone did not explain what others could reuse, so I approved MIT for the original addon code, retaining Danoozy's idea credit. AI assistance added the license and brought the project notes into agreement, without changing how the application runs. Other people's content retains its own terms.
