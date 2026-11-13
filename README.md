@@ -82,3 +82,7 @@ The journal distinguishes source-based reconstruction, author direction, AI assi
 The original idea for this project is credited to **Danoozy**; **Babuni.dev** built and refined FavorCraft. Its October 2026 catalog uses **309 recipes**, while descriptions of **314 vendor offers** include five separate profession certifications. The two counts should not be conflated. The addon preserves Redridge Recipe Planner aliases and SavedVariables compatibility; source-level migration is not a substitute for a tested upgrade.
 
 See [interaction design](docs/DESIGN.md), [content and provenance](docs/CONTENT.md), [architecture](docs/ARCHITECTURE.md), [decisions](docs/DECISIONS.md), [development journal](docs/DEVLOG.md) and [collaboration credits](docs/AI_COLLABORATION.md). This documentation audit did not change addon code or validate the vendor catalog against a live client.
+
+## License
+
+Original addon software is licensed under [MIT](LICENSE). The existing acknowledgment of Danoozy's original idea remains unchanged; game-client content and upstream data retain their own rights.
