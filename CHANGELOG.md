@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed — addon code moved into folders (2026-11-19)
+- Runtime Lua files moved into `Core/` (`Core.lua`, `Faction.lua`), `Data/` (`Catalog.lua`, `Schematics.lua`) and `Comparisons/` (profession comparison modules, source audits and `Comparisons.lua`). Both TOCs and the LuaJIT tests now use the folder paths; load order and code are unchanged.
+- Research notes and per-profession JSON exports, including `AlchemyComparisons.json`, now live in `docs/research/`. `.pkgmeta` no longer lists `AlchemyComparisons.json` separately because `docs/` is already excluded. Claude Code (Claude Opus 5.5).
+
 ### Changed — human–AI collaboration record (2026-11-19)
 - Rewrote `docs/AI_COLLABORATION.md` to the shared text used in all of Babuni's repositories: how Babuni works with AI, who did what (the tools and recorded models named in this project's records) and where the details are. The earlier, longer version stays in the Git history. Claude Code (Claude Opus 5.5).
 

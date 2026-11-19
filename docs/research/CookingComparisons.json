@@ -1,0 +1,561 @@
+{
+  "schema_version": 2,
+  "addon": "Favorcraft",
+  "profession": "Cooking",
+  "recipe_count": 6,
+  "status": "source_researched_not_ingame_verified",
+  "definitions": {
+    "equivalent": "Same core stats and functional effect at equivalent tier; no identical trainer recipe verified in this dataset.",
+    "alternative": "Meaningful shared purpose, with differences in buff stat, potency, level, reagents or acquisition.",
+    "distinct": "No sufficiently close documented match; never claim exclusive availability."
+  },
+  "sources": [
+    {
+      "name": "WoW Forever item spells",
+      "url": "https://www.wowhead.com/forever/spell=1249963/venomous-smoothie"
+    },
+    {
+      "name": "WoW Forever Cooking acquisition guide",
+      "url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+    },
+    {
+      "name": "WoW Professions merchant catalog",
+      "url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce"
+    },
+    {
+      "name": "Zockify cooking tea/smoothie comparison",
+      "url": "https://www.zockify.com/forever/professions/cooking/"
+    },
+    {
+      "name": "WoW Forever recent cooking article",
+      "url": "https://www.wowhead.com/forever/news/all-cooking-food-that-currently-gives-xp-buffs-in-wow-forever-382928"
+    }
+  ],
+  "recipes": [
+    {
+      "merchant_recipe_name": "Venomous Smoothie",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249963,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249963",
+      "effect_reported": "Restores 145 mana over 18 sec; Well Fed +1 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": false,
+      "required_level": 1,
+      "required_cooking": 25,
+      "merchant_favor_cost": 30,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Refreshing Spring Water",
+          "quantity": 1
+        },
+        {
+          "name": "Mild Spices",
+          "quantity": 1
+        },
+        {
+          "name": "Small Venom Sac",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249963",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+1 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Peace Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Peace Tea",
+          "relation": "alternative",
+          "acquisition": "world_drop",
+          "source_verified": true,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +1 Spirit; the tea grants +2 Healing Power. This is not the same buff.",
+          "source_url": "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling",
+          "source_note": "Drop: Frostmane Seer (per Wowhead Cooking guide)",
+          "outputItemID": 249865,
+          "item_source_url": "https://forevercompass.com/items/249865",
+          "item_id_provenance": "Forever Compass, Forever beta client-derived consumable"
+        },
+        {
+          "name": "Slimy Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+1 vs +3 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249872,
+          "item_source_url": "https://foreverdb.net/item/249872",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "",
+      "merchant_output_item_id": 249871,
+      "merchant_recipe_scroll_item_id": 249885
+    },
+    {
+      "merchant_recipe_name": "Slimy Smoothie",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249964,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249964",
+      "effect_reported": "Restores 420 mana over 21 sec; Well Fed +3 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": false,
+      "required_level": 5,
+      "required_cooking": 100,
+      "merchant_favor_cost": 30,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Ice Cold Milk",
+          "quantity": 1
+        },
+        {
+          "name": "Mild Spices",
+          "quantity": 2
+        },
+        {
+          "name": "Spider Ichor",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249964",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+3 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Royal Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Royal Tea",
+          "relation": "alternative",
+          "acquisition": "world_drop",
+          "source_verified": true,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +3 Spirit; the tea grants +7 Healing Power. This is not the same buff.",
+          "source_url": "https://www.wowhead.com/forever/item=249880/recipe-royal-tea",
+          "source_note": "Drop: Windshear Geomancer (Wowhead item listing)",
+          "outputItemID": 249866,
+          "item_source_url": "https://foreverdb.net/item/249866",
+          "item_id_provenance": "ForeverDB, Forever beta consumable"
+        },
+        {
+          "name": "Venomous Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+3 vs +1 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249871,
+          "item_source_url": "https://foreverdb.net/item/249871",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        },
+        {
+          "name": "Mrrggl Smrrthle",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+3 vs +5 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249873,
+          "item_source_url": "https://foreverdb.net/item/249873",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "",
+      "merchant_output_item_id": 249872,
+      "merchant_recipe_scroll_item_id": 249886
+    },
+    {
+      "merchant_recipe_name": "Mrrggl Smrrthle",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249965,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249965",
+      "effect_reported": "Restores 803 mana over 24 sec; Well Fed +5 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": false,
+      "required_level": 15,
+      "required_cooking": 125,
+      "merchant_favor_cost": 30,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Melon Juice",
+          "quantity": 1
+        },
+        {
+          "name": "Hot Spices",
+          "quantity": 2
+        },
+        {
+          "name": "Murloc Fin",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249965",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+5 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Root Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Root Tea",
+          "relation": "alternative",
+          "acquisition": "unverified",
+          "source_verified": false,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +5 Spirit; the tea grants +11 Healing Power. This is not the same buff.",
+          "source_url": "https://www.zockify.com/forever/professions/cooking/",
+          "source_note": "Exact acquisition not confirmed here",
+          "outputItemID": 249867,
+          "item_source_url": "https://foreverdb.net/es/item/249867",
+          "item_id_provenance": "ForeverDB, Forever beta consumable"
+        },
+        {
+          "name": "Slimy Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+5 vs +3 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249872,
+          "item_source_url": "https://foreverdb.net/item/249872",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        },
+        {
+          "name": "Calcified Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+5 vs +10 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249874,
+          "item_source_url": "https://foreverdb.net/item/249874",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "",
+      "merchant_output_item_id": 249873,
+      "merchant_recipe_scroll_item_id": 249887
+    },
+    {
+      "merchant_recipe_name": "Calcified Smoothie",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249966,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249966",
+      "effect_reported": "Restores 1293 mana over 27 sec; Well Fed +10 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": false,
+      "required_level": 25,
+      "required_cooking": 180,
+      "merchant_favor_cost": 60,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Sweet Nectar",
+          "quantity": 1
+        },
+        {
+          "name": "Hot Spices",
+          "quantity": 3
+        },
+        {
+          "name": "Large Fang",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249966",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+10 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Triage Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Triage Tea",
+          "relation": "alternative",
+          "acquisition": "unverified",
+          "source_verified": false,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +10 Spirit; the tea grants +22 Healing Power. This is not the same buff.",
+          "source_url": "https://www.zockify.com/forever/professions/cooking/",
+          "source_note": "Exact acquisition not confirmed here",
+          "outputItemID": 249868,
+          "item_source_url": "https://foreverdb.net/item/249868",
+          "item_id_provenance": "ForeverDB, Forever beta consumable"
+        },
+        {
+          "name": "Mrrggl Smrrthle",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+10 vs +5 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249873,
+          "item_source_url": "https://foreverdb.net/item/249873",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        },
+        {
+          "name": "Spicy Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+10 vs +15 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249875,
+          "item_source_url": "https://foreverdb.net/item/249875",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "Public sources disagree about the required skill (125 versus 180); merchant guide and recipe-spell page say 180. ",
+      "merchant_output_item_id": 249874,
+      "merchant_recipe_scroll_item_id": 249888
+    },
+    {
+      "merchant_recipe_name": "Spicy Smoothie",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249967,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249967",
+      "effect_reported": "Restores 1915 mana over 30 sec; Well Fed +15 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": false,
+      "required_level": 35,
+      "required_cooking": 200,
+      "merchant_favor_cost": 60,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Moonberry Juice",
+          "quantity": 1
+        },
+        {
+          "name": "Soothing Spices",
+          "quantity": 3
+        },
+        {
+          "name": "Small Flame Sac",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249967",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+15 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Sunny Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Sunny Tea",
+          "relation": "alternative",
+          "acquisition": "unverified",
+          "source_verified": false,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +15 Spirit; the tea grants +33 Healing Power. This is not the same buff.",
+          "source_url": "https://www.zockify.com/forever/professions/cooking/",
+          "source_note": "Exact acquisition not confirmed here",
+          "outputItemID": 249869,
+          "item_source_url": "https://foreverdb.net/item/249869",
+          "item_id_provenance": "ForeverDB, Forever beta consumable"
+        },
+        {
+          "name": "Calcified Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+15 vs +10 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249874,
+          "item_source_url": "https://foreverdb.net/item/249874",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        },
+        {
+          "name": "Wicked Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+15 vs +20 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249876,
+          "item_source_url": "https://foreverdb.net/item/249876",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "",
+      "merchant_output_item_id": 249875,
+      "merchant_recipe_scroll_item_id": 249889
+    },
+    {
+      "merchant_recipe_name": "Wicked Smoothie",
+      "classification": "alternative",
+      "verification": "review_required",
+      "comparison_scope": "functionally similar consumables, not recipe duplication",
+      "recipe_spell_id": 1249968,
+      "recipe_spell_source_url": "https://www.wowhead.com/forever/spell=1249968",
+      "effect_reported": "Restores 2821 mana over 30 sec; Well Fed +20 Spirit for 15 min; +5% experience from kills reported in Forever guides (not consistently present in every item tooltip)",
+      "effect_core_verified": true,
+      "effect_xp_bonus_needs_client_check": true,
+      "required_level": 45,
+      "required_cooking": 250,
+      "merchant_favor_cost": 90,
+      "output_per_craft": 2,
+      "reagents_per_craft": [
+        {
+          "name": "Morning Glory Dew",
+          "quantity": 1
+        },
+        {
+          "name": "Soothing Spices",
+          "quantity": 4
+        },
+        {
+          "name": "Wicked Claw",
+          "quantity": 1
+        }
+      ],
+      "source_urls": [
+        "https://www.wowhead.com/forever/spell=1249968",
+        "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+        "https://www.wowhead.com/forever/guide/professions/cooking/overview-leveling"
+      ],
+      "summary": "+20 Spirit Well Fed drink; close alternatives are other smoothies (different tiers) and Sage's Tea (Healing Power instead of Spirit). No exact trainer-taught duplicate verified.",
+      "matches": [
+        {
+          "name": "Sage's Tea",
+          "relation": "alternative",
+          "acquisition": "unverified",
+          "source_verified": false,
+          "similarity": "Same Cooking-skill tier; restores mana and grants a 15-minute Well Fed bonus, but improves Healing Power instead of Spirit.",
+          "difference": "Smoothie grants +20 Spirit; the tea grants +44 Healing Power. This is not the same buff.",
+          "source_url": "https://www.zockify.com/forever/professions/cooking/",
+          "source_note": "Exact acquisition not confirmed here",
+          "outputItemID": 249870,
+          "item_source_url": "https://foreverdb.net/item/249870",
+          "item_id_provenance": "ForeverDB, Forever beta consumable"
+        },
+        {
+          "name": "Spicy Smoothie",
+          "relation": "alternative",
+          "acquisition": "merchants_favor",
+          "source_verified": true,
+          "similarity": "Same Spirit-focused Well Fed effect (+5% kill XP where present in tooltip), same 15-minute buff duration, mana restoration while drinking.",
+          "difference": "+20 vs +15 Spirit; different use levels, Cooking skill, mana restoration and reagents.",
+          "source_url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+          "outputItemID": 249875,
+          "item_source_url": "https://foreverdb.net/item/249875",
+          "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+        }
+      ],
+      "exact_trainer_duplicate_confirmed": false,
+      "notes": "Some current Wowhead tooltip views omit the +5% kill XP text; verify that bonus in game.",
+      "merchant_output_item_id": 249876,
+      "merchant_recipe_scroll_item_id": 249890
+    }
+  ],
+  "limitations": [
+    "No exact trainer-taught duplicate found among the six smoothie recipes; not proof of nonexistence.",
+    "Spirit smoothie series is internally similar, but different tiers are alternatives, not equivalent items.",
+    "Tea comparisons share mana restoration and Well Fed mechanics but grant Healing Power, not Spirit.",
+    "Not every tea acquisition source independently confirmed.",
+    "XP bonus on Wicked Smoothie is inconsistent across published descriptions.",
+    "This data contains verified recipe spell IDs, not verified crafted output item IDs.",
+    "Reagent quantities and output counts are taken from published spell pages; recheck live beta patches."
+  ],
+  "verification_note": "Crafted consumable IDs sourced from Forever client-derived records; native tooltip rendering must be tested in the client. Acquisition sources and effects in the original research retain their original labels.",
+  "item_id_field": "outputItemID (crafted consumable), distinct from recipe-scroll item ID",
+  "coverage": {
+    "merchant_recipes": 6,
+    "alternative_links": 16,
+    "distinct_alternative_consumables": 12,
+    "links_missing_output_item_id": 0,
+    "teas_resolved": 6,
+    "smoothies_resolved": 6
+  },
+  "alternative_item_index": {
+    "Calcified Smoothie": {
+      "outputItemID": 249874,
+      "item_source_url": "https://foreverdb.net/item/249874",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    },
+    "Mrrggl Smrrthle": {
+      "outputItemID": 249873,
+      "item_source_url": "https://foreverdb.net/item/249873",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    },
+    "Peace Tea": {
+      "outputItemID": 249865,
+      "item_source_url": "https://forevercompass.com/items/249865",
+      "item_id_provenance": "Forever Compass, Forever beta client-derived consumable"
+    },
+    "Root Tea": {
+      "outputItemID": 249867,
+      "item_source_url": "https://foreverdb.net/es/item/249867",
+      "item_id_provenance": "ForeverDB, Forever beta consumable"
+    },
+    "Royal Tea": {
+      "outputItemID": 249866,
+      "item_source_url": "https://foreverdb.net/item/249866",
+      "item_id_provenance": "ForeverDB, Forever beta consumable"
+    },
+    "Sage's Tea": {
+      "outputItemID": 249870,
+      "item_source_url": "https://foreverdb.net/item/249870",
+      "item_id_provenance": "ForeverDB, Forever beta consumable"
+    },
+    "Slimy Smoothie": {
+      "outputItemID": 249872,
+      "item_source_url": "https://foreverdb.net/item/249872",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    },
+    "Spicy Smoothie": {
+      "outputItemID": 249875,
+      "item_source_url": "https://foreverdb.net/item/249875",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    },
+    "Sunny Tea": {
+      "outputItemID": 249869,
+      "item_source_url": "https://foreverdb.net/item/249869",
+      "item_id_provenance": "ForeverDB, Forever beta consumable"
+    },
+    "Triage Tea": {
+      "outputItemID": 249868,
+      "item_source_url": "https://foreverdb.net/item/249868",
+      "item_id_provenance": "ForeverDB, Forever beta consumable"
+    },
+    "Venomous Smoothie": {
+      "outputItemID": 249871,
+      "item_source_url": "https://foreverdb.net/item/249871",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    },
+    "Wicked Smoothie": {
+      "outputItemID": 249876,
+      "item_source_url": "https://foreverdb.net/item/249876",
+      "item_id_provenance": "FavorCraft client-derived Schematics.lua"
+    }
+  }
+}

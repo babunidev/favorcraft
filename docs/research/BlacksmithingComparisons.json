@@ -1,0 +1,1619 @@
+{
+  "schemaVersion": 1,
+  "project": "FavorCraft",
+  "game": "World of Warcraft: Forever (1.60.1 beta)",
+  "profession": "Blacksmithing",
+  "asOf": "2026-10-16",
+  "sourceLuaBlobSha1": "c341e788ce07e37a85931cfacf5752d4df401c48",
+  "purpose": "Provide crafted alternative item IDs for native in-game item tooltips. The comparison remains a same-slot research example, not a claim of equivalent stats.",
+  "coverage": {
+    "merchantRecipes": 61,
+    "comparisonEntries": 61,
+    "uniqueAlternativeItems": 16,
+    "missingAlternativeOutputItemIDs": 0
+  },
+  "itemIndex": {
+    "Bronze Greatsword": {
+      "outputItemID": 7957,
+      "sourceURL": "https://foreverdb.net/item/7957"
+    },
+    "Bronze Warhammer": {
+      "outputItemID": 7956,
+      "sourceURL": "https://wow-forever.gg/db/items/7956-bronze-warhammer/"
+    },
+    "Gemmed Copper Gauntlets": {
+      "outputItemID": 3474,
+      "sourceURL": "https://foreverdb.net/item/3474",
+      "note": "The crafted gloves may have a random enchantment. Output item ID is 3474; Plans item ID 3610 is different."
+    },
+    "Golden Scale Bracers": {
+      "outputItemID": 6040,
+      "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/"
+    },
+    "Green Iron Helm": {
+      "outputItemID": 3836,
+      "sourceURL": "https://foreverdb.net/item/3836"
+    },
+    "Green Iron Leggings": {
+      "outputItemID": 3842,
+      "sourceURL": "https://foreverdb.net/item/3842"
+    },
+    "Heavy Mithril Boots": {
+      "outputItemID": 7933,
+      "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots"
+    },
+    "Heavy Mithril Breastplate": {
+      "outputItemID": 7930,
+      "sourceURL": "https://foreverdb.net/item/7930"
+    },
+    "Heavy Mithril Gauntlet": {
+      "outputItemID": 7919,
+      "sourceURL": "https://foreverdb.net/item/7919"
+    },
+    "Heavy Mithril Shoulder": {
+      "outputItemID": 7918,
+      "sourceURL": "https://www.wowhead.com/forever/item=7918"
+    },
+    "Mithril Claws": {
+      "outputItemID": 250609,
+      "sourceURL": "https://foreverdb.net/item/250609",
+      "note": "Forever-only crafted fist weapon. 250609 is the output; Plans: Mithril Claws is a different item, 251461."
+    },
+    "Mithril Plate Pants": {
+      "outputItemID": 7920,
+      "sourceURL": "https://wow-forever.gg/db/items/7920-mithril-plate-pants/",
+      "note": "Forever entry is Mail legs despite the Plate word in its name; older Classic version was Mithril Scale Pants."
+    },
+    "Rough Bronze Boots": {
+      "outputItemID": 6350,
+      "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/"
+    },
+    "Runed Copper Belt": {
+      "outputItemID": 2857,
+      "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/"
+    },
+    "Steel Breastplate": {
+      "outputItemID": 7963,
+      "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+      "note": "This Forever item is Mail chest gear; it is not a plate chest piece."
+    },
+    "Steel Plate Helm": {
+      "outputItemID": 7922,
+      "sourceURL": "https://foreverdb.net/item/7922"
+    }
+  },
+  "recipes": [
+    {
+      "merchantRecipeName": "Guard's Chain Belt",
+      "merchantKey": "Blacksmithing|Guard's Chain Belt",
+      "merchantSchematicIDs": {
+        "spellID": 1252263,
+        "scrollItemID": 251366,
+        "outputItemID": 250514
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 12,
+      "requiredSkill": 45,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Guard's Gloves",
+      "merchantKey": "Blacksmithing|Guard's Gloves",
+      "merchantSchematicIDs": {
+        "spellID": 1252258,
+        "scrollItemID": 251361,
+        "outputItemID": 250509
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 15,
+      "requiredSkill": 80,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Gemmed Copper Gauntlets",
+          "outputItemID": 3474,
+          "sourceURL": "https://foreverdb.net/item/3474",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Guard's Boots",
+      "merchantKey": "Blacksmithing|Guard's Boots",
+      "merchantSchematicIDs": {
+        "spellID": 1252253,
+        "scrollItemID": 251356,
+        "outputItemID": 250504
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 17,
+      "requiredSkill": 85,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Rough Bronze Boots",
+          "outputItemID": 6350,
+          "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Guard's Silvered Chain Helm",
+      "merchantKey": "Blacksmithing|Guard's Silvered Chain Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252278,
+        "scrollItemID": 251381,
+        "outputItemID": 250529
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Head",
+      "requiredLevel": 20,
+      "requiredSkill": 95,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the head slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Helm",
+          "outputItemID": 3836,
+          "sourceURL": "https://foreverdb.net/item/3836",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Guard's Silvered Chain Shirt",
+      "merchantKey": "Blacksmithing|Guard's Silvered Chain Shirt",
+      "merchantSchematicIDs": {
+        "spellID": 1252268,
+        "scrollItemID": 251371,
+        "outputItemID": 250519
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Chest",
+      "requiredLevel": 22,
+      "requiredSkill": 110,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the chest slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Steel Breastplate",
+          "outputItemID": 7963,
+          "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Guard's Silvered Chain Leggings",
+      "merchantKey": "Blacksmithing|Guard's Silvered Chain Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252273,
+        "scrollItemID": 251376,
+        "outputItemID": 250524
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Legs",
+      "requiredLevel": 25,
+      "requiredSkill": 125,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the legs slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Leggings",
+          "outputItemID": 3842,
+          "sourceURL": "https://foreverdb.net/item/3842",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Sentinel's Gauntlet",
+      "merchantKey": "Blacksmithing|Sentinel's Gauntlet",
+      "merchantSchematicIDs": {
+        "spellID": 1252316,
+        "scrollItemID": 251419,
+        "outputItemID": 250567
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 35,
+      "requiredSkill": 175,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Gauntlet",
+          "outputItemID": 7919,
+          "sourceURL": "https://foreverdb.net/item/7919",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Sentinel's Pauldrons",
+      "merchantKey": "Blacksmithing|Sentinel's Pauldrons",
+      "merchantSchematicIDs": {
+        "spellID": 1252326,
+        "scrollItemID": 251429,
+        "outputItemID": 250577
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Shoulder",
+      "requiredLevel": 42,
+      "requiredSkill": 210,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the shoulder slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Shoulder",
+          "outputItemID": 7918,
+          "sourceURL": "https://www.wowhead.com/forever/item=7918",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Sentinel's Wristguards",
+      "merchantKey": "Blacksmithing|Sentinel's Wristguards",
+      "merchantSchematicIDs": {
+        "spellID": 1252331,
+        "scrollItemID": null,
+        "outputItemID": 250582
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Wrist",
+      "requiredLevel": 45,
+      "requiredSkill": 225,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the wrist slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Golden Scale Bracers",
+          "outputItemID": 6040,
+          "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Sentinel's Sabatons",
+      "merchantKey": "Blacksmithing|Sentinel's Sabatons",
+      "merchantSchematicIDs": {
+        "spellID": 1252311,
+        "scrollItemID": 251414,
+        "outputItemID": 250562
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 47,
+      "requiredSkill": 240,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Boots",
+          "outputItemID": 7933,
+          "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Sentinel's Waistguard",
+      "merchantKey": "Blacksmithing|Sentinel's Waistguard",
+      "merchantSchematicIDs": {
+        "spellID": 1252321,
+        "scrollItemID": 251424,
+        "outputItemID": 250572
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets defense, stamina and physical tank stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Chain Belt",
+      "merchantKey": "Blacksmithing|Veteran's Chain Belt",
+      "merchantSchematicIDs": {
+        "spellID": 1252262,
+        "scrollItemID": 251365,
+        "outputItemID": 250513
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 12,
+      "requiredSkill": 45,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Gloves",
+      "merchantKey": "Blacksmithing|Veteran's Gloves",
+      "merchantSchematicIDs": {
+        "spellID": 1252257,
+        "scrollItemID": 251360,
+        "outputItemID": 250508
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 15,
+      "requiredSkill": 80,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Gemmed Copper Gauntlets",
+          "outputItemID": 3474,
+          "sourceURL": "https://foreverdb.net/item/3474",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Boots",
+      "merchantKey": "Blacksmithing|Veteran's Boots",
+      "merchantSchematicIDs": {
+        "spellID": 1252252,
+        "scrollItemID": 251355,
+        "outputItemID": 250503
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 17,
+      "requiredSkill": 85,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Rough Bronze Boots",
+          "outputItemID": 6350,
+          "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Silvered Chain Helm",
+      "merchantKey": "Blacksmithing|Veteran's Silvered Chain Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252277,
+        "scrollItemID": 251380,
+        "outputItemID": 250528
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Head",
+      "requiredLevel": 20,
+      "requiredSkill": 95,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the head slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Helm",
+          "outputItemID": 3836,
+          "sourceURL": "https://foreverdb.net/item/3836",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Silvered Chain Shirt",
+      "merchantKey": "Blacksmithing|Veteran's Silvered Chain Shirt",
+      "merchantSchematicIDs": {
+        "spellID": 1252267,
+        "scrollItemID": 251370,
+        "outputItemID": 250518
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Chest",
+      "requiredLevel": 22,
+      "requiredSkill": 110,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the chest slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Steel Breastplate",
+          "outputItemID": 7963,
+          "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Veteran's Silvered Chain Leggings",
+      "merchantKey": "Blacksmithing|Veteran's Silvered Chain Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252272,
+        "scrollItemID": 251375,
+        "outputItemID": 250523
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Legs",
+      "requiredLevel": 25,
+      "requiredSkill": 125,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the legs slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Leggings",
+          "outputItemID": 3842,
+          "sourceURL": "https://foreverdb.net/item/3842",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Officer's Gauntlet",
+      "merchantKey": "Blacksmithing|Officer's Gauntlet",
+      "merchantSchematicIDs": {
+        "spellID": 1252315,
+        "scrollItemID": 251418,
+        "outputItemID": 250566
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 35,
+      "requiredSkill": 175,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Gauntlet",
+          "outputItemID": 7919,
+          "sourceURL": "https://foreverdb.net/item/7919",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Officer's Pauldrons",
+      "merchantKey": "Blacksmithing|Officer's Pauldrons",
+      "merchantSchematicIDs": {
+        "spellID": 1252325,
+        "scrollItemID": 251428,
+        "outputItemID": 250576
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Shoulder",
+      "requiredLevel": 42,
+      "requiredSkill": 210,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the shoulder slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Shoulder",
+          "outputItemID": 7918,
+          "sourceURL": "https://www.wowhead.com/forever/item=7918",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Officer's Wristguards",
+      "merchantKey": "Blacksmithing|Officer's Wristguards",
+      "merchantSchematicIDs": {
+        "spellID": 1252330,
+        "scrollItemID": null,
+        "outputItemID": 250581
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Wrist",
+      "requiredLevel": 45,
+      "requiredSkill": 225,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the wrist slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Golden Scale Bracers",
+          "outputItemID": 6040,
+          "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Officer's Sabatons",
+      "merchantKey": "Blacksmithing|Officer's Sabatons",
+      "merchantSchematicIDs": {
+        "spellID": 1252310,
+        "scrollItemID": 251413,
+        "outputItemID": 250561
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 47,
+      "requiredSkill": 240,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Boots",
+          "outputItemID": 7933,
+          "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Officer's Waistguard",
+      "merchantKey": "Blacksmithing|Officer's Waistguard",
+      "merchantSchematicIDs": {
+        "spellID": 1252320,
+        "scrollItemID": 251423,
+        "outputItemID": 250571
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets physical melee damage attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Chain Belt",
+      "merchantKey": "Blacksmithing|Acolyte's Chain Belt",
+      "merchantSchematicIDs": {
+        "spellID": 1252265,
+        "scrollItemID": 251368,
+        "outputItemID": 250516
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 12,
+      "requiredSkill": 45,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Gloves",
+      "merchantKey": "Blacksmithing|Acolyte's Gloves",
+      "merchantSchematicIDs": {
+        "spellID": 1252260,
+        "scrollItemID": 251363,
+        "outputItemID": 250511
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 15,
+      "requiredSkill": 80,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Gemmed Copper Gauntlets",
+          "outputItemID": 3474,
+          "sourceURL": "https://foreverdb.net/item/3474",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Boots",
+      "merchantKey": "Blacksmithing|Acolyte's Boots",
+      "merchantSchematicIDs": {
+        "spellID": 1252255,
+        "scrollItemID": 251358,
+        "outputItemID": 250506
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 17,
+      "requiredSkill": 85,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Rough Bronze Boots",
+          "outputItemID": 6350,
+          "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Silvered Chain Helm",
+      "merchantKey": "Blacksmithing|Acolyte's Silvered Chain Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252280,
+        "scrollItemID": 251383,
+        "outputItemID": 250531
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Head",
+      "requiredLevel": 20,
+      "requiredSkill": 95,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the head slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Helm",
+          "outputItemID": 3836,
+          "sourceURL": "https://foreverdb.net/item/3836",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Silvered Chain Shirt",
+      "merchantKey": "Blacksmithing|Acolyte's Silvered Chain Shirt",
+      "merchantSchematicIDs": {
+        "spellID": 1252270,
+        "scrollItemID": 251373,
+        "outputItemID": 250521
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Chest",
+      "requiredLevel": 22,
+      "requiredSkill": 110,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the chest slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Steel Breastplate",
+          "outputItemID": 7963,
+          "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Acolyte's Silvered Chain Leggings",
+      "merchantKey": "Blacksmithing|Acolyte's Silvered Chain Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252275,
+        "scrollItemID": 251378,
+        "outputItemID": 250526
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Legs",
+      "requiredLevel": 25,
+      "requiredSkill": 125,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the legs slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Leggings",
+          "outputItemID": 3842,
+          "sourceURL": "https://foreverdb.net/item/3842",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Prefect's Gauntlet",
+      "merchantKey": "Blacksmithing|Prefect's Gauntlet",
+      "merchantSchematicIDs": {
+        "spellID": 1252318,
+        "scrollItemID": 251421,
+        "outputItemID": 250569
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 35,
+      "requiredSkill": 175,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Gauntlet",
+          "outputItemID": 7919,
+          "sourceURL": "https://foreverdb.net/item/7919",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Prefect's Pauldrons",
+      "merchantKey": "Blacksmithing|Prefect's Pauldrons",
+      "merchantSchematicIDs": {
+        "spellID": 1252328,
+        "scrollItemID": 251431,
+        "outputItemID": 250579
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Shoulder",
+      "requiredLevel": 42,
+      "requiredSkill": 210,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the shoulder slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Shoulder",
+          "outputItemID": 7918,
+          "sourceURL": "https://www.wowhead.com/forever/item=7918",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Prefect's Wristguards",
+      "merchantKey": "Blacksmithing|Prefect's Wristguards",
+      "merchantSchematicIDs": {
+        "spellID": 1252333,
+        "scrollItemID": null,
+        "outputItemID": 250584
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Wrist",
+      "requiredLevel": 45,
+      "requiredSkill": 225,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the wrist slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Golden Scale Bracers",
+          "outputItemID": 6040,
+          "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Prefect's Sabatons",
+      "merchantKey": "Blacksmithing|Prefect's Sabatons",
+      "merchantSchematicIDs": {
+        "spellID": 1252313,
+        "scrollItemID": 251416,
+        "outputItemID": 250564
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 47,
+      "requiredSkill": 240,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Boots",
+          "outputItemID": 7933,
+          "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Prefect's Waistguard",
+      "merchantKey": "Blacksmithing|Prefect's Waistguard",
+      "merchantSchematicIDs": {
+        "spellID": 1252323,
+        "scrollItemID": 251426,
+        "outputItemID": 250574
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets intellect, healing or magical stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Chain Belt",
+      "merchantKey": "Blacksmithing|Protector's Chain Belt",
+      "merchantSchematicIDs": {
+        "spellID": 1252264,
+        "scrollItemID": 251367,
+        "outputItemID": 250515
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 12,
+      "requiredSkill": 45,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Gloves",
+      "merchantKey": "Blacksmithing|Protector's Gloves",
+      "merchantSchematicIDs": {
+        "spellID": 1252259,
+        "scrollItemID": 251362,
+        "outputItemID": 250510
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 15,
+      "requiredSkill": 80,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Gemmed Copper Gauntlets",
+          "outputItemID": 3474,
+          "sourceURL": "https://foreverdb.net/item/3474",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Boots",
+      "merchantKey": "Blacksmithing|Protector's Boots",
+      "merchantSchematicIDs": {
+        "spellID": 1252254,
+        "scrollItemID": 251357,
+        "outputItemID": 250505
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 17,
+      "requiredSkill": 85,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Rough Bronze Boots",
+          "outputItemID": 6350,
+          "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Silvered Chain Helm",
+      "merchantKey": "Blacksmithing|Protector's Silvered Chain Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252279,
+        "scrollItemID": 251382,
+        "outputItemID": 250530
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Head",
+      "requiredLevel": 20,
+      "requiredSkill": 95,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the head slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Helm",
+          "outputItemID": 3836,
+          "sourceURL": "https://foreverdb.net/item/3836",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Silvered Chain Shirt",
+      "merchantKey": "Blacksmithing|Protector's Silvered Chain Shirt",
+      "merchantSchematicIDs": {
+        "spellID": 1252269,
+        "scrollItemID": 251372,
+        "outputItemID": 250520
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Chest",
+      "requiredLevel": 22,
+      "requiredSkill": 110,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the chest slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Steel Breastplate",
+          "outputItemID": 7963,
+          "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Protector's Silvered Chain Leggings",
+      "merchantKey": "Blacksmithing|Protector's Silvered Chain Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252274,
+        "scrollItemID": 251377,
+        "outputItemID": 250525
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Legs",
+      "requiredLevel": 25,
+      "requiredSkill": 125,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the legs slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Leggings",
+          "outputItemID": 3842,
+          "sourceURL": "https://foreverdb.net/item/3842",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Warder's Gauntlet",
+      "merchantKey": "Blacksmithing|Warder's Gauntlet",
+      "merchantSchematicIDs": {
+        "spellID": 1252317,
+        "scrollItemID": 251420,
+        "outputItemID": 250568
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 35,
+      "requiredSkill": 175,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Gauntlet",
+          "outputItemID": 7919,
+          "sourceURL": "https://foreverdb.net/item/7919",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Warder's Pauldrons",
+      "merchantKey": "Blacksmithing|Warder's Pauldrons",
+      "merchantSchematicIDs": {
+        "spellID": 1252327,
+        "scrollItemID": 251430,
+        "outputItemID": 250578
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Shoulder",
+      "requiredLevel": 42,
+      "requiredSkill": 210,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the shoulder slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Shoulder",
+          "outputItemID": 7918,
+          "sourceURL": "https://www.wowhead.com/forever/item=7918",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Warder's Wristguards",
+      "merchantKey": "Blacksmithing|Warder's Wristguards",
+      "merchantSchematicIDs": {
+        "spellID": 1252332,
+        "scrollItemID": null,
+        "outputItemID": 250583
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Wrist",
+      "requiredLevel": 45,
+      "requiredSkill": 225,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the wrist slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Golden Scale Bracers",
+          "outputItemID": 6040,
+          "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Warder's Sabatons",
+      "merchantKey": "Blacksmithing|Warder's Sabatons",
+      "merchantSchematicIDs": {
+        "spellID": 1252312,
+        "scrollItemID": 251415,
+        "outputItemID": 250563
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 47,
+      "requiredSkill": 240,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Boots",
+          "outputItemID": 7933,
+          "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Warder's Waistguard",
+      "merchantKey": "Blacksmithing|Warder's Waistguard",
+      "merchantSchematicIDs": {
+        "spellID": 1252322,
+        "scrollItemID": 251425,
+        "outputItemID": 250573
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets defense with spell-focused paladin hybrid stats. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Chain Belt",
+      "merchantKey": "Blacksmithing|Crusader's Chain Belt",
+      "merchantSchematicIDs": {
+        "spellID": 1252266,
+        "scrollItemID": 251369,
+        "outputItemID": 250517
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 12,
+      "requiredSkill": 45,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Gloves",
+      "merchantKey": "Blacksmithing|Crusader's Gloves",
+      "merchantSchematicIDs": {
+        "spellID": 1252261,
+        "scrollItemID": 251364,
+        "outputItemID": 250512
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 15,
+      "requiredSkill": 80,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Gemmed Copper Gauntlets",
+          "outputItemID": 3474,
+          "sourceURL": "https://foreverdb.net/item/3474",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Boots",
+      "merchantKey": "Blacksmithing|Crusader's Boots",
+      "merchantSchematicIDs": {
+        "spellID": 1252256,
+        "scrollItemID": 251359,
+        "outputItemID": 250507
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 17,
+      "requiredSkill": 85,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Rough Bronze Boots",
+          "outputItemID": 6350,
+          "sourceURL": "https://wow-forever.gg/db/items/6350-rough-bronze-boots/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Silvered Chain Helm",
+      "merchantKey": "Blacksmithing|Crusader's Silvered Chain Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252281,
+        "scrollItemID": 251384,
+        "outputItemID": 250532
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Head",
+      "requiredLevel": 20,
+      "requiredSkill": 95,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the head slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Helm",
+          "outputItemID": 3836,
+          "sourceURL": "https://foreverdb.net/item/3836",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Silvered Chain Shirt",
+      "merchantKey": "Blacksmithing|Crusader's Silvered Chain Shirt",
+      "merchantSchematicIDs": {
+        "spellID": 1252271,
+        "scrollItemID": 251374,
+        "outputItemID": 250522
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Chest",
+      "requiredLevel": 22,
+      "requiredSkill": 110,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the chest slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Steel Breastplate",
+          "outputItemID": 7963,
+          "sourceURL": "https://wow-forever.gg/db/items/7963-steel-breastplate/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Crusader's Silvered Chain Leggings",
+      "merchantKey": "Blacksmithing|Crusader's Silvered Chain Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252276,
+        "scrollItemID": 251379,
+        "outputItemID": 250527
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Legs",
+      "requiredLevel": 25,
+      "requiredSkill": 125,
+      "merchantFavor": 30,
+      "summary": "Both craft equipment for the legs slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade. Separately verify the similarly named non-Silvered Chain recipes appearing as trainer crafts in client databases.",
+      "alternatives": [
+        {
+          "name": "Green Iron Leggings",
+          "outputItemID": 3842,
+          "sourceURL": "https://foreverdb.net/item/3842",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Justicar's Gauntlet",
+      "merchantKey": "Blacksmithing|Justicar's Gauntlet",
+      "merchantSchematicIDs": {
+        "spellID": 1252319,
+        "scrollItemID": 251422,
+        "outputItemID": 250570
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Hands",
+      "requiredLevel": 35,
+      "requiredSkill": 175,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the hands slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Gauntlet",
+          "outputItemID": 7919,
+          "sourceURL": "https://foreverdb.net/item/7919",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Justicar's Pauldrons",
+      "merchantKey": "Blacksmithing|Justicar's Pauldrons",
+      "merchantSchematicIDs": {
+        "spellID": 1252329,
+        "scrollItemID": 251432,
+        "outputItemID": 250580
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Shoulder",
+      "requiredLevel": 42,
+      "requiredSkill": 210,
+      "merchantFavor": 60,
+      "summary": "Both craft equipment for the shoulder slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Shoulder",
+          "outputItemID": 7918,
+          "sourceURL": "https://www.wowhead.com/forever/item=7918",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Justicar's Wristguards",
+      "merchantKey": "Blacksmithing|Justicar's Wristguards",
+      "merchantSchematicIDs": {
+        "spellID": 1252334,
+        "scrollItemID": 251437,
+        "outputItemID": 250585
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Wrist",
+      "requiredLevel": 45,
+      "requiredSkill": 225,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the wrist slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Golden Scale Bracers",
+          "outputItemID": 6040,
+          "sourceURL": "https://wow-forever.gg/db/items/6040-golden-scale-bracers/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Justicar's Sabatons",
+      "merchantKey": "Blacksmithing|Justicar's Sabatons",
+      "merchantSchematicIDs": {
+        "spellID": 1252314,
+        "scrollItemID": 251417,
+        "outputItemID": 250565
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Feet",
+      "requiredLevel": 47,
+      "requiredSkill": 240,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the feet slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Boots",
+          "outputItemID": 7933,
+          "sourceURL": "https://ahledger.com/items/7933-heavy-mithril-boots",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Justicar's Waistguard",
+      "merchantKey": "Blacksmithing|Justicar's Waistguard",
+      "merchantSchematicIDs": {
+        "spellID": 1252324,
+        "scrollItemID": 251427,
+        "outputItemID": 250575
+      },
+      "comparisonScope": "same_slot_only",
+      "slot": "Waist",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both craft equipment for the waist slot; the Merchant's Favor item targets physical and holy paladin-oriented attributes. Exact stats, armor category, level, reagents and material value must be compared before judging an upgrade.",
+      "alternatives": [
+        {
+          "name": "Runed Copper Belt",
+          "outputItemID": 2857,
+          "sourceURL": "https://wow-forever.gg/db/items/2857-runed-copper-belt/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "equipment_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Thorium Cestus",
+      "merchantKey": "Blacksmithing|Thorium Cestus",
+      "merchantSchematicIDs": {
+        "spellID": 1252363,
+        "scrollItemID": 251466,
+        "outputItemID": 250614
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "One-hand weapon",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Both are crafted melee hand weapons; weapon type, speed, DPS and stats must be verified.",
+      "alternatives": [
+        {
+          "name": "Mithril Claws",
+          "outputItemID": 250609,
+          "sourceURL": "https://foreverdb.net/item/250609",
+          "relation": "alternative",
+          "acquisition": "source_unverified",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Legionite Glaive",
+      "merchantKey": "Blacksmithing|Legionite Glaive",
+      "merchantSchematicIDs": {
+        "spellID": 1252368,
+        "scrollItemID": 251471,
+        "outputItemID": 250619
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "Weapon",
+      "requiredLevel": 58,
+      "requiredSkill": 300,
+      "merchantFavor": 120,
+      "summary": "Weapon-category comparison only. Different level and potentially weapon type; not an equivalent.",
+      "alternatives": [
+        {
+          "name": "Bronze Greatsword",
+          "outputItemID": 7957,
+          "sourceURL": "https://foreverdb.net/item/7957",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Enriched Thorium Breastplate",
+      "merchantKey": "Blacksmithing|Enriched Thorium Breastplate",
+      "merchantSchematicIDs": {
+        "spellID": 1252344,
+        "scrollItemID": 251447,
+        "outputItemID": 250595
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "Chest",
+      "requiredLevel": 57,
+      "requiredSkill": 300,
+      "merchantFavor": 120,
+      "summary": "Late-game crafted torso armor compared with a lower-tier trainer chest; defensive and item-level differences need item data.",
+      "alternatives": [
+        {
+          "name": "Heavy Mithril Breastplate",
+          "outputItemID": 7930,
+          "sourceURL": "https://foreverdb.net/item/7930",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Enriched Thorium Helm",
+      "merchantKey": "Blacksmithing|Enriched Thorium Helm",
+      "merchantSchematicIDs": {
+        "spellID": 1252346,
+        "scrollItemID": 251449,
+        "outputItemID": 250597
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "Head",
+      "requiredLevel": 58,
+      "requiredSkill": 300,
+      "merchantFavor": 120,
+      "summary": "Armor head slot only; likely significant item-level and attribute differences.",
+      "alternatives": [
+        {
+          "name": "Steel Plate Helm",
+          "outputItemID": 7922,
+          "sourceURL": "https://foreverdb.net/item/7922",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Enriched Thorium Leggings",
+      "merchantKey": "Blacksmithing|Enriched Thorium Leggings",
+      "merchantSchematicIDs": {
+        "spellID": 1252345,
+        "scrollItemID": 251448,
+        "outputItemID": 250596
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "Legs",
+      "requiredLevel": 58,
+      "requiredSkill": 300,
+      "merchantFavor": 120,
+      "summary": "Crafted leg armor, but not confirmed matching defenses or item level.",
+      "alternatives": [
+        {
+          "name": "Mithril Plate Pants",
+          "outputItemID": 7920,
+          "sourceURL": "https://wow-forever.gg/db/items/7920-mithril-plate-pants/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Thorium Greatmace",
+      "merchantKey": "Blacksmithing|Thorium Greatmace",
+      "merchantSchematicIDs": {
+        "spellID": 1252362,
+        "scrollItemID": 251465,
+        "outputItemID": 250613
+      },
+      "comparisonScope": "same_slot_or_weapon_category",
+      "slot": "Two-hand mace",
+      "requiredLevel": 50,
+      "requiredSkill": 250,
+      "merchantFavor": 90,
+      "summary": "Two-handed blunt weapon family; weapon speed, DPS and stats differ by tier.",
+      "alternatives": [
+        {
+          "name": "Bronze Warhammer",
+          "outputItemID": 7956,
+          "sourceURL": "https://wow-forever.gg/db/items/7956-bronze-warhammer/",
+          "relation": "alternative",
+          "acquisition": "trainer",
+          "similarity": "weapon_or_slot"
+        }
+      ]
+    }
+  ],
+  "integration": "Copy BlacksmithingComparisons.lua over the local addon file. Existing Comparisons.lua reads matches[].outputItemID. JSON is for editing/research only.",
+  "warnings": [
+    "No GitHub edits were made for this Blacksmithing task.",
+    "Native tooltip appearance still requires a /reload test in the actual WoW Forever beta client.",
+    "Research uses item output IDs, not Plans scroll IDs.",
+    "Same-slot comparisons remain same-slot, with original research notes preserved."
+  ]
+}

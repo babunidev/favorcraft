@@ -15,3 +15,14 @@ Follow [the documentation standard](docs/DOCUMENTATION.md) for first-person auth
 ## Repository layout
 
 The repository root holds only `README.md`, `AGENTS.md`, `LICENSE` and `CHANGELOG.md` (plus any additional license files). All other documentation lives in `docs/`; put new documents there.
+
+Addon runtime code lives in folders, never loose in the root. The root keeps only the two TOC files (WoW requires them there), the four documents above, and tool configuration (`.pkgmeta`, `.github/`). Put new files in the matching folder and list them by folder path in **both** TOCs and the relevant tests:
+
+| Folder | Contents |
+| --- | --- |
+| `Core/` | Planner logic and faction definitions |
+| `Data/` | Client-derived recipe catalog and schematics |
+| `Comparisons/` | Per-profession comparison modules, source audits and the `Comparisons.lua` aggregator |
+| `UI/` | Interface frames and widgets |
+| `tests/` | LuaJIT checks run by CI (not packaged) |
+| `docs/` | Documentation; `docs/research/` holds research notes and raw JSON exports that the addon never loads |

@@ -5,7 +5,6 @@ manual-changelog:
 ignore:
   - tests
   - AGENTS.md
-  - AlchemyComparisons.json
   - README.md
   - .github
   - docs

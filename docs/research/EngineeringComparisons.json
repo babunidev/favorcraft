@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "addon": "FavorCraft",
+  "game": "World of Warcraft: Forever",
+  "profession": "Engineering",
+  "researchDate": "2026-10-16",
+  "sourceAddonVersion": "0.4.9-beta",
+  "purpose": "Evaluate alternative trainer, normal-vendor or world-schematic crafts before spending Merchant Favor, without Favor-to-Favor comparisons.",
+  "coverage": {
+    "activeMerchantRecipes": 26,
+    "activeRecipesWithAlternatives": 11,
+    "activeRecipesWithoutAlternatives": 15,
+    "comparisonLinks": 11,
+    "uniqueExternalCraftedItems": 6,
+    "missingAlternativeOutputItemIDs": 0,
+    "researchOnlyOutsideCatalog": 2
+  },
+  "rules": [
+    "Alternatives must be crafted from a recipe not sold for Merchant Favor.",
+    "Compare function or ability with stated practical differences, not merely equipment slot or similar names.",
+    "Reusable thrown satchels are not treated as equivalent to consumed bombs.",
+    "Comparisons with a large level difference are allowed only for strongly overlapping gadget functionality and explicitly state the mismatch.",
+    "Report an unavailable alternative honestly rather than inventing one.",
+    "Crafted output IDs are separate from schematic IDs."
+  ],
+  "externalItemIndex": {
+    "Rough Dynamite": {
+      "outputItemID": 4358,
+      "sourceURL": "https://foreverdb.net/guide/professions"
+    },
+    "Rough Copper Bomb": {
+      "outputItemID": 4360,
+      "sourceURL": "https://forevercompass.com/items/4360"
+    },
+    "Big Bronze Bomb": {
+      "outputItemID": 4380,
+      "sourceURL": "https://foreverdb.net/item/4380"
+    },
+    "Ornate Spyglass": {
+      "outputItemID": 5507,
+      "sourceURL": "https://foreverdb.net/item/5507"
+    },
+    "Gnomish Cloaking Device": {
+      "outputItemID": 4397,
+      "sourceURL": "https://theforeverera.com/en/recipes/engineering/gnomish-cloaking-device/"
+    },
+    "Parachute Cloak": {
+      "outputItemID": 10518,
+      "sourceURL": "https://theforeverera.com/en/recipes/engineering/parachute-cloak/"
+    }
+  },
+  "recipes": [
+    {
+      "merchantRecipeName": "SAF-T Dynamite",
+      "merchantKey": "Engineering|SAF-T Dynamite",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 25,
+      "merchantSpellID": 1266905,
+      "merchantScrollItemID": 264202,
+      "merchantOutputItemID": 260792,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Rough Dynamite",
+          "craftedOutputItemID": 4358,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Same basic 26-34 Fire damage in a 5-yard area.",
+          "differences": "Rough Dynamite requires Engineering to use; SAF-T Dynamite can be used by non-engineers. Both are consumed.",
+          "levelTierContext": "Level 10 item; early-tier explosive.",
+          "sourceURL": "https://foreverdb.net/guide/professions"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "SAF-T Copper Bomb",
+      "merchantKey": "Engineering|SAF-T Copper Bomb",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 55,
+      "merchantSpellID": 1266906,
+      "merchantScrollItemID": 264203,
+      "merchantOutputItemID": 260793,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Rough Copper Bomb",
+          "craftedOutputItemID": 4360,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both inflict Fire damage and stun nearby enemies.",
+          "differences": "Rough Copper Bomb: 22-28 Fire damage and 1-sec stun within 3 yards; requires Engineering (30). SAF-T Copper Bomb is intended for users without Engineering and uses SAF-T Tabs.",
+          "levelTierContext": "Copper-tier explosives; nearby crafting tiers (Engineering 30 versus 55).",
+          "sourceURL": "https://forevercompass.com/items/4360"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "EZ-Thro Copper Bomb XL",
+      "merchantKey": "Engineering|EZ-Thro Copper Bomb XL",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 130,
+      "merchantSpellID": 1266908,
+      "merchantScrollItemID": 264205,
+      "merchantOutputItemID": 260795,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Big Bronze Bomb",
+          "craftedOutputItemID": 4380,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both explode in a 5-yard area and briefly stun.",
+          "differences": "Big Bronze Bomb: 85-115 Fire damage and 2-sec stun; requires Engineering to throw. EZ-Thro Copper Bomb XL: 43-57 Fire damage and 1-sec stun but can be used without Engineering.",
+          "levelTierContext": "Neighboring Engineering tiers: 130 versus 140.",
+          "sourceURL": "https://foreverdb.net/item/4380"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Satchel of Copper Bombs",
+      "merchantKey": "Engineering|Satchel of Copper Bombs",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 13,
+      "requiredSkill": 85,
+      "merchantSpellID": 1317958,
+      "merchantScrollItemID": 285285,
+      "merchantOutputItemID": 285275,
+      "summary": "Reusable thrown-slot weapon with splash damage. A disposable Copper Bomb is not a substitute; no comparable non-Favor craft established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Satchel of Bronze Bombs",
+      "merchantKey": "Engineering|Satchel of Bronze Bombs",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 28,
+      "requiredSkill": 165,
+      "merchantSpellID": 1317959,
+      "merchantScrollItemID": 285286,
+      "merchantOutputItemID": 285276,
+      "summary": "Reusable thrown-slot weapon (+Stamina, splash on thrown attacks), not a consumable bomb. No direct non-Favor alternative established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Satchel of Iron Bombs",
+      "merchantKey": "Engineering|Satchel of Iron Bombs",
+      "inCatalog": true,
+      "merchantFavor": 270,
+      "requiredLevel": 41,
+      "requiredSkill": 230,
+      "merchantSpellID": 1317960,
+      "merchantScrollItemID": 285287,
+      "merchantOutputItemID": 285277,
+      "summary": "Reusable thrown-slot weapon with splash on every throw; ordinary Iron Grenades are consumed. No direct non-Favor alternative established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Satchel of Dark Iron Bombs",
+      "merchantKey": "Engineering|Satchel of Dark Iron Bombs",
+      "inCatalog": true,
+      "merchantFavor": 270,
+      "requiredLevel": 52,
+      "requiredSkill": 285,
+      "merchantSpellID": 1317961,
+      "merchantScrollItemID": 285288,
+      "merchantOutputItemID": 285278,
+      "summary": "Reusable thrown-slot weapon with Fire splash, not a consumed Dark Iron Bomb. No direct non-Favor alternative established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Clanking Cord",
+      "merchantKey": "Engineering|Clanking Cord",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 30,
+      "requiredSkill": 175,
+      "merchantSpellID": 1308180,
+      "merchantScrollItemID": 280323,
+      "merchantOutputItemID": 280308,
+      "summary": "Level-30 crafted mail waist armor. No non-Favor Engineering recipe found with a sufficiently similar class, effect and item tier.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Gizmo Girdle",
+      "merchantKey": "Engineering|Gizmo Girdle",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 30,
+      "requiredSkill": 175,
+      "merchantSpellID": 1308179,
+      "merchantScrollItemID": 280322,
+      "merchantOutputItemID": 280307,
+      "summary": "Level-30 crafted leather waist armor. Other Merchant Favor belts are excluded; no suitable external craft established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Whimsical Waistwrap",
+      "merchantKey": "Engineering|Whimsical Waistwrap",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 30,
+      "requiredSkill": 175,
+      "merchantSpellID": 1308178,
+      "merchantScrollItemID": 280321,
+      "merchantOutputItemID": 280306,
+      "summary": "Level-30 crafted cloth waist armor. Other Merchant Favor belts are excluded; no suitable external craft established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Bent Goggles",
+      "merchantKey": "Engineering|Bent Goggles",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 40,
+      "requiredSkill": 200,
+      "merchantSpellID": 1308184,
+      "merchantScrollItemID": 280326,
+      "merchantOutputItemID": 280311,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Ornate Spyglass",
+          "craftedOutputItemID": 5507,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both allow looking far into the distance.",
+          "differences": "Ornate Spyglass is a non-equippable hand device, not leather head armor; no armor or wearable stats. The goggles are level-40 wearable headgear and consume a spyglass as a reagent.",
+          "levelTierContext": "Exact viewing function; equipment levels differ, not a headgear upgrade comparison.",
+          "sourceURL": "https://foreverdb.net/item/5507"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Dented Goggles",
+      "merchantKey": "Engineering|Dented Goggles",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 40,
+      "requiredSkill": 200,
+      "merchantSpellID": 1308186,
+      "merchantScrollItemID": 280328,
+      "merchantOutputItemID": 280313,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Ornate Spyglass",
+          "craftedOutputItemID": 5507,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both allow looking far into the distance.",
+          "differences": "Ornate Spyglass is a handheld device and offers none of the 355 plate armor or helm slot of level-40 Dented Goggles. A spyglass is required to craft the goggles.",
+          "levelTierContext": "Only the viewing utility matches; not a plate-gear comparison.",
+          "sourceURL": "https://foreverdb.net/item/5507"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Floppy Goggles",
+      "merchantKey": "Engineering|Floppy Goggles",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 40,
+      "requiredSkill": 200,
+      "merchantSpellID": 1308183,
+      "merchantScrollItemID": 280325,
+      "merchantOutputItemID": 280310,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Ornate Spyglass",
+          "craftedOutputItemID": 5507,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both allow looking far into the distance.",
+          "differences": "Ornate Spyglass is non-equippable; Floppy Goggles are cloth headgear with 48 armor at level 40. The goggles consume a spyglass as a reagent.",
+          "levelTierContext": "Only the viewing utility matches; not a cloth-gear comparison.",
+          "sourceURL": "https://foreverdb.net/item/5507"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Stuckbutton Goggles",
+      "merchantKey": "Engineering|Stuckbutton Goggles",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 40,
+      "requiredSkill": 200,
+      "merchantSpellID": 1308185,
+      "merchantScrollItemID": 280327,
+      "merchantOutputItemID": 280312,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Ornate Spyglass",
+          "craftedOutputItemID": 5507,
+          "acquisition": "Profession trainer",
+          "relation": "Comparable Item",
+          "similarity": "Both allow looking far into the distance.",
+          "differences": "Ornate Spyglass is non-equippable; Stuckbutton Goggles offer 202 mail armor at level 40, with a possible random suffix. The goggles consume a spyglass.",
+          "levelTierContext": "Only the viewing utility matches; not a mail-gear comparison.",
+          "sourceURL": "https://foreverdb.net/item/5507"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Emergency Field Cloak",
+      "merchantKey": "Engineering|Emergency Field Cloak",
+      "inCatalog": true,
+      "merchantFavor": 270,
+      "requiredLevel": 1,
+      "requiredSkill": 225,
+      "merchantSpellID": 1266919,
+      "merchantScrollItemID": 264216,
+      "merchantOutputItemID": 260806,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Gnomish Cloaking Device",
+          "craftedOutputItemID": 4397,
+          "acquisition": "Non-Favor schematic / vendor",
+          "relation": "Comparable Item",
+          "similarity": "Both are item-level-40 trinkets granting 10 sec invisibility on a 1-hour cooldown.",
+          "differences": "Gnomish Cloaking Device is a non-Favor schematic item (Engineering 200), traditionally sold by a vendor; Emergency Field Cloak costs Favor, is bind-on-pickup, and uses one Gnomish Cloaking Device plus SAF-T Casing. Despite its name, Emergency Field Cloak is a TRINKET, not back-slot armor.",
+          "levelTierContext": "Identical reported active effect and item level.",
+          "sourceURL": "https://theforeverera.com/en/recipes/engineering/gnomish-cloaking-device/"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "SAF-T Disposable Parachute",
+      "merchantKey": "Engineering|SAF-T Disposable Parachute",
+      "inCatalog": true,
+      "merchantFavor": 270,
+      "requiredLevel": 1,
+      "requiredSkill": 250,
+      "merchantSpellID": 1266923,
+      "merchantScrollItemID": 264220,
+      "merchantOutputItemID": 260810,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Parachute Cloak",
+          "craftedOutputItemID": 10518,
+          "acquisition": "Non-Favor recipe item",
+          "relation": "Comparable Item",
+          "similarity": "Both offer 10 sec fall-speed reduction with 30-minute cooldown as equippable cloaks.",
+          "differences": "Parachute Cloak is a non-Favor schematic craft with +8 Agility and item level 45; the Favor SAF-T Disposable Parachute (item level 50) consumes a Parachute Cloak plus SAF-T Casing, but lacks the +8 Agility bonus. Schematic source is a non-Favor recipe item; precise current-world drop not asserted.",
+          "levelTierContext": "Adjacent item levels 45 versus 50; same use effect.",
+          "sourceURL": "https://theforeverera.com/en/recipes/engineering/parachute-cloak/"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Gnomish Poultryizer",
+      "merchantKey": "Engineering|Gnomish Poultryizer",
+      "inCatalog": true,
+      "merchantFavor": 360,
+      "requiredLevel": 60,
+      "requiredSkill": 300,
+      "merchantSpellID": 1266937,
+      "merchantScrollItemID": 264234,
+      "merchantOutputItemID": 260824,
+      "summary": "Transforms a target into a chicken for up to 15 sec, with possible backfire. Ordinary control gadgets are not equivalent; no suitable non-Favor craft at a comparable tier established.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Compact Critter Carrier",
+      "merchantKey": "Engineering|Compact Critter Carrier",
+      "inCatalog": true,
+      "merchantFavor": 270,
+      "requiredLevel": 40,
+      "requiredSkill": 225,
+      "merchantSpellID": 1266920,
+      "merchantScrollItemID": 264217,
+      "merchantOutputItemID": 260807,
+      "summary": "Portable temporary Hunter stable-access device for group members, NOT a vanity critter or pet. Mechanical Squirrel Box is not a functional alternative.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Stealthman 52",
+      "merchantKey": "Engineering|Stealthman 52",
+      "inCatalog": true,
+      "merchantFavor": 360,
+      "requiredLevel": 55,
+      "requiredSkill": 300,
+      "merchantSpellID": 1266940,
+      "merchantScrollItemID": 264237,
+      "merchantOutputItemID": 260827,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Gnomish Cloaking Device",
+          "craftedOutputItemID": 4397,
+          "acquisition": "Non-Favor schematic / vendor",
+          "relation": "Comparable Item",
+          "similarity": "Both grant concealment through crafted Engineering gadgets.",
+          "differences": "Stealthman 52 (item level 60, required level 55) lasts up to 1 min while stationary, 6 sec after moving, cannot activate during combat, and has 5-min cooldown. The older Gnomish Cloaking Device (item level 40) gives 10 sec invisibility and has a 1-hour cooldown. This is a functional alternative, not a comparable gear tier.",
+          "levelTierContext": "Different item levels (60 versus 40); purposeful same-function comparison.",
+          "sourceURL": "https://theforeverera.com/en/recipes/engineering/gnomish-cloaking-device/"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Ultralight Goblin Glider",
+      "merchantKey": "Engineering|Ultralight Goblin Glider",
+      "inCatalog": true,
+      "merchantFavor": 360,
+      "requiredLevel": null,
+      "requiredSkill": 300,
+      "merchantSpellID": 1266938,
+      "merchantScrollItemID": 264235,
+      "merchantOutputItemID": 260825,
+      "summary": "The non-Favor craft below overlaps in an actionable use; compare the explicit restrictions, armor slot, skill and cooldown before spending Favor.",
+      "comparisonStatus": "Comparable Item",
+      "alternatives": [
+        {
+          "name": "Parachute Cloak",
+          "craftedOutputItemID": 10518,
+          "acquisition": "Non-Favor recipe item",
+          "relation": "Comparable Item",
+          "similarity": "Both allow controlled survival from high falls through a 10-sec descent effect.",
+          "differences": "Ultralight Goblin Glider permits steering and uses a 3-minute cooldown (requires Engineering 250 to use). Parachute Cloak slows falling without gliding control, has a 30-minute cooldown, is a back-slot garment with +8 Agility and requires Engineering 225 to craft.",
+          "levelTierContext": "Different item categories; compared for descent utility, not item levels.",
+          "sourceURL": "https://theforeverera.com/en/recipes/engineering/parachute-cloak/"
+        }
+      ]
+    },
+    {
+      "merchantRecipeName": "Ultrasafe Rechargeable Battery",
+      "merchantKey": "Engineering|Ultrasafe Rechargeable Battery",
+      "inCatalog": true,
+      "merchantFavor": 360,
+      "requiredLevel": 60,
+      "requiredSkill": 300,
+      "merchantSpellID": 1266935,
+      "merchantScrollItemID": 264232,
+      "merchantOutputItemID": 260822,
+      "summary": "Restores three charges to non-explosive SAF-T or EZ-Thro devices. No trainer/drop recipe established that performs the same recharge.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "SAF-T Tabs",
+      "merchantKey": "Engineering|SAF-T Tabs",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 25,
+      "merchantSpellID": 1266893,
+      "merchantScrollItemID": 264201,
+      "merchantOutputItemID": 260784,
+      "summary": "Purpose-built safety component enabling SAF-T recipe functionality. Handful of Copper Bolts is not an interchangeable component.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "EZ-Thro Wrap",
+      "merchantKey": "Engineering|EZ-Thro Wrap",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 100,
+      "merchantSpellID": 1266907,
+      "merchantScrollItemID": 264204,
+      "merchantOutputItemID": 260794,
+      "summary": "A dedicated EZ-Thro recipe component. Other standard Engineering parts are not known substitutes.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "No Slip SAF-T Padding",
+      "merchantKey": "Engineering|No Slip SAF-T Padding",
+      "inCatalog": true,
+      "merchantFavor": 45,
+      "requiredLevel": 1,
+      "requiredSkill": 145,
+      "merchantSpellID": 1266909,
+      "merchantScrollItemID": 264206,
+      "merchantOutputItemID": 260796,
+      "summary": "Specialized SAF-T component without a documented non-Favor substitute.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "SAF-T Bell",
+      "merchantKey": "Engineering|SAF-T Bell",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 1,
+      "requiredSkill": 175,
+      "merchantSpellID": 1266912,
+      "merchantScrollItemID": 264209,
+      "merchantOutputItemID": 260799,
+      "summary": "Specific SAF-T component; no documented non-Favor substitute.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "EZ-Thro Fireproof Fuse",
+      "merchantKey": "Engineering|EZ-Thro Fireproof Fuse",
+      "inCatalog": true,
+      "merchantFavor": 180,
+      "requiredLevel": 1,
+      "requiredSkill": 190,
+      "merchantSpellID": 1266914,
+      "merchantScrollItemID": 264211,
+      "merchantOutputItemID": 260801,
+      "summary": "Specialized EZ-Thro component; no documented non-Favor substitute.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Gnomish Army Knife",
+      "merchantKey": "Engineering|Gnomish Army Knife",
+      "inCatalog": false,
+      "merchantFavor": null,
+      "requiredLevel": null,
+      "requiredSkill": null,
+      "merchantSpellID": null,
+      "merchantScrollItemID": null,
+      "merchantOutputItemID": null,
+      "summary": "Outside the current 26-recipe Merchant Favor catalog. A conventional Arclight Spanner only covers one tool function, so it is not offered as a substitute here.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    },
+    {
+      "merchantRecipeName": "Loot-A-Rang",
+      "merchantKey": "Engineering|Loot-A-Rang",
+      "inCatalog": false,
+      "merchantFavor": null,
+      "requiredLevel": null,
+      "requiredSkill": null,
+      "merchantSpellID": null,
+      "merchantScrollItemID": null,
+      "merchantOutputItemID": null,
+      "summary": "Outside the current 26-recipe Merchant Favor catalog. Gnomish Universal Remote controls mechanical units; it does not loot corpses and is not a comparison.",
+      "comparisonStatus": "No Comparison Recorded",
+      "alternatives": []
+    }
+  ]
+}

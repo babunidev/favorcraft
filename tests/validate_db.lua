@@ -15,8 +15,8 @@ local function loadChunk(file)
     end
     chunk("FavorCraft", RRP)
 end
-loadChunk("Catalog.lua")
-loadChunk("Schematics.lua")
+loadChunk("Data/Catalog.lua")
+loadChunk("Data/Schematics.lua")
 
 local professions = {"Alchemy", "Blacksmithing", "Cooking", "Enchanting", "Engineering", "Leatherworking", "Tailoring"}
 local stats = {}

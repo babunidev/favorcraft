@@ -16,11 +16,11 @@ local function check(name, ok, detail)
 end
 
 local uiFiles = {
-    "Catalog.lua", "Schematics.lua", "Faction.lua", "Core.lua",
-    "AlchemyComparisons.lua", "BlacksmithingComparisons.lua", "CookingComparisons.lua",
-    "EnchantingComparisons.lua", "EngineeringComparisons.lua",
-    "LeatherworkingComparisons.lua", "LeatherworkingSourceAudit.lua",
-    "BlacksmithingSourceAudit.lua", "TailoringComparisons.lua", "Comparisons.lua",
+    "Data/Catalog.lua", "Data/Schematics.lua", "Core/Faction.lua", "Core/Core.lua",
+    "Comparisons/AlchemyComparisons.lua", "Comparisons/BlacksmithingComparisons.lua", "Comparisons/CookingComparisons.lua",
+    "Comparisons/EnchantingComparisons.lua", "Comparisons/EngineeringComparisons.lua",
+    "Comparisons/LeatherworkingComparisons.lua", "Comparisons/LeatherworkingSourceAudit.lua",
+    "Comparisons/BlacksmithingSourceAudit.lua", "Comparisons/TailoringComparisons.lua", "Comparisons/Comparisons.lua",
     "UI/Widgets.lua", "UI/Nav.lua", "UI/Browser.lua", "UI/Details.lua",
     "UI/Plan.lua", "UI/Settings.lua", "UI/Shopping.lua", "UI/Main.lua",
 }
@@ -62,10 +62,10 @@ local function loadChunk(file)
     if not chunk then error(err) end
     chunk("FavorCraft", RRP)
 end
-loadChunk("Catalog.lua")
-loadChunk("Schematics.lua")
-loadChunk("Faction.lua")
-loadChunk("Core.lua")
+loadChunk("Data/Catalog.lua")
+loadChunk("Data/Schematics.lua")
+loadChunk("Core/Faction.lua")
+loadChunk("Core/Core.lua")
 
 RRPDB = {characters = {}, materials = {}, discovered = {}, scrollItems = {}}
 local profile = RRP.GetProfile()
@@ -466,16 +466,16 @@ GetSkillLineInfo = function() return "Blacksmithing", false, true, 90, 0, 13, 15
 profile.professionRanks.Blacksmithing = nil
 check("a skill bonus counts in the shown rank", RRP.ProfessionRank("Blacksmithing") == 103, RRP.ProfessionRank("Blacksmithing"))
 
-loadChunk("AlchemyComparisons.lua")
-loadChunk("BlacksmithingComparisons.lua")
-loadChunk("CookingComparisons.lua")
-loadChunk("EnchantingComparisons.lua")
-loadChunk("EngineeringComparisons.lua")
-loadChunk("LeatherworkingComparisons.lua")
-loadChunk("LeatherworkingSourceAudit.lua")
-loadChunk("BlacksmithingSourceAudit.lua")
-loadChunk("TailoringComparisons.lua")
-loadChunk("Comparisons.lua")
+loadChunk("Comparisons/AlchemyComparisons.lua")
+loadChunk("Comparisons/BlacksmithingComparisons.lua")
+loadChunk("Comparisons/CookingComparisons.lua")
+loadChunk("Comparisons/EnchantingComparisons.lua")
+loadChunk("Comparisons/EngineeringComparisons.lua")
+loadChunk("Comparisons/LeatherworkingComparisons.lua")
+loadChunk("Comparisons/LeatherworkingSourceAudit.lua")
+loadChunk("Comparisons/BlacksmithingSourceAudit.lua")
+loadChunk("Comparisons/TailoringComparisons.lua")
+loadChunk("Comparisons/Comparisons.lua")
 
 local function entryNamed(view, name)
     for i = 1, #view.entries do

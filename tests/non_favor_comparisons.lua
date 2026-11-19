@@ -9,14 +9,14 @@ local function load(file)
     chunk("FavorCraft", r)
 end
 for _, file in ipairs({
-    "Catalog.lua", "Schematics.lua", "AlchemyComparisons.lua",
-    "BlacksmithingComparisons.lua", "BlacksmithingSourceAudit.lua",
-    "CookingComparisons.lua", "EnchantingComparisons.lua",
-    "EngineeringComparisons.lua", "LeatherworkingComparisons.lua",
-    "LeatherworkingSourceAudit.lua", "TailoringComparisons.lua",
+    "Data/Catalog.lua", "Data/Schematics.lua", "Comparisons/AlchemyComparisons.lua",
+    "Comparisons/BlacksmithingComparisons.lua", "Comparisons/BlacksmithingSourceAudit.lua",
+    "Comparisons/CookingComparisons.lua", "Comparisons/EnchantingComparisons.lua",
+    "Comparisons/EngineeringComparisons.lua", "Comparisons/LeatherworkingComparisons.lua",
+    "Comparisons/LeatherworkingSourceAudit.lua", "Comparisons/TailoringComparisons.lua",
 }) do load(file) end
 r.GetByKey = function(key) return r.ByKey[key] end
-load("Comparisons.lua")
+load("Comparisons/Comparisons.lua")
 local merchantIDs, merchantNames = {}, {}
 for key, sch in pairs(r.Schematics) do
     merchantNames[key:match("^[^|]+|(.+)$")] = true

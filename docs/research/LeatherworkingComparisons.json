@@ -1,0 +1,5421 @@
+{
+  "profession": "Leatherworking",
+  "game": "World of Warcraft Forever",
+  "sourceBuild": "1.60.1",
+  "schemaVersion": 2,
+  "updated": "2026-10-16",
+  "purpose": "Beta comparison dataset with native tooltip item IDs, merchant schematic IDs and separate additional recipe sources",
+  "dataPolicy": "Use client-derived AHledger merchant IDs and client-derived Forever item databases as trusted beta references. Similar slot does not imply same bonus. Additional pattern sources do not imply guaranteed current dungeon loot.",
+  "sources": [
+    "https://ahledger.com",
+    "https://foreverdb.net/profession/leatherworking",
+    "https://theforeverera.com/en/recipes/leatherworking/"
+  ],
+  "coverage": {
+    "merchantRecipes": 81,
+    "merchantOutputItemIDs": 81,
+    "merchantRecipeScrollIDs": 81,
+    "merchantSpellIDs": 81,
+    "recipesWithNativeTooltipAlternatives": 81,
+    "externalAlternativeLinks": 71,
+    "internalFavorAlternativeLinks": 79,
+    "distinctExternalAlternativeItems": 16,
+    "additionalRecipeSourceReports": 11,
+    "missingAlternativeOutputItemIDs": 0
+  },
+  "externalItemIndex": {
+    "Dark Leather Boots": 2315,
+    "Dark Leather Pants": 5961,
+    "Dusky Belt": 7387,
+    "Embossed Leather Boots": 2309,
+    "Embossed Leather Gloves": 4239,
+    "Fine Leather Belt": 4246,
+    "Fine Leather Tunic": 4243,
+    "Guardian Leather Bracers": 4260,
+    "Hillman's Leather Gloves": 4247,
+    "Nightscape Boots": 8197,
+    "Nightscape Shoulders": 8192,
+    "Rugged Armor Kit": 15564,
+    "Thick Armor Kit": 8173,
+    "Tough Scorpid Boots": 8209,
+    "Tough Scorpid Shoulders": 8207,
+    "Turtle Scale Bracers": 8198
+  },
+  "records": [
+    {
+      "key": "Leatherworking|Brawler's Leather Belt",
+      "name": "Brawler's Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Defender's Leather Belt",
+          "outputItemID": 252430,
+          "recipeSpellID": 1255140,
+          "recipeScrollItemID": 252767,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255142,
+      "merchantScrollItemID": 252765,
+      "merchantOutputItemID": 252428,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        },
+        {
+          "itemID": 1210,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Brawler's Leather Gloves",
+      "name": "Brawler's Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Trapper's Leather Gloves",
+          "outputItemID": 252495,
+          "recipeSpellID": 1255129,
+          "recipeScrollItemID": 252778,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255130,
+      "merchantScrollItemID": 252777,
+      "merchantOutputItemID": 252494,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 1210,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "vendor_sale",
+            "npc": "Gilnid",
+            "location": "The Deadmines",
+            "verification": "reported",
+            "note": "Listed as sold, not as a mob drop.",
+            "evidence": "https://realmfirst.net/world-of-warcraft-forever/items/252777/"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Brawler's Leather Boots",
+      "name": "Brawler's Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Boots",
+          "outputItemID": 2315,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +5 Agility in Forever",
+          "sourceURL": "https://foreverdb.net/item/2315",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Totemic Leather Boots",
+          "outputItemID": 252442,
+          "recipeSpellID": 1255118,
+          "recipeScrollItemID": 252789,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255121,
+      "merchantScrollItemID": 252786,
+      "merchantOutputItemID": 252439,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 1210,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Brawler's Leather Hood",
+      "name": "Brawler's Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Stormrider's Leather Hood",
+          "outputItemID": 252506,
+          "recipeSpellID": 1255105,
+          "recipeScrollItemID": 252802,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255109,
+      "merchantScrollItemID": 252798,
+      "merchantOutputItemID": 252504,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 1210,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Lady Sarevess",
+            "location": "Blackfathom Deeps",
+            "verification": "reported",
+            "evidence": "https://endgametools.com/en/wow-forever/items/252798"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Brawler's Leather Tunic",
+      "name": "Brawler's Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Wisdom's Leather Tunic",
+          "outputItemID": 252511,
+          "recipeSpellID": 1255097,
+          "recipeScrollItemID": 252810,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255102,
+      "merchantScrollItemID": 252805,
+      "merchantOutputItemID": 252508,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 1210,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Brawler's Leather Legguards",
+      "name": "Brawler's Leather Legguards",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Defender's Leather Kilt",
+          "outputItemID": 252457,
+          "recipeSpellID": 1255085,
+          "recipeScrollItemID": 252822,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255087,
+      "merchantScrollItemID": 252820,
+      "merchantOutputItemID": 252516,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 1210,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "zone_report",
+            "location": "Scarlet Monastery, Stormwind Stockade, Razorfen Kraul, Blackfathom Deeps, and Gnomeregan",
+            "verification": "reported",
+            "note": "Earlier listing, not confirmed: Fallen Champion; Ironspine; Dextren Ward; Aggem Thorncurse; Gelihast; Twilight Lord Kelris; Dark Iron Ambassador."
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Belt",
+      "name": "Defender's Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Trapper's Leather Belt",
+          "outputItemID": 252429,
+          "recipeSpellID": 1255141,
+          "recipeScrollItemID": 252766,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255140,
+      "merchantScrollItemID": 252767,
+      "merchantOutputItemID": 252430,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        },
+        {
+          "itemID": 2458,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Gloves",
+      "name": "Defender's Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Totemic Leather Gloves",
+          "outputItemID": 252497,
+          "recipeSpellID": 1255127,
+          "recipeScrollItemID": 252780,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255128,
+      "merchantScrollItemID": 252779,
+      "merchantOutputItemID": 252496,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 2458,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Boots",
+      "name": "Defender's Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Boots",
+          "outputItemID": 2315,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +5 Agility in Forever",
+          "sourceURL": "https://foreverdb.net/item/2315",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stormrider's Leather Boots",
+          "outputItemID": 252443,
+          "recipeSpellID": 1255117,
+          "recipeScrollItemID": 252790,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255119,
+      "merchantScrollItemID": 252788,
+      "merchantOutputItemID": 252441,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 2458,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Hood",
+      "name": "Defender's Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Wisdom's Leather Hood",
+          "outputItemID": 252507,
+          "recipeSpellID": 1255104,
+          "recipeScrollItemID": 252803,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255107,
+      "merchantScrollItemID": 252800,
+      "merchantOutputItemID": 252447,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 2458,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Edwin VanCleef",
+            "location": "The Deadmines",
+            "verification": "reported",
+            "evidence": "https://www.wowhead.com/forever/npc=639/edwin-vancleef"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Tunic",
+      "name": "Defender's Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Brawler's Leather Tunic",
+          "outputItemID": 252508,
+          "recipeSpellID": 1255102,
+          "recipeScrollItemID": 252805,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255100,
+      "merchantScrollItemID": 252807,
+      "merchantOutputItemID": 252450,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 2458,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Defender's Leather Kilt",
+      "name": "Defender's Leather Kilt",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Trapper's Leather Legguards",
+          "outputItemID": 252517,
+          "recipeSpellID": 1255086,
+          "recipeScrollItemID": 252821,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255085,
+      "merchantScrollItemID": 252822,
+      "merchantOutputItemID": 252457,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 2458,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Belt",
+      "name": "Trapper's Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Totemic Leather Belt",
+          "outputItemID": 252431,
+          "recipeSpellID": 1255139,
+          "recipeScrollItemID": 252768,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255141,
+      "merchantScrollItemID": 252766,
+      "merchantOutputItemID": 252429,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        },
+        {
+          "itemID": 6470,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Gloves",
+      "name": "Trapper's Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stormrider's Leather Gloves",
+          "outputItemID": 252498,
+          "recipeSpellID": 1255126,
+          "recipeScrollItemID": 252781,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255129,
+      "merchantScrollItemID": 252778,
+      "merchantOutputItemID": 252495,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 6470,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Boots",
+      "name": "Trapper's Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Boots",
+          "outputItemID": 2315,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +5 Agility in Forever",
+          "sourceURL": "https://foreverdb.net/item/2315",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Wisdom's Leather Boots",
+          "outputItemID": 252444,
+          "recipeSpellID": 1255116,
+          "recipeScrollItemID": 252791,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255120,
+      "merchantScrollItemID": 252787,
+      "merchantOutputItemID": 252440,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 6470,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Hood",
+      "name": "Trapper's Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Brawler's Leather Hood",
+          "outputItemID": 252504,
+          "recipeSpellID": 1255109,
+          "recipeScrollItemID": 252798,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255108,
+      "merchantScrollItemID": 252799,
+      "merchantOutputItemID": 252505,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 6470,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "zone_report",
+            "location": "Shadowfang Keep, The Deadmines, and Wailing Caverns",
+            "verification": "reported",
+            "note": "Earlier listing, not confirmed: Fel Steed / Shadow Charger; Edwin VanCleef; a Wailing Caverns mob that was not named."
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Tunic",
+      "name": "Trapper's Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Defender's Leather Tunic",
+          "outputItemID": 252450,
+          "recipeSpellID": 1255100,
+          "recipeScrollItemID": 252807,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255101,
+      "merchantScrollItemID": 252806,
+      "merchantOutputItemID": 252509,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 6470,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Trapper's Leather Legguards",
+      "name": "Trapper's Leather Legguards",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Totemic Leather Leggings",
+          "outputItemID": 252458,
+          "recipeSpellID": 1255084,
+          "recipeScrollItemID": 252823,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255086,
+      "merchantScrollItemID": 252821,
+      "merchantOutputItemID": 252517,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 6470,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Belt",
+      "name": "Totemic Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stormrider's Leather Belt",
+          "outputItemID": 252432,
+          "recipeSpellID": 1255138,
+          "recipeScrollItemID": 252769,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255139,
+      "merchantScrollItemID": 252768,
+      "merchantOutputItemID": 252431,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        },
+        {
+          "itemID": 249410,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Gloves",
+      "name": "Totemic Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Wisdom's Leather Gloves",
+          "outputItemID": 252499,
+          "recipeSpellID": 1255125,
+          "recipeScrollItemID": 252782,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255127,
+      "merchantScrollItemID": 252780,
+      "merchantOutputItemID": 252497,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 249410,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Gilnid",
+            "location": "The Deadmines",
+            "verification": "reported"
+          },
+          {
+            "type": "dungeon_drop",
+            "npc": "Mr. Smite",
+            "location": "The Deadmines",
+            "verification": "reported"
+          },
+          {
+            "type": "dungeon_drop",
+            "npc": "Bazzalan",
+            "location": "Ragefire Chasm",
+            "verification": "reported"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Boots",
+      "name": "Totemic Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Boots",
+          "outputItemID": 2315,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +5 Agility in Forever",
+          "sourceURL": "https://foreverdb.net/item/2315",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Brawler's Leather Boots",
+          "outputItemID": 252439,
+          "recipeSpellID": 1255121,
+          "recipeScrollItemID": 252786,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255118,
+      "merchantScrollItemID": 252789,
+      "merchantOutputItemID": 252442,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 249410,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Hood",
+      "name": "Totemic Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Defender's Leather Hood",
+          "outputItemID": 252447,
+          "recipeSpellID": 1255107,
+          "recipeScrollItemID": 252800,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255106,
+      "merchantScrollItemID": 252801,
+      "merchantOutputItemID": 252448,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 249410,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Edwin VanCleef",
+            "location": "The Deadmines",
+            "verification": "reported",
+            "note": "Other dungeons are also reported. Earlier listing, not confirmed: Fel Steed / Shadow Charger (Shadowfang Keep); Ghamoo-ra (Blackfathom Deeps)."
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Tunic",
+      "name": "Totemic Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Trapper's Leather Tunic",
+          "outputItemID": 252509,
+          "recipeSpellID": 1255101,
+          "recipeScrollItemID": 252806,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255099,
+      "merchantScrollItemID": 252808,
+      "merchantOutputItemID": 252451,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 249410,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Totemic Leather Leggings",
+      "name": "Totemic Leather Leggings",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stormrider's Leather Kilt",
+          "outputItemID": 252518,
+          "recipeSpellID": 1255083,
+          "recipeScrollItemID": 252824,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255084,
+      "merchantScrollItemID": 252823,
+      "merchantOutputItemID": 252458,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 249410,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Twilight Lord Kelris",
+            "location": "Blackfathom Deeps",
+            "verification": "reported",
+            "evidence": "https://endgametools.com/en/wow-forever/items/252823"
+          },
+          {
+            "type": "world_drop",
+            "verification": "reported",
+            "note": "RealmFirst describes a general world drop instead of a Kelris drop.",
+            "evidence": "https://realmfirst.net/world-of-warcraft-forever/items/252823/"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Belt",
+      "name": "Stormrider's Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Wisdom's Leather Belt",
+          "outputItemID": 252433,
+          "recipeSpellID": 1255137,
+          "recipeScrollItemID": 252770,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255138,
+      "merchantScrollItemID": 252769,
+      "merchantOutputItemID": 252432,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 249409,
+          "quantity": 1
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Gloves",
+      "name": "Stormrider's Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Brawler's Leather Gloves",
+          "outputItemID": 252494,
+          "recipeSpellID": 1255130,
+          "recipeScrollItemID": 252777,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255126,
+      "merchantScrollItemID": 252781,
+      "merchantOutputItemID": 252498,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 249409,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "zone_report",
+            "location": "Shadowfang Keep, The Deadmines, Ragefire Chasm, and Wailing Caverns",
+            "verification": "reported",
+            "note": "Earlier listing, not confirmed: Fel Steed / Shadow Charger; Mr. Smite; Oggleflint; Deviate Faerie Dragon."
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Boots",
+      "name": "Stormrider's Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Boots",
+          "outputItemID": 2309,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +2 Stamina and +2 Spell Power in Forever",
+          "sourceURL": "https://foreverdb.net/item/2309",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Defender's Leather Boots",
+          "outputItemID": 252441,
+          "recipeSpellID": 1255119,
+          "recipeScrollItemID": 252788,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255117,
+      "merchantScrollItemID": 252790,
+      "merchantOutputItemID": 252443,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 249409,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Hood",
+      "name": "Stormrider's Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Trapper's Leather Hood",
+          "outputItemID": 252505,
+          "recipeSpellID": 1255108,
+          "recipeScrollItemID": 252799,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255105,
+      "merchantScrollItemID": 252802,
+      "merchantOutputItemID": 252506,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 249409,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Tunic",
+      "name": "Stormrider's Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Totemic Leather Tunic",
+          "outputItemID": 252451,
+          "recipeSpellID": 1255099,
+          "recipeScrollItemID": 252808,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255098,
+      "merchantScrollItemID": 252809,
+      "merchantOutputItemID": 252510,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 249409,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stormrider's Leather Kilt",
+      "name": "Stormrider's Leather Kilt",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Wisdom's Leather Leggings",
+          "outputItemID": 252519,
+          "recipeSpellID": 1255082,
+          "recipeScrollItemID": 252825,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255083,
+      "merchantScrollItemID": 252824,
+      "merchantOutputItemID": 252518,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 249409,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Bazil Thredd",
+            "location": "The Stockade",
+            "verification": "reported"
+          },
+          {
+            "type": "dungeon_drop",
+            "npc": "Aku'mai",
+            "location": "Blackfathom Deeps",
+            "verification": "reported"
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Belt",
+      "name": "Wisdom's Leather Belt",
+      "skill": 60,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Belt",
+          "outputItemID": 4246,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather waist; different bonuses",
+          "sourceURL": "https://foreverdb.net/item/4246",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Brawler's Leather Belt",
+          "outputItemID": 252428,
+          "recipeSpellID": 1255142,
+          "recipeScrollItemID": 252765,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255137,
+      "merchantScrollItemID": 252770,
+      "merchantOutputItemID": 252433,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 10
+        },
+        {
+          "itemID": 4231,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 2320,
+          "quantity": 1
+        },
+        {
+          "itemID": 5498,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Gloves",
+      "name": "Wisdom's Leather Gloves",
+      "skill": 75,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Gloves",
+          "outputItemID": 4239,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather hands; +1 Agility and +1 Stamina in Forever",
+          "sourceURL": "https://foreverdb.net/item/4239",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Defender's Leather Gloves",
+          "outputItemID": 252496,
+          "recipeSpellID": 1255128,
+          "recipeScrollItemID": 252779,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255125,
+      "merchantScrollItemID": 252782,
+      "merchantOutputItemID": 252499,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 12
+        },
+        {
+          "itemID": 4231,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 5498,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Boots",
+      "name": "Wisdom's Leather Boots",
+      "skill": 85,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Embossed Leather Boots",
+          "outputItemID": 2309,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather feet; +2 Stamina and +2 Spell Power in Forever",
+          "sourceURL": "https://foreverdb.net/item/2309",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Trapper's Leather Boots",
+          "outputItemID": 252440,
+          "recipeSpellID": 1255120,
+          "recipeScrollItemID": 252787,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255116,
+      "merchantScrollItemID": 252791,
+      "merchantOutputItemID": 252444,
+      "materials": [
+        {
+          "itemID": 2318,
+          "quantity": 14
+        },
+        {
+          "itemID": 4231,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 5498,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Hood",
+      "name": "Wisdom's Leather Hood",
+      "skill": 100,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Totemic Leather Hood",
+          "outputItemID": 252448,
+          "recipeSpellID": 1255106,
+          "recipeScrollItemID": 252801,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "head",
+      "armorType": "leather",
+      "merchantSpellID": 1255104,
+      "merchantScrollItemID": 252803,
+      "merchantOutputItemID": 252507,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 5498,
+          "quantity": 4
+        },
+        {
+          "itemID": 4233,
+          "quantity": 2
+        },
+        {
+          "itemID": 2321,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather head options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips.",
+      "reportedAdditionalAcquisition": {
+        "sources": [
+          {
+            "type": "dungeon_drop",
+            "npc": "Edwin VanCleef",
+            "location": "The Deadmines",
+            "verification": "reported",
+            "note": "Shadowfang Keep is also reported. Earlier listing, not confirmed: Fel Steed / Shadow Charger."
+          }
+        ],
+        "sourceAuditModule": "LeatherworkingSourceAudit.lua",
+        "status": "Forever database source listings (availability can change by build)"
+      }
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Tunic",
+      "name": "Wisdom's Leather Tunic",
+      "skill": 110,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Fine Leather Tunic",
+          "outputItemID": 4243,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather chest; +4 Agility and +3 Stamina",
+          "sourceURL": "https://foreverdb.net/item/4243",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stormrider's Leather Tunic",
+          "outputItemID": 252510,
+          "recipeSpellID": 1255098,
+          "recipeScrollItemID": 252809,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "chest",
+      "armorType": "leather",
+      "merchantSpellID": 1255097,
+      "merchantScrollItemID": 252810,
+      "merchantOutputItemID": 252511,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 10
+        },
+        {
+          "itemID": 249427,
+          "quantity": 6
+        },
+        {
+          "itemID": 5498,
+          "quantity": 6
+        },
+        {
+          "itemID": 4233,
+          "quantity": 3
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather chest options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Wisdom's Leather Leggings",
+      "name": "Wisdom's Leather Leggings",
+      "skill": 125,
+      "merchantFavor": 30,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dark Leather Pants",
+          "outputItemID": 5961,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Trainer leatherworking craft; leather legs; +8 Agility",
+          "sourceURL": "https://foreverdb.net/item/5961",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Brawler's Leather Legguards",
+          "outputItemID": 252516,
+          "recipeSpellID": 1255087,
+          "recipeScrollItemID": 252820,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "legs",
+      "armorType": "leather",
+      "merchantSpellID": 1255082,
+      "merchantScrollItemID": 252825,
+      "merchantOutputItemID": 252519,
+      "materials": [
+        {
+          "itemID": 2319,
+          "quantity": 12
+        },
+        {
+          "itemID": 249427,
+          "quantity": 8
+        },
+        {
+          "itemID": 5498,
+          "quantity": 8
+        },
+        {
+          "itemID": 4233,
+          "quantity": 4
+        },
+        {
+          "itemID": 2321,
+          "quantity": 3
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather legs options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Prowler's Leather Gloves",
+      "name": "Prowler's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Gloves",
+          "outputItemID": 252525,
+          "recipeSpellID": 1255070,
+          "recipeScrollItemID": 252837,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255071,
+      "merchantScrollItemID": 252836,
+      "merchantOutputItemID": 252524,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 1529,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Prowler's Leather Shoulder",
+      "name": "Prowler's Leather Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Shoulders",
+          "outputItemID": 8192,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather shoulders; +11 Agility, +5 Stamina; different level",
+          "sourceURL": "https://endgametools.com/en/wow-forever/items/8192",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Warden's Leather Shoulder",
+          "outputItemID": 252536,
+          "recipeSpellID": 1255057,
+          "recipeScrollItemID": 252850,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "leather",
+      "merchantSpellID": 1255059,
+      "merchantScrollItemID": 252848,
+      "merchantOutputItemID": 252534,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 1529,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Prowler's Leather Bracers",
+      "name": "Prowler's Leather Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Guardian Leather Bracers",
+          "outputItemID": 4260,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather wrist; +6 Intellect, +6 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4260",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Leather Bracers",
+          "outputItemID": 252542,
+          "recipeSpellID": 1255051,
+          "recipeScrollItemID": 252856,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "leather",
+      "merchantSpellID": 1255054,
+      "merchantScrollItemID": 252853,
+      "merchantOutputItemID": 252539,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 1529,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Prowler's Leather Boots",
+      "name": "Prowler's Leather Boots",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Boots",
+          "outputItemID": 8197,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather feet; +12 Agility and stealth bonus; different level",
+          "sourceURL": "https://foreverdb.net/item/8197",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Leather Boots",
+          "outputItemID": 252472,
+          "recipeSpellID": 1255043,
+          "recipeScrollItemID": 252864,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255047,
+      "merchantScrollItemID": 252860,
+      "merchantOutputItemID": 252468,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 1529,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Prowler's Leather Waistguard",
+      "name": "Prowler's Leather Waistguard",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dusky Belt",
+          "outputItemID": 7387,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather waist; +8 Agility, +8 Stamina; different level",
+          "sourceURL": "https://www.wowhead.com/forever/item=7387/dusky-belt",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Waistguard",
+          "outputItemID": 252474,
+          "recipeSpellID": 1255034,
+          "recipeScrollItemID": 252873,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255035,
+      "merchantScrollItemID": 252872,
+      "merchantOutputItemID": 252473,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 1529,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skulker's Leather Gloves",
+      "name": "Skulker's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skirmisher's Leather Gloves",
+          "outputItemID": 252528,
+          "recipeSpellID": 1255067,
+          "recipeScrollItemID": 252840,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255070,
+      "merchantScrollItemID": 252837,
+      "merchantOutputItemID": 252525,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 3182,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skulker's Leather Shoulder",
+      "name": "Skulker's Leather Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Shoulders",
+          "outputItemID": 8192,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather shoulders; +11 Agility, +5 Stamina; different level",
+          "sourceURL": "https://endgametools.com/en/wow-forever/items/8192",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Leather Shoulder",
+          "outputItemID": 252537,
+          "recipeSpellID": 1255056,
+          "recipeScrollItemID": 252851,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "leather",
+      "merchantSpellID": 1255058,
+      "merchantScrollItemID": 252849,
+      "merchantOutputItemID": 252535,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 3182,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skulker's Leather Bracers",
+      "name": "Skulker's Leather Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Guardian Leather Bracers",
+          "outputItemID": 4260,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather wrist; +6 Intellect, +6 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4260",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Leather Bracers",
+          "outputItemID": 252543,
+          "recipeSpellID": 1255050,
+          "recipeScrollItemID": 252857,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "leather",
+      "merchantSpellID": 1255053,
+      "merchantScrollItemID": 252854,
+      "merchantOutputItemID": 252540,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 3182,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skulker's Leather Boots",
+      "name": "Skulker's Leather Boots",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Boots",
+          "outputItemID": 8197,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather feet; +12 Agility and stealth bonus; different level",
+          "sourceURL": "https://foreverdb.net/item/8197",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Prowler's Leather Boots",
+          "outputItemID": 252468,
+          "recipeSpellID": 1255047,
+          "recipeScrollItemID": 252860,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255046,
+      "merchantScrollItemID": 252861,
+      "merchantOutputItemID": 252469,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 3182,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skulker's Leather Waistguard",
+      "name": "Skulker's Leather Waistguard",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dusky Belt",
+          "outputItemID": 7387,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather waist; +8 Agility, +8 Stamina; different level",
+          "sourceURL": "https://www.wowhead.com/forever/item=7387/dusky-belt",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Warden's Leather Waistguard",
+          "outputItemID": 252475,
+          "recipeSpellID": 1255033,
+          "recipeScrollItemID": 252874,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255034,
+      "merchantScrollItemID": 252873,
+      "merchantOutputItemID": 252474,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 3182,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Warden's Leather Gloves",
+      "name": "Warden's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stalker's Leather Gloves",
+          "outputItemID": 252526,
+          "recipeSpellID": 1255069,
+          "recipeScrollItemID": 252838,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255068,
+      "merchantScrollItemID": 252839,
+      "merchantOutputItemID": 252527,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 7067,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Warden's Leather Shoulder",
+      "name": "Warden's Leather Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Shoulders",
+          "outputItemID": 8192,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather shoulders; +11 Agility, +5 Stamina; different level",
+          "sourceURL": "https://endgametools.com/en/wow-forever/items/8192",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Leather Shoulder",
+          "outputItemID": 252538,
+          "recipeSpellID": 1255055,
+          "recipeScrollItemID": 252852,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "leather",
+      "merchantSpellID": 1255057,
+      "merchantScrollItemID": 252850,
+      "merchantOutputItemID": 252536,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 7067,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Warden's Leather Bracers",
+      "name": "Warden's Leather Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Guardian Leather Bracers",
+          "outputItemID": 4260,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather wrist; +6 Intellect, +6 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4260",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Prowler's Leather Bracers",
+          "outputItemID": 252539,
+          "recipeSpellID": 1255054,
+          "recipeScrollItemID": 252853,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "leather",
+      "merchantSpellID": 1255052,
+      "merchantScrollItemID": 252855,
+      "merchantOutputItemID": 252541,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 7067,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Warden's Leather Boots",
+      "name": "Warden's Leather Boots",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Boots",
+          "outputItemID": 8197,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather feet; +12 Agility and stealth bonus; different level",
+          "sourceURL": "https://foreverdb.net/item/8197",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Boots",
+          "outputItemID": 252469,
+          "recipeSpellID": 1255046,
+          "recipeScrollItemID": 252861,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255045,
+      "merchantScrollItemID": 252862,
+      "merchantOutputItemID": 252470,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 7067,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Warden's Leather Waistguard",
+      "name": "Warden's Leather Waistguard",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dusky Belt",
+          "outputItemID": 7387,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather waist; +8 Agility, +8 Stamina; different level",
+          "sourceURL": "https://www.wowhead.com/forever/item=7387/dusky-belt",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Leather Waistguard",
+          "outputItemID": 252476,
+          "recipeSpellID": 1255032,
+          "recipeScrollItemID": 252875,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255033,
+      "merchantScrollItemID": 252874,
+      "merchantOutputItemID": 252475,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 7067,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Leather Gloves",
+      "name": "Skycaller's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Leather Gloves",
+          "outputItemID": 252530,
+          "recipeSpellID": 1255065,
+          "recipeScrollItemID": 252842,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255066,
+      "merchantScrollItemID": 252841,
+      "merchantOutputItemID": 252529,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 7070,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Leather Shoulder",
+      "name": "Skycaller's Leather Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Shoulders",
+          "outputItemID": 8192,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather shoulders; +11 Agility, +5 Stamina; different level",
+          "sourceURL": "https://endgametools.com/en/wow-forever/items/8192",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Prowler's Leather Shoulder",
+          "outputItemID": 252534,
+          "recipeSpellID": 1255059,
+          "recipeScrollItemID": 252848,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "leather",
+      "merchantSpellID": 1255056,
+      "merchantScrollItemID": 252851,
+      "merchantOutputItemID": 252537,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 7070,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Leather Bracers",
+      "name": "Skycaller's Leather Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Guardian Leather Bracers",
+          "outputItemID": 4260,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather wrist; +6 Intellect, +6 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4260",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Bracers",
+          "outputItemID": 252540,
+          "recipeSpellID": 1255053,
+          "recipeScrollItemID": 252854,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "leather",
+      "merchantSpellID": 1255051,
+      "merchantScrollItemID": 252856,
+      "merchantOutputItemID": 252542,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 7070,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Leather Boots",
+      "name": "Skycaller's Leather Boots",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Boots",
+          "outputItemID": 8197,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather feet; +12 Agility and stealth bonus; different level",
+          "sourceURL": "https://foreverdb.net/item/8197",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Warden's Leather Boots",
+          "outputItemID": 252470,
+          "recipeSpellID": 1255045,
+          "recipeScrollItemID": 252862,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255044,
+      "merchantScrollItemID": 252863,
+      "merchantOutputItemID": 252471,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 7070,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Leather Waistguard",
+      "name": "Skycaller's Leather Waistguard",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dusky Belt",
+          "outputItemID": 7387,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather waist; +8 Agility, +8 Stamina; different level",
+          "sourceURL": "https://www.wowhead.com/forever/item=7387/dusky-belt",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Leather Waistguard",
+          "outputItemID": 252477,
+          "recipeSpellID": 1255031,
+          "recipeScrollItemID": 252876,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255032,
+      "merchantScrollItemID": 252875,
+      "merchantOutputItemID": 252476,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 7070,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Leather Gloves",
+      "name": "Mender's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Warden's Leather Gloves",
+          "outputItemID": 252527,
+          "recipeSpellID": 1255068,
+          "recipeScrollItemID": 252839,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255065,
+      "merchantScrollItemID": 252842,
+      "merchantOutputItemID": 252530,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 5500,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Leather Shoulder",
+      "name": "Mender's Leather Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Shoulders",
+          "outputItemID": 8192,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather shoulders; +11 Agility, +5 Stamina; different level",
+          "sourceURL": "https://endgametools.com/en/wow-forever/items/8192",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Shoulder",
+          "outputItemID": 252535,
+          "recipeSpellID": 1255058,
+          "recipeScrollItemID": 252849,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "leather",
+      "merchantSpellID": 1255055,
+      "merchantScrollItemID": 252852,
+      "merchantOutputItemID": 252538,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 5500,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Leather Bracers",
+      "name": "Mender's Leather Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Guardian Leather Bracers",
+          "outputItemID": 4260,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather wrist; +6 Intellect, +6 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4260",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Warden's Leather Bracers",
+          "outputItemID": 252541,
+          "recipeSpellID": 1255052,
+          "recipeScrollItemID": 252855,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "leather",
+      "merchantSpellID": 1255050,
+      "merchantScrollItemID": 252857,
+      "merchantOutputItemID": 252543,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 5500,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Leather Boots",
+      "name": "Mender's Leather Boots",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Nightscape Boots",
+          "outputItemID": 8197,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather feet; +12 Agility and stealth bonus; different level",
+          "sourceURL": "https://foreverdb.net/item/8197",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Leather Boots",
+          "outputItemID": 252471,
+          "recipeSpellID": 1255044,
+          "recipeScrollItemID": 252863,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "leather",
+      "merchantSpellID": 1255043,
+      "merchantScrollItemID": 252864,
+      "merchantOutputItemID": 252472,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 5500,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Leather Waistguard",
+      "name": "Mender's Leather Waistguard",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Dusky Belt",
+          "outputItemID": 7387,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather waist; +8 Agility, +8 Stamina; different level",
+          "sourceURL": "https://www.wowhead.com/forever/item=7387/dusky-belt",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Prowler's Leather Waistguard",
+          "outputItemID": 252473,
+          "recipeSpellID": 1255035,
+          "recipeScrollItemID": 252872,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "leather",
+      "merchantSpellID": 1255031,
+      "merchantScrollItemID": 252876,
+      "merchantOutputItemID": 252477,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 5500,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stalker's Leather Gloves",
+      "name": "Stalker's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skulker's Leather Gloves",
+          "outputItemID": 252525,
+          "recipeSpellID": 1255070,
+          "recipeScrollItemID": 252837,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255069,
+      "merchantScrollItemID": 252838,
+      "merchantOutputItemID": 252526,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 7069,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stalker's Mail Shoulder",
+      "name": "Stalker's Mail Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Shoulders",
+          "outputItemID": 8207,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail shoulders; +10 Agility, +10 Intellect in Forever; different level",
+          "sourceURL": "https://theforeverera.com/en/items/8207/",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Mail Shoulder",
+          "outputItemID": 252569,
+          "recipeSpellID": 1255004,
+          "recipeScrollItemID": 252903,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "mail",
+      "merchantSpellID": 1255007,
+      "merchantScrollItemID": 252900,
+      "merchantOutputItemID": 252566,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 7069,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stalker's Mail Bracers",
+      "name": "Stalker's Mail Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Turtle Scale Bracers",
+          "outputItemID": 8198,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail wrists; +5 Intellect, +5 Stamina, +6 Spell Power; different level",
+          "sourceURL": "https://foreverdb.net/item/8198",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skirmisher's Mail Bracers",
+          "outputItemID": 252572,
+          "recipeSpellID": 1255001,
+          "recipeScrollItemID": 252906,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "mail",
+      "merchantSpellID": 1255003,
+      "merchantScrollItemID": 252904,
+      "merchantOutputItemID": 252570,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 7069,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stalker's Mail Sabatons",
+      "name": "Stalker's Mail Sabatons",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Boots",
+          "outputItemID": 8209,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail feet; +12 Agility, +7 Intellect in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/8209",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Mail Sabatons",
+          "outputItemID": 252577,
+          "recipeSpellID": 1254996,
+          "recipeScrollItemID": 252911,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "mail",
+      "merchantSpellID": 1254997,
+      "merchantScrollItemID": 252910,
+      "merchantOutputItemID": 252576,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 7069,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Stalker's Mail Belt",
+      "name": "Stalker's Mail Belt",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Mender's Mail Belt",
+          "outputItemID": 252591,
+          "recipeSpellID": 1254982,
+          "recipeScrollItemID": 252925,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "mail",
+      "merchantSpellID": 1254985,
+      "merchantScrollItemID": 252922,
+      "merchantOutputItemID": 252588,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 7069,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skirmisher's Leather Gloves",
+      "name": "Skirmisher's Leather Gloves",
+      "skill": 175,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Hillman's Leather Gloves",
+          "outputItemID": 4247,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Leather hands; +6 Stamina and +5 Spell Power in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/4247",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Prowler's Leather Gloves",
+          "outputItemID": 252524,
+          "recipeSpellID": 1255071,
+          "recipeScrollItemID": 252836,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "hands",
+      "armorType": "leather",
+      "merchantSpellID": 1255067,
+      "merchantScrollItemID": 252840,
+      "merchantOutputItemID": 252528,
+      "materials": [
+        {
+          "itemID": 4234,
+          "quantity": 16
+        },
+        {
+          "itemID": 3864,
+          "quantity": 2
+        },
+        {
+          "itemID": 4236,
+          "quantity": 2
+        },
+        {
+          "itemID": 249428,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        },
+        {
+          "itemID": 249427,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Leather hands options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skirmisher's Mail Shoulder",
+      "name": "Skirmisher's Mail Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Shoulders",
+          "outputItemID": 8207,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail shoulders; +10 Agility, +10 Intellect in Forever; different level",
+          "sourceURL": "https://theforeverera.com/en/items/8207/",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Mail Shoulder",
+          "outputItemID": 252567,
+          "recipeSpellID": 1255006,
+          "recipeScrollItemID": 252901,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "mail",
+      "merchantSpellID": 1255005,
+      "merchantScrollItemID": 252902,
+      "merchantOutputItemID": 252568,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 3864,
+          "quantity": 3
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skirmisher's Mail Bracers",
+      "name": "Skirmisher's Mail Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Turtle Scale Bracers",
+          "outputItemID": 8198,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail wrists; +5 Intellect, +5 Stamina, +6 Spell Power; different level",
+          "sourceURL": "https://foreverdb.net/item/8198",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Mail Bracers",
+          "outputItemID": 252573,
+          "recipeSpellID": 1255000,
+          "recipeScrollItemID": 252907,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "mail",
+      "merchantSpellID": 1255001,
+      "merchantScrollItemID": 252906,
+      "merchantOutputItemID": 252572,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 3864,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skirmisher's Mail Sabatons",
+      "name": "Skirmisher's Mail Sabatons",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Boots",
+          "outputItemID": 8209,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail feet; +12 Agility, +7 Intellect in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/8209",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stalker's Mail Sabatons",
+          "outputItemID": 252576,
+          "recipeSpellID": 1254997,
+          "recipeScrollItemID": 252910,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "mail",
+      "merchantSpellID": 1254995,
+      "merchantScrollItemID": 252912,
+      "merchantOutputItemID": 252578,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 3864,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skirmisher's Mail Belt",
+      "name": "Skirmisher's Mail Belt",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Skycaller's Mail Belt",
+          "outputItemID": 252589,
+          "recipeSpellID": 1254984,
+          "recipeScrollItemID": 252923,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "mail",
+      "merchantSpellID": 1254983,
+      "merchantScrollItemID": 252924,
+      "merchantOutputItemID": 252590,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 3864,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Mail Shoulder",
+      "name": "Skycaller's Mail Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Shoulders",
+          "outputItemID": 8207,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail shoulders; +10 Agility, +10 Intellect in Forever; different level",
+          "sourceURL": "https://theforeverera.com/en/items/8207/",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Mender's Mail Shoulder",
+          "outputItemID": 252569,
+          "recipeSpellID": 1255004,
+          "recipeScrollItemID": 252903,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "mail",
+      "merchantSpellID": 1255006,
+      "merchantScrollItemID": 252901,
+      "merchantOutputItemID": 252567,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 7070,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Mail Bracers",
+      "name": "Skycaller's Mail Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Turtle Scale Bracers",
+          "outputItemID": 8198,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail wrists; +5 Intellect, +5 Stamina, +6 Spell Power; different level",
+          "sourceURL": "https://foreverdb.net/item/8198",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stalker's Mail Bracers",
+          "outputItemID": 252570,
+          "recipeSpellID": 1255003,
+          "recipeScrollItemID": 252904,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "mail",
+      "merchantSpellID": 1255002,
+      "merchantScrollItemID": 252905,
+      "merchantOutputItemID": 252571,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 7070,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Mail Sabatons",
+      "name": "Skycaller's Mail Sabatons",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Boots",
+          "outputItemID": 8209,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail feet; +12 Agility, +7 Intellect in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/8209",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skirmisher's Mail Sabatons",
+          "outputItemID": 252578,
+          "recipeSpellID": 1254995,
+          "recipeScrollItemID": 252912,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "mail",
+      "merchantSpellID": 1254996,
+      "merchantScrollItemID": 252911,
+      "merchantOutputItemID": 252577,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 7070,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Skycaller's Mail Belt",
+      "name": "Skycaller's Mail Belt",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Mender's Mail Belt",
+          "outputItemID": 252591,
+          "recipeSpellID": 1254982,
+          "recipeScrollItemID": 252925,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "mail",
+      "merchantSpellID": 1254984,
+      "merchantScrollItemID": 252923,
+      "merchantOutputItemID": 252589,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 7070,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Mail Shoulder",
+      "name": "Mender's Mail Shoulder",
+      "skill": 210,
+      "merchantFavor": 60,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Shoulders",
+          "outputItemID": 8207,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail shoulders; +10 Agility, +10 Intellect in Forever; different level",
+          "sourceURL": "https://theforeverera.com/en/items/8207/",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Stalker's Mail Shoulder",
+          "outputItemID": 252566,
+          "recipeSpellID": 1255007,
+          "recipeScrollItemID": 252900,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "shoulder",
+      "armorType": "mail",
+      "merchantSpellID": 1255004,
+      "merchantScrollItemID": 252903,
+      "merchantOutputItemID": 252569,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 10
+        },
+        {
+          "itemID": 249428,
+          "quantity": 4
+        },
+        {
+          "itemID": 4236,
+          "quantity": 3
+        },
+        {
+          "itemID": 5500,
+          "quantity": 3
+        },
+        {
+          "itemID": 249427,
+          "quantity": 2
+        },
+        {
+          "itemID": 4291,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail shoulder options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Mail Bracers",
+      "name": "Mender's Mail Bracers",
+      "skill": 225,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Turtle Scale Bracers",
+          "outputItemID": 8198,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail wrists; +5 Intellect, +5 Stamina, +6 Spell Power; different level",
+          "sourceURL": "https://foreverdb.net/item/8198",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skirmisher's Mail Bracers",
+          "outputItemID": 252572,
+          "recipeSpellID": 1255001,
+          "recipeScrollItemID": 252906,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "wrist",
+      "armorType": "mail",
+      "merchantSpellID": 1255000,
+      "merchantScrollItemID": 252907,
+      "merchantOutputItemID": 252573,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 6
+        },
+        {
+          "itemID": 4236,
+          "quantity": 4
+        },
+        {
+          "itemID": 5500,
+          "quantity": 4
+        },
+        {
+          "itemID": 249427,
+          "quantity": 3
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail wrist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Mail Sabatons",
+      "name": "Mender's Mail Sabatons",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Tough Scorpid Boots",
+          "outputItemID": 8209,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "equipment_slot",
+          "differences": "Mail feet; +12 Agility, +7 Intellect in Forever; different level",
+          "sourceURL": "https://foreverdb.net/item/8209",
+          "dataSource": "WoW Forever client-derived item record"
+        },
+        {
+          "name": "Skycaller's Mail Sabatons",
+          "outputItemID": 252577,
+          "recipeSpellID": 1254996,
+          "recipeScrollItemID": 252911,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "feet",
+      "armorType": "mail",
+      "merchantSpellID": 1254994,
+      "merchantScrollItemID": 252913,
+      "merchantOutputItemID": 252579,
+      "materials": [
+        {
+          "itemID": 4304,
+          "quantity": 16
+        },
+        {
+          "itemID": 249428,
+          "quantity": 8
+        },
+        {
+          "itemID": 5500,
+          "quantity": 6
+        },
+        {
+          "itemID": 249427,
+          "quantity": 4
+        },
+        {
+          "itemID": 8172,
+          "quantity": 2
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail feet options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Mender's Mail Belt",
+      "name": "Mender's Mail Belt",
+      "skill": 250,
+      "merchantFavor": 90,
+      "classification": "related",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Stalker's Mail Belt",
+          "outputItemID": 252588,
+          "recipeSpellID": 1254985,
+          "recipeScrollItemID": 252922,
+          "relation": "equipment_slot",
+          "comparisonLabel": "Same-slot Gear",
+          "acquisition": "merchants_favor",
+          "similarity": "equipment_slot",
+          "differences": "Another Merchant's Favor recipe for the same slot, armor class and crafting skill tier. Role and item bonuses differ; inspect tooltips.",
+          "sourceURL": "https://ahledger.com",
+          "dataSource": "AHledger WoW Forever client schematics bundled in FavorCraft"
+        }
+      ],
+      "note": "Comparable equipment by slot and armor category, not guaranteed equal stats or upgrade.",
+      "slot": "waist",
+      "armorType": "mail",
+      "merchantSpellID": 1254982,
+      "merchantScrollItemID": 252925,
+      "merchantOutputItemID": 252591,
+      "materials": [
+        {
+          "itemID": 8170,
+          "quantity": 12
+        },
+        {
+          "itemID": 249428,
+          "quantity": 10
+        },
+        {
+          "itemID": 5500,
+          "quantity": 8
+        },
+        {
+          "itemID": 249427,
+          "quantity": 5
+        },
+        {
+          "itemID": 8172,
+          "quantity": 4
+        },
+        {
+          "itemID": 8343,
+          "quantity": 2
+        }
+      ],
+      "comparisonScope": "same_slot_only",
+      "summary": "Mail waist options from Forever Leatherworking and Merchant's Favor. Item and level differences appear in native tooltips."
+    },
+    {
+      "key": "Leatherworking|Forceful Thick Armor Kit",
+      "name": "Forceful Thick Armor Kit",
+      "skill": 185,
+      "merchantFavor": 60,
+      "classification": "alternative",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Thick Armor Kit",
+          "outputItemID": 8173,
+          "relation": "alternative",
+          "comparisonLabel": "Comparable Item",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "same purpose and application",
+          "differences": "Armor kit (+4 Stamina and +32 Armor); Favor kit adds attack power instead",
+          "sourceURL": "https://foreverdb.net/item/8173",
+          "dataSource": "WoW Forever client-derived item record"
+        }
+      ],
+      "note": "Different secondary bonuses: not equivalent enchantments.",
+      "slot": "armor_kit",
+      "armorType": "consumable",
+      "merchantSpellID": 1255073,
+      "merchantScrollItemID": 252834,
+      "merchantOutputItemID": 252463,
+      "materials": [
+        {
+          "itemID": 3391,
+          "quantity": 2
+        },
+        {
+          "itemID": 11137,
+          "quantity": 2
+        },
+        {
+          "itemID": 8173,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "application_comparison",
+      "summary": "Armor kit for the same eligible equipment slots with different secondary bonuses. Compare effects and level requirements."
+    },
+    {
+      "key": "Leatherworking|Mystic Rugged Armor Kit",
+      "name": "Mystic Rugged Armor Kit",
+      "skill": 235,
+      "merchantFavor": 90,
+      "classification": "alternative",
+      "comparisonStatus": "beta_comparison",
+      "alternatives": [
+        {
+          "name": "Rugged Armor Kit",
+          "outputItemID": 15564,
+          "relation": "alternative",
+          "comparisonLabel": "Comparable Item",
+          "acquisition": "Leatherworking recipe",
+          "similarity": "same purpose and application",
+          "differences": "Armor kit (+5 Stamina and +40 Armor); Favor kit adds spell power instead",
+          "sourceURL": "https://foreverdb.net/item/15564",
+          "dataSource": "WoW Forever client-derived item record"
+        }
+      ],
+      "note": "Different secondary bonuses: not equivalent enchantments.",
+      "slot": "armor_kit",
+      "armorType": "consumable",
+      "merchantSpellID": 1254966,
+      "merchantScrollItemID": 252941,
+      "merchantOutputItemID": 252487,
+      "materials": [
+        {
+          "itemID": 11176,
+          "quantity": 2
+        },
+        {
+          "itemID": 13444,
+          "quantity": 2
+        },
+        {
+          "itemID": 248824,
+          "quantity": 1
+        },
+        {
+          "itemID": 249429,
+          "quantity": 1
+        },
+        {
+          "itemID": 15564,
+          "quantity": 1
+        }
+      ],
+      "comparisonScope": "application_comparison",
+      "summary": "Armor kit for the same eligible equipment slots with different secondary bonuses. Compare effects and level requirements."
+    }
+  ]
+}

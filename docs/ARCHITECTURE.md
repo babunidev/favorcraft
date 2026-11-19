@@ -6,6 +6,10 @@ Core.lua, Catalog.lua, Comparisons.lua and profession-specific comparison module
 
 Code and file evidence only; runtime behavior not independently verified.
 
+## Repository layout — 2026-11-19
+
+Both TOCs list runtime files by folder path in this load order: `Data/Catalog.lua` and `Data/Schematics.lua`, then `Core/Faction.lua` and `Core/Core.lua`, then the profession modules and source audits in `Comparisons/` ending with `Comparisons/Comparisons.lua`, then `UI/`. Files share state through the addon namespace (`local _, RRP = ...`), so the move changed no Lua code. Only the TOCs, the test loaders and `.pkgmeta` changed. `docs/research/` keeps the research handoffs and the per-profession JSON exports; no TOC references them and `.pkgmeta` excludes `docs/` as a whole. Sections below that name bare file names predate this layout.
+
 ## Source responsibilities and migration — 2026-10-28
 
 As of the 0.5.1-beta tag (2026-11-04), both TOCs declare Interface **16001**, version **0.5.1-beta**, and both `RRPDB` and `FavorcraftDB` SavedVariables. The load order begins with `Catalog.lua`, `Schematics.lua`, `Faction.lua` and `Core.lua`; profession-specific comparison and source-audit files feed `Comparisons.lua`, and `UI/` splits widgets, navigation, browsing, details, planning, settings and shopping.
