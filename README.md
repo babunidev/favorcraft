@@ -54,7 +54,7 @@ comparison instead of a native tooltip.
 Alchemy, Cooking and Tailoring now exclude other Merchant's Favor items from comparisons. Research about additional sources for the same pattern is shown separately. External acquisitions may still need in-game verification.
 
 Research data can be corrected as the beta changes. See
-[Comparison Beta Guide](COMPARISON_BETA_GUIDE.md) for the category rules,
+[Comparison Beta Guide](docs/COMPARISON_BETA_GUIDE.md) for the category rules,
 profession coverage, and testing notes.
 
 ## Credits
@@ -67,11 +67,11 @@ profession coverage, and testing notes.
 
 ## Release and verification status
 
-Version `0.5.1-beta` was tagged on 4 November 2026 for WoW Forever 1.60.1. The tag-triggered CurseForge file was visible as a **Beta in Processing** in the publisher dashboard; final approval and inspection of its archive contents have not been confirmed. GitHub Actions passed its LuaJIT and installable-ZIP checks at commit `2ba7601`, but these are not in-game tests. The intended CurseForge package excludes repository documentation and development files via `.pkgmeta`; see [publishing record](PUBLISHING.md).
+Version `0.5.1-beta` was tagged on 4 November 2026 for WoW Forever 1.60.1. The tag-triggered CurseForge file was visible as a **Beta in Processing** in the publisher dashboard; final approval and inspection of its archive contents have not been confirmed. GitHub Actions passed its LuaJIT and installable-ZIP checks at commit `2ba7601`, but these are not in-game tests. The intended CurseForge package excludes repository documentation and development files via `.pkgmeta`; see [publishing record](docs/PUBLISHING.md).
 
 ## Development documentation
 
-- [Concept](CONCEPT.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md)
+- [Concept](docs/CONCEPT.md) · [Roadmap](docs/ROADMAP.md) · [Changelog](CHANGELOG.md)
 - [Architecture](docs/ARCHITECTURE.md) · [Design evidence](docs/DECISIONS.md) · [Development journal](docs/DEVLOG.md)
 - [AI collaborator rules](AGENTS.md)
 

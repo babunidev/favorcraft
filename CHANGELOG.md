@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed — documentation moved into `docs/` (2026-11-19)
+- Moved `CONCEPT.md`, `ROADMAP.md`, `COMPARISON_BETA_GUIDE.md` and `PUBLISHING.md` into `docs/`. The root keeps only `README.md`, `AGENTS.md`, `LICENSE` and `CHANGELOG.md`; links to the moved files and the documentation rules in `AGENTS.md` were updated. No code changed. Claude Code (Claude Opus 5.5).
+
 ## 0.5.2-beta — 2026-11-08
 
 - Filter choices are now stored independently for each profession and restored when switching professions or reopening FavorCraft. First-visit automatic defaults for broad professions and the existing All Specs behavior for Enchanting, Engineering, and Cooking are preserved; Alchemy retains its existing behavior.
